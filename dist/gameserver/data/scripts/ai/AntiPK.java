@@ -1,10 +1,10 @@
 package ai;
 
-import ru.j2dev.gameserver.ai.Fighter;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MagicSkillUse;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.gameserver.ai.Fighter;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
+import ru.l2.gameserver.utils.Location;
 
 /**
  * Created by JunkyFunky

@@ -1,11 +1,11 @@
 package ai;
 
-import ru.j2dev.gameserver.ai.DefaultAI;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.World;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.Earthquake;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.L2GameServerPacket;
+import ru.l2.gameserver.ai.DefaultAI;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.World;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.Earthquake;
+import ru.l2.gameserver.network.lineage2.serverpackets.L2GameServerPacket;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package events.l2day;
 
-import ru.j2dev.gameserver.model.reward.RewardData;
+import ru.l2.gameserver.model.reward.RewardData;
 
 import java.util.Arrays;
 import java.util.Map;

@@ -1,14 +1,14 @@
 package npc.model;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ai.CtrlEvent;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.instances.ChestInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.PlaySound;
-import ru.j2dev.gameserver.tables.SkillTable;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ai.CtrlEvent;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.instances.ChestInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.PlaySound;
+import ru.l2.gameserver.tables.SkillTable;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public class TreasureChestInstance extends ChestInstance {
 

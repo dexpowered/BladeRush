@@ -1,12 +1,12 @@
 package npc.model;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
-import ru.j2dev.gameserver.utils.ItemFunctions;
-import ru.j2dev.gameserver.utils.Location;
-import ru.j2dev.gameserver.utils.NpcUtils;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.utils.ItemFunctions;
+import ru.l2.gameserver.utils.Location;
+import ru.l2.gameserver.utils.NpcUtils;
 
 public final class DragonVortexInstance extends NpcInstance {
     private final int[] bosses = {25718, 25719, 25720, 25721, 25722, 25723, 25724};

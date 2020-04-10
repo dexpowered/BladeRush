@@ -2,10 +2,10 @@ package events.PcCafePointsExchange;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.j2dev.gameserver.listener.script.OnInitScriptListener;
-import ru.j2dev.gameserver.manager.SpawnManager;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.scripts.Functions;
+import ru.l2.gameserver.listener.script.OnInitScriptListener;
+import ru.l2.gameserver.manager.SpawnManager;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.scripts.Functions;
 
 public class PcCafePointsExchange extends Functions implements OnInitScriptListener {
     private static final Logger LOGGER = LoggerFactory.getLogger(PcCafePointsExchange.class);

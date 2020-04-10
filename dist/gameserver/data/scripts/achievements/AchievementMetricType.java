@@ -1,6 +1,6 @@
 package achievements;
 
-import ru.j2dev.gameserver.model.Player;
+import ru.l2.gameserver.model.Player;
 
 public enum AchievementMetricType {
     LOGIN,

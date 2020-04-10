@@ -1,11 +1,11 @@
 package ai.door;
 
-import ru.j2dev.commons.lang.reference.HardReference;
-import ru.j2dev.gameserver.GameTimeController;
-import ru.j2dev.gameserver.ai.DoorAI;
-import ru.j2dev.gameserver.listener.game.OnDayNightChangeListener;
-import ru.j2dev.gameserver.manager.ReflectionManager;
-import ru.j2dev.gameserver.model.instances.DoorInstance;
+import ru.l2.commons.lang.reference.HardReference;
+import ru.l2.gameserver.GameTimeController;
+import ru.l2.gameserver.ai.DoorAI;
+import ru.l2.gameserver.listener.game.OnDayNightChangeListener;
+import ru.l2.gameserver.manager.ReflectionManager;
+import ru.l2.gameserver.model.instances.DoorInstance;
 
 public class OnNightOpen extends DoorAI {
     public OnNightOpen(final DoorInstance actor) {

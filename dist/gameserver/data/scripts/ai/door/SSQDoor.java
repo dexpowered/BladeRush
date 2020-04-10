@@ -1,12 +1,12 @@
 package ai.door;
 
 import org.apache.commons.lang3.ArrayUtils;
-import ru.j2dev.commons.geometry.Rectangle;
-import ru.j2dev.gameserver.ai.DoorAI;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Territory;
-import ru.j2dev.gameserver.model.instances.DoorInstance;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
+import ru.l2.commons.geometry.Rectangle;
+import ru.l2.gameserver.ai.DoorAI;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Territory;
+import ru.l2.gameserver.model.instances.DoorInstance;
+import ru.l2.gameserver.model.instances.NpcInstance;
 
 public class SSQDoor extends DoorAI {
     private static final Territory room1 = new Territory().add(new Rectangle(-89696, 217741, -88858, 218085).setZmin(-7520).setZmax(-7320));

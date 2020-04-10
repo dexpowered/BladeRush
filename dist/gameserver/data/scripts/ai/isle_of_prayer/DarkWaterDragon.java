@@ -1,14 +1,14 @@
 package ai.isle_of_prayer;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ai.CtrlEvent;
-import ru.j2dev.gameserver.ai.Fighter;
-import ru.j2dev.gameserver.data.xml.holder.NpcTemplateHolder;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.SimpleSpawner;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ai.CtrlEvent;
+import ru.l2.gameserver.ai.Fighter;
+import ru.l2.gameserver.data.xml.holder.NpcTemplateHolder;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.SimpleSpawner;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.utils.Location;
 
 public class DarkWaterDragon extends Fighter {
     private static final int FAFURION = 18482;

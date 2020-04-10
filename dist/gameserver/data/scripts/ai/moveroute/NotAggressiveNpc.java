@@ -1,7 +1,7 @@
 package ai.moveroute;
 
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.instances.NpcInstance;
 
 public class NotAggressiveNpc extends MoveRouteDefaultAI {
     public NotAggressiveNpc(final NpcInstance actor) {

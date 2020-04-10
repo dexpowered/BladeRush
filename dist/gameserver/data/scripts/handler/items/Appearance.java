@@ -2,13 +2,13 @@ package handler.items;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.cache.Msg;
-import ru.j2dev.gameserver.handler.items.IRefineryHandler;
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.*;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.handler.items.IRefineryHandler;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.*;
 
 public class Appearance extends ScriptItemHandler implements IRefineryHandler {
     private static final Logger LOG = LoggerFactory.getLogger(Appearance.class);

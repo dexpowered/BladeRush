@@ -1,6 +1,6 @@
 package npc.model.residences.clanhall;
 
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public class MikhailInstance extends _34BossMinionInstance {
     public MikhailInstance(final int objectId, final NpcTemplate template) {

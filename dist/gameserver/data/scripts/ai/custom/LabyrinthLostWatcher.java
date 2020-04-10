@@ -1,12 +1,12 @@
 package ai.custom;
 
-import ru.j2dev.gameserver.ai.Fighter;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.entity.Reflection;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.instances.ReflectionBossInstance;
-import ru.j2dev.gameserver.stats.Stats;
-import ru.j2dev.gameserver.stats.funcs.FuncSet;
+import ru.l2.gameserver.ai.Fighter;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.entity.Reflection;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.instances.ReflectionBossInstance;
+import ru.l2.gameserver.stats.Stats;
+import ru.l2.gameserver.stats.funcs.FuncSet;
 
 public class LabyrinthLostWatcher extends Fighter {
     public LabyrinthLostWatcher(final NpcInstance actor) {

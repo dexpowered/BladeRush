@@ -2,18 +2,18 @@ package handler.items;
 
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
-import ru.j2dev.gameserver.ai.NextAction;
-import ru.j2dev.gameserver.data.xml.holder.ItemTemplateHolder;
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Request;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.L2GameServerPacket;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.SendTradeDone;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.SystemMessage;
-import ru.j2dev.gameserver.templates.item.ItemTemplate;
-import ru.j2dev.gameserver.templates.item.WeaponTemplate.WeaponType;
-import ru.j2dev.gameserver.utils.ItemFunctions;
+import ru.l2.gameserver.ai.NextAction;
+import ru.l2.gameserver.data.xml.holder.ItemTemplateHolder;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Request;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.L2GameServerPacket;
+import ru.l2.gameserver.network.lineage2.serverpackets.SendTradeDone;
+import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage;
+import ru.l2.gameserver.templates.item.ItemTemplate;
+import ru.l2.gameserver.templates.item.WeaponTemplate.WeaponType;
+import ru.l2.gameserver.utils.ItemFunctions;
 
 public class EquipableItem extends ScriptItemHandler {
     private final int[] _itemIds;

@@ -1,8 +1,8 @@
 package npc.model.residences.clanhall;
 
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public class MatchLeaderInstance extends MatchBerserkerInstance {
     public MatchLeaderInstance(final int objectId, final NpcTemplate template) {

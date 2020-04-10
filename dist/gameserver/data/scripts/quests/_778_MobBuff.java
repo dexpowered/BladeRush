@@ -1,12 +1,12 @@
 package quests;
 
-import ru.j2dev.gameserver.listener.script.OnInitScriptListener;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.quest.Quest;
-import ru.j2dev.gameserver.model.quest.QuestState;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MagicSkillUse;
-import ru.j2dev.gameserver.tables.SkillTable;
+import ru.l2.gameserver.listener.script.OnInitScriptListener;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.quest.Quest;
+import ru.l2.gameserver.model.quest.QuestState;
+import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
+import ru.l2.gameserver.tables.SkillTable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 /**

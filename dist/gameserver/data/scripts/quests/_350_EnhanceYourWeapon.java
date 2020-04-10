@@ -1,20 +1,20 @@
 package quests;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.data.xml.holder.NpcTemplateHolder;
-import ru.j2dev.gameserver.data.xml.holder.SoulCrystalHolder;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.MonsterInstance;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.model.quest.Quest;
-import ru.j2dev.gameserver.model.quest.QuestState;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.SystemMessage2;
-import ru.j2dev.gameserver.templates.SoulCrystal;
-import ru.j2dev.gameserver.templates.npc.AbsorbInfo;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.data.xml.holder.NpcTemplateHolder;
+import ru.l2.gameserver.data.xml.holder.SoulCrystalHolder;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.MonsterInstance;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.model.quest.Quest;
+import ru.l2.gameserver.model.quest.QuestState;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage2;
+import ru.l2.gameserver.templates.SoulCrystal;
+import ru.l2.gameserver.templates.npc.AbsorbInfo;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 import java.util.ArrayList;
 import java.util.Collections;

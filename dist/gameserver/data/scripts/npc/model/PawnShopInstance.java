@@ -1,9 +1,9 @@
 package npc.model;
 
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 import services.pawnshop.PawnShop;
 
 public class PawnShopInstance extends NpcInstance {

@@ -1,10 +1,10 @@
 package quests;
 
-import ru.j2dev.gameserver.cache.Msg;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.quest.Quest;
-import ru.j2dev.gameserver.model.quest.QuestState;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.quest.Quest;
+import ru.l2.gameserver.model.quest.QuestState;
+import ru.l2.gameserver.utils.Location;
 
 public class _635_InTheDimensionalRift extends Quest {
     private static final int DIMENSION_FRAGMENT = 7079;

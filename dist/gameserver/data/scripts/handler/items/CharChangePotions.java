@@ -1,9 +1,9 @@
 package handler.items;
 
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MagicSkillUse;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
 
 public class CharChangePotions extends ScriptItemHandler {
     private static final int[] _itemIds = {5235, 5236, 5237, 5238, 5239, 5240, 5241, 5242, 5243, 5244, 5245, 5246, 5247, 5248};

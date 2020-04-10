@@ -1,17 +1,17 @@
 package ai;
 
 import org.apache.commons.lang3.ArrayUtils;
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ai.CtrlEvent;
-import ru.j2dev.gameserver.ai.Fighter;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.World;
-import ru.j2dev.gameserver.model.entity.Reflection;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ExShowScreenMessage;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
-import ru.j2dev.gameserver.tables.SkillTable;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ai.CtrlEvent;
+import ru.l2.gameserver.ai.Fighter;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.World;
+import ru.l2.gameserver.model.entity.Reflection;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.ExShowScreenMessage;
+import ru.l2.gameserver.network.lineage2.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
+import ru.l2.gameserver.tables.SkillTable;
 
 import java.util.List;
 

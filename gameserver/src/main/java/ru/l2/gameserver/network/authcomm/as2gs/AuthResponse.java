@@ -1,0 +1,32 @@
+package ru.l2.gameserver.network.authcomm.as2gs;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import ru.l2.gameserver.network.authcomm.AuthServerCommunication;
+import ru.l2.gameserver.network.authcomm.ReceivablePacket;
+import ru.l2.gameserver.network.authcomm.gs2as.OnlineStatus;
+import ru.l2.gameserver.network.authcomm.gs2as.PlayerInGame;
+
+import java.util.Arrays;
+
+public class AuthResponse extends ReceivablePacket {
+    private static final Logger LOGGER = LoggerFactory.getLogger(AuthResponse.class);
+
+    private int _serverId;
+    private String _serverName;
+
+    @Override
+    protected void readImpl() {
+        _serverId = readC();
+        _serverName = readS();
+    }
+
+    @Override
+    protected void runImpl() {
+        LOGGER.info("|=====================AUTHRESPONE=========================|");
+        LOGGER.info("Registered on authserver as " + _serverId + " [" + _serverName + "]");
+        sendPacket(new OnlineStatus(true));
+        final String[] accounts = AuthServerCommunication.getInstance().getAccounts();
+        Arrays.stream(accounts).map(PlayerInGame::new).forEach(this::sendPacket);
+    }
+}

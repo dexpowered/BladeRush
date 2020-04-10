@@ -1,13 +1,13 @@
 package events.Christmas;
 
-import ru.j2dev.commons.threading.RunnableImpl;
-import ru.j2dev.gameserver.Announcements;
-import ru.j2dev.gameserver.ThreadPoolManager;
-import ru.j2dev.gameserver.manager.ServerVariables;
-import ru.j2dev.gameserver.model.GameObjectsStorage;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MagicSkillUse;
-import ru.j2dev.gameserver.tables.SkillTable;
+import ru.l2.commons.threading.RunnableImpl;
+import ru.l2.gameserver.Announcements;
+import ru.l2.gameserver.ThreadPoolManager;
+import ru.l2.gameserver.manager.ServerVariables;
+import ru.l2.gameserver.model.GameObjectsStorage;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
+import ru.l2.gameserver.tables.SkillTable;
 
 import java.util.Calendar;
 

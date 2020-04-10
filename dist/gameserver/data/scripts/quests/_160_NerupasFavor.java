@@ -1,9 +1,9 @@
 package quests;
 
-import ru.j2dev.gameserver.model.base.Race;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.quest.Quest;
-import ru.j2dev.gameserver.model.quest.QuestState;
+import ru.l2.gameserver.model.base.Race;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.quest.Quest;
+import ru.l2.gameserver.model.quest.QuestState;
 
 public class _160_NerupasFavor extends Quest {
     private static final int SILVERY_SPIDERSILK = 1026;

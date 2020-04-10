@@ -1,13 +1,13 @@
 package ai.door;
 
-import ru.j2dev.gameserver.ai.DoorAI;
-import ru.j2dev.gameserver.data.xml.holder.ResidenceHolder;
-import ru.j2dev.gameserver.listener.actor.player.OnAnswerListener;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.entity.residence.Residence;
-import ru.j2dev.gameserver.model.instances.DoorInstance;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ConfirmDlg;
+import ru.l2.gameserver.ai.DoorAI;
+import ru.l2.gameserver.data.xml.holder.ResidenceHolder;
+import ru.l2.gameserver.listener.actor.player.OnAnswerListener;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.entity.residence.Residence;
+import ru.l2.gameserver.model.instances.DoorInstance;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.network.lineage2.serverpackets.ConfirmDlg;
 
 public class ResidenceDoor extends DoorAI {
     public ResidenceDoor(final DoorInstance actor) {

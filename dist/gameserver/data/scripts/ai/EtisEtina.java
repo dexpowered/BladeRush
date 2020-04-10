@@ -1,10 +1,10 @@
 package ai;
 
-import ru.j2dev.gameserver.ai.Fighter;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.utils.Location;
-import ru.j2dev.gameserver.utils.NpcUtils;
+import ru.l2.gameserver.ai.Fighter;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.utils.Location;
+import ru.l2.gameserver.utils.NpcUtils;
 
 public class EtisEtina extends Fighter {
     private boolean summonsReleased;

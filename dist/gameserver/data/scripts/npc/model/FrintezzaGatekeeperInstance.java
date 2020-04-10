@@ -1,13 +1,13 @@
 package npc.model;
 
 import bosses.FrintezzaManager;
-import ru.j2dev.gameserver.cache.Msg;
-import ru.j2dev.gameserver.model.CommandChannel;
-import ru.j2dev.gameserver.model.Party;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
-import ru.j2dev.gameserver.utils.ItemFunctions;
+import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.model.CommandChannel;
+import ru.l2.gameserver.model.Party;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.utils.ItemFunctions;
 
 import java.util.List;
 

@@ -1,16 +1,16 @@
 package quests;
 
-import ru.j2dev.gameserver.listener.actor.OnCurrentHpDamageListener;
-import ru.j2dev.gameserver.listener.actor.player.OnPlayerEnterListener;
-import ru.j2dev.gameserver.manager.QuestManager;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.actor.listener.CharListenerList;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.quest.Quest;
-import ru.j2dev.gameserver.model.quest.QuestState;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.TutorialCloseHtml;
+import ru.l2.gameserver.listener.actor.OnCurrentHpDamageListener;
+import ru.l2.gameserver.listener.actor.player.OnPlayerEnterListener;
+import ru.l2.gameserver.manager.QuestManager;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.actor.listener.CharListenerList;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.quest.Quest;
+import ru.l2.gameserver.model.quest.QuestState;
+import ru.l2.gameserver.network.lineage2.serverpackets.TutorialCloseHtml;
 
 import java.util.HashMap;
 import java.util.Map;

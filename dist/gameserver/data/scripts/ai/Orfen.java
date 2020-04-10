@@ -1,14 +1,14 @@
 package ai;
 
 import npc.model.OrfenInstance;
-import ru.j2dev.commons.text.PrintfFormat;
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ai.Fighter;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.commons.text.PrintfFormat;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ai.Fighter;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.utils.Location;
 
 public class Orfen extends Fighter {
     public static final PrintfFormat[] MsgOnRecall = {new PrintfFormat("%s. Stop kidding yourself about your own powerlessness!"), new PrintfFormat("%s. I'll make you feel what true fear is!"), new PrintfFormat("You're really stupid to have challenged me. %s! Get ready!"), new PrintfFormat("%s. Do you think that's going to work?!")};

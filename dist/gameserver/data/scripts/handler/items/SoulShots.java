@@ -1,17 +1,17 @@
 package handler.items;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.cache.Msg;
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ExAutoSoulShot;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MagicSkillUse;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.SystemMessage;
-import ru.j2dev.gameserver.stats.Stats;
-import ru.j2dev.gameserver.templates.item.WeaponTemplate;
-import ru.j2dev.gameserver.templates.item.WeaponTemplate.WeaponType;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.ExAutoSoulShot;
+import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
+import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage;
+import ru.l2.gameserver.stats.Stats;
+import ru.l2.gameserver.templates.item.WeaponTemplate;
+import ru.l2.gameserver.templates.item.WeaponTemplate.WeaponType;
 
 public class SoulShots extends ScriptItemHandler {
     private static final int[] _itemIds = {5789, 1835, 1463, 1464, 1465, 1466, 1467};

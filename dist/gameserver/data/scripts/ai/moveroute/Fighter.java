@@ -1,6 +1,6 @@
 package ai.moveroute;
 
-import ru.j2dev.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.instances.NpcInstance;
 
 public class Fighter extends MoveRouteDefaultAI {
     public Fighter(final NpcInstance actor) {

@@ -2,16 +2,16 @@ package npc.model;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.j2dev.gameserver.model.GameObjectsStorage;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.base.Race;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.quest.QuestState;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.PlaySound;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.RadarControl;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.model.GameObjectsStorage;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.base.Race;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.quest.QuestState;
+import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
+import ru.l2.gameserver.network.lineage2.serverpackets.PlaySound;
+import ru.l2.gameserver.network.lineage2.serverpackets.RadarControl;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 import java.util.Arrays;
 import java.util.List;

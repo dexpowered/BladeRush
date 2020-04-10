@@ -1,10 +1,10 @@
 package handler.admincommands;
 
 import org.apache.commons.lang3.tuple.Pair;
-import ru.j2dev.commons.collections.MultiValueSet;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.commons.collections.MultiValueSet;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
+import ru.l2.gameserver.utils.Location;
 
 import java.util.ArrayList;
 import java.util.Comparator;

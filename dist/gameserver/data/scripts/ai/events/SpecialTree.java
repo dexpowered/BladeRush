@@ -1,10 +1,10 @@
 package ai.events;
 
-import ru.j2dev.commons.math.random.RndSelector;
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ai.DefaultAI;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MagicSkillUse;
+import ru.l2.commons.math.random.RndSelector;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ai.DefaultAI;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
 
 public class SpecialTree extends DefaultAI {
     private static final RndSelector<Integer> SOUNDS = new RndSelector<>(5);

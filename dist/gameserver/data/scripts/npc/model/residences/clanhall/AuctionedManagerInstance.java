@@ -1,9 +1,9 @@
 package npc.model.residences.clanhall;
 
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.entity.residence.Residence;
-import ru.j2dev.gameserver.model.pledge.Clan;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.entity.residence.Residence;
+import ru.l2.gameserver.model.pledge.Clan;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public class AuctionedManagerInstance extends ManagerInstance {
     public AuctionedManagerInstance(final int objectId, final NpcTemplate template) {

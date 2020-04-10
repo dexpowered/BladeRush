@@ -1,13 +1,13 @@
 package quests;
 
-import ru.j2dev.gameserver.data.xml.holder.ResidenceHolder;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.entity.residence.ClanHall;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.pledge.Clan;
-import ru.j2dev.gameserver.model.quest.Quest;
-import ru.j2dev.gameserver.model.quest.QuestState;
-import ru.j2dev.gameserver.utils.TimeUtils;
+import ru.l2.gameserver.data.xml.holder.ResidenceHolder;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.entity.residence.ClanHall;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.pledge.Clan;
+import ru.l2.gameserver.model.quest.Quest;
+import ru.l2.gameserver.model.quest.QuestState;
+import ru.l2.gameserver.utils.TimeUtils;
 
 public class _655_AGrandPlanForTamingWildBeasts extends Quest {
     private static final int MESSENGER = 35627;

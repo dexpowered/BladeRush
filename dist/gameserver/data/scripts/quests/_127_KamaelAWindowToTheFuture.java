@@ -1,9 +1,9 @@
 package quests;
 
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.quest.Quest;
-import ru.j2dev.gameserver.model.quest.QuestState;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ExPlayScene;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.quest.Quest;
+import ru.l2.gameserver.model.quest.QuestState;
+import ru.l2.gameserver.network.lineage2.serverpackets.ExPlayScene;
 
 public class _127_KamaelAWindowToTheFuture extends Quest {
     private final int AKLAN;

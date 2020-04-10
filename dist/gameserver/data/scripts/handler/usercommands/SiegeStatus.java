@@ -1,9 +1,9 @@
 package handler.usercommands;
 
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.entity.residence.Castle;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.entity.residence.Castle;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
 
 public class SiegeStatus extends ScriptUserCommand {
     public static final int[] COMMANDS = {99};

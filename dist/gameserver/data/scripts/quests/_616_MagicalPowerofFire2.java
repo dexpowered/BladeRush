@@ -1,14 +1,14 @@
 package quests;
 
-import ru.j2dev.commons.listener.Listener;
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.listener.actor.OnDeathListener;
-import ru.j2dev.gameserver.manager.ServerVariables;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.GameObjectsStorage;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.quest.Quest;
-import ru.j2dev.gameserver.model.quest.QuestState;
+import ru.l2.commons.listener.Listener;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.listener.actor.OnDeathListener;
+import ru.l2.gameserver.manager.ServerVariables;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.GameObjectsStorage;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.quest.Quest;
+import ru.l2.gameserver.model.quest.QuestState;
 
 public class _616_MagicalPowerofFire2 extends Quest {
     private static final int KETRAS_HOLY_ALTAR = 31558;

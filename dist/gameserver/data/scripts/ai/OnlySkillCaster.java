@@ -1,12 +1,12 @@
 package ai;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ai.Mystic;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.tables.SkillTable;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ai.Mystic;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.tables.SkillTable;
 
 public class OnlySkillCaster extends Mystic {
 

@@ -1,0 +1,112 @@
+
+checkRequirements:
+     [echo] Check ANT version
+     [echo] Check JDK version
+
+init:
+    [mkdir] Created dir: D:\BladeRush\build\classes
+    [mkdir] Created dir: D:\BladeRush\build\dist
+    [mkdir] Created dir: D:\BladeRush\build\dist\gameserver
+    [mkdir] Created dir: D:\BladeRush\build\dist\lib
+    [mkdir] Created dir: D:\BladeRush\build\dist\authserver
+    [mkdir] Created dir: D:\BladeRush\build\dist\tools
+
+compile-commons:
+   [delete] Deleting directory D:\BladeRush\build\classes
+    [mkdir] Created dir: D:\BladeRush\build\classes
+    [javac] Compiling 109 source files to D:\BladeRush\build\classes
+    [javac] Note: D:\BladeRush\commons\src\main\java\ru\l2\commons\net\io\IOContext.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+
+commons-jar:
+     [echo] Current Revision 3
+      [jar] Building jar: D:\BladeRush\build\commons.jar
+ [stringer] Stringer Java Obfuscator Standard v3.0.3 (20170228), LICEL CORPORATION
+ [stringer] License file: D:\BladeRush\stringer\stringer.jar
+ [stringer] 
+ [stringer] Stringer Java Obfuscator Standard
+ [stringer] Version: 3.0.3
+ [stringer] Build id: 20170228
+ [stringer] 
+ [stringer] Licensed to: coolman@paradi.se [Cracked]
+ [stringer] 
+ [stringer] 
+ [stringer] (c) Copyright LICEL CORPORATION 2011-2017.  All rights reserved.
+ [stringer] Visit https://jfxstore.com/stringer
+ [stringer] 
+ [stringer] Third-Party Licenses. Information about third-party components and
+ [stringer]  its licenses can be found in distribution
+ [stringer] [Protecting commons.jar]
+ [stringer] [Analyzing commons.jar]
+ [stringer] Found ru/l2/commons/util/SystemUtil,openStream
+ [stringer] Found ru/l2/commons/util/SystemUtil,openStream
+ [stringer] Contains signature: false
+ [stringer] [Finishing commons.jar]
+ [stringer] Total strings processed: 0
+ [stringer] Total classes processed: 0
+ [stringer] Total resources processed: 0
+ [stringer] Total bytes processed: 494535, ratio 1.0131598370186135
+
+compile-gameserver:
+   [delete] Deleting directory D:\BladeRush\build\classes
+    [mkdir] Created dir: D:\BladeRush\build\classes
+    [javac] Compiling 1705 source files to D:\BladeRush\build\classes
+    [javac] D:\BladeRush\gameserver\src\main\java\ru\l2\gameserver\cache\HtmCache.java:44: warning: [unchecked] unchecked conversion
+    [javac]     private final Cache<String, String>[] caffeine_cache = new Cache[Language.VALUES.length];
+    [javac]                                                            ^
+    [javac]   required: Cache<String,String>[]
+    [javac]   found:    Cache[]
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 1 warning
+
+gameserver-jar:
+     [echo] Current Revision 3
+      [jar] Building jar: D:\BladeRush\build\gameserver.jar
+ [stringer] Stringer Java Obfuscator Standard v3.0.3 (20170228), LICEL CORPORATION
+ [stringer] License file: D:\BladeRush\stringer\stringer.jar
+ [stringer] 
+ [stringer] Stringer Java Obfuscator Standard
+ [stringer] Version: 3.0.3
+ [stringer] Build id: 20170228
+ [stringer] 
+ [stringer] Licensed to: coolman@paradi.se [Cracked]
+ [stringer] 
+ [stringer] 
+ [stringer] (c) Copyright LICEL CORPORATION 2011-2017.  All rights reserved.
+ [stringer] Visit https://jfxstore.com/stringer
+ [stringer] 
+ [stringer] Third-Party Licenses. Information about third-party components and
+ [stringer]  its licenses can be found in distribution
+ [stringer] [Protecting gameserver.jar]
+ [stringer] [Analyzing gameserver.jar]
+ [stringer] Found ru/l2/gameserver/taskmanager/L2TopRuManager,openConnection
+ [stringer] Found ru/l2/gameserver/utils/IpUtils,openStream
+ [stringer] Found ru/l2/gameserver/utils/IpUtils,openStream
+ [stringer] Found ru/l2/gameserver/utils/IpUtils,openStream
+ [stringer] Found ru/l2/gameserver/utils/IpUtils,openStream
+ [stringer] Contains signature: false
+ [stringer] [Finishing gameserver.jar]
+ [stringer] Total strings processed: 861
+ [stringer] Total classes processed: 115
+ [stringer] Total resources processed: 0
+ [stringer] Total bytes processed: 8428206, ratio 1.0345352261204817
+
+gameserver:
+    [mkdir] Created dir: D:\BladeRush\build\dist\gameserver\geodata
+    [mkdir] Created dir: D:\BladeRush\build\dist\gameserver\log
+     [copy] Copying 1 file to D:\BladeRush\build\dist\lib
+   [delete] Deleting directory D:\BladeRush\build\classes
+     [copy] Copying 1039 files to D:\BladeRush\build\dist\gameserver
+     [copy] Copying 16 files to D:\BladeRush\build\dist\authserver
+     [copy] Copying 105 files to D:\BladeRush\build\dist\tools
+
+dist:
+   [delete] Deleting: D:\BladeRush\build\commons.jar
+   [delete] Deleting: D:\BladeRush\build\gameserver.jar
+     [echo] Creating Zip archive
+      [zip] Building zip: D:\BladeRush\build_archive\_Interlude_Rev.3.zip
+     [echo] Creating Zip archive done
+
+BUILD SUCCESSFUL
+Total time: 11 minutes 33 seconds

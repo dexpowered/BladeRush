@@ -1,8 +1,8 @@
 package handler.items;
 
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ShowCalc;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.ShowCalc;
 
 public class Calculator extends ScriptItemHandler {
     private static final int CALCULATOR = 4393;

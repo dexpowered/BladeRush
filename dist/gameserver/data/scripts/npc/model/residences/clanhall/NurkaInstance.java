@@ -1,15 +1,15 @@
 package npc.model.residences.clanhall;
 
 import npc.model.residences.SiegeGuardInstance;
-import ru.j2dev.gameserver.model.AggroList.HateInfo;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.entity.events.impl.SiegeEvent;
-import ru.j2dev.gameserver.model.pledge.Clan;
-import ru.j2dev.gameserver.tables.SkillTable;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.model.AggroList.HateInfo;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.entity.events.impl.SiegeEvent;
+import ru.l2.gameserver.model.pledge.Clan;
+import ru.l2.gameserver.tables.SkillTable;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 import java.util.HashMap;
 import java.util.Map;

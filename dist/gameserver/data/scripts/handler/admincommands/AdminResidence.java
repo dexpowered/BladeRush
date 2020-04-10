@@ -1,19 +1,19 @@
 package handler.admincommands;
 
-import ru.j2dev.commons.dao.JdbcEntityState;
-import ru.j2dev.commons.threading.RunnableImpl;
-import ru.j2dev.gameserver.ThreadPoolManager;
-import ru.j2dev.gameserver.data.xml.holder.ResidenceHolder;
-import ru.j2dev.gameserver.handler.admincommands.AdminCommandHandler;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.entity.events.impl.SiegeEvent;
-import ru.j2dev.gameserver.model.entity.events.objects.SiegeClanObject;
-import ru.j2dev.gameserver.model.entity.residence.Residence;
-import ru.j2dev.gameserver.model.pledge.Clan;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.j2dev.gameserver.tables.ClanTable;
-import ru.j2dev.gameserver.utils.HtmlUtils;
+import ru.l2.commons.dao.JdbcEntityState;
+import ru.l2.commons.threading.RunnableImpl;
+import ru.l2.gameserver.ThreadPoolManager;
+import ru.l2.gameserver.data.xml.holder.ResidenceHolder;
+import ru.l2.gameserver.handler.admincommands.AdminCommandHandler;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.entity.events.impl.SiegeEvent;
+import ru.l2.gameserver.model.entity.events.objects.SiegeClanObject;
+import ru.l2.gameserver.model.entity.residence.Residence;
+import ru.l2.gameserver.model.pledge.Clan;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
+import ru.l2.gameserver.tables.ClanTable;
+import ru.l2.gameserver.utils.HtmlUtils;
 
 import java.util.Calendar;
 import java.util.Objects;

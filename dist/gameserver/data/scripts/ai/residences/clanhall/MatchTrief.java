@@ -1,8 +1,8 @@
 package ai.residences.clanhall;
 
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.tables.SkillTable;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.tables.SkillTable;
 
 public class MatchTrief extends MatchFighter {
     public static final Skill HOLD = SkillTable.getInstance().getInfo(4047, 6);

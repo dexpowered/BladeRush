@@ -2,19 +2,19 @@ package ai.residences.clanhall;
 
 import npc.model.residences.clanhall.RainbowGourdInstance;
 import npc.model.residences.clanhall.RainbowYetiInstance;
-import ru.j2dev.commons.threading.RunnableImpl;
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ThreadPoolManager;
-import ru.j2dev.gameserver.ai.CharacterAI;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.entity.events.impl.ClanHallMiniGameEvent;
-import ru.j2dev.gameserver.model.entity.events.objects.CMGSiegeClanObject;
-import ru.j2dev.gameserver.model.entity.events.objects.SpawnExObject;
-import ru.j2dev.gameserver.model.entity.events.objects.ZoneObject;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.utils.NpcUtils;
+import ru.l2.commons.threading.RunnableImpl;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ThreadPoolManager;
+import ru.l2.gameserver.ai.CharacterAI;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.entity.events.impl.ClanHallMiniGameEvent;
+import ru.l2.gameserver.model.entity.events.objects.CMGSiegeClanObject;
+import ru.l2.gameserver.model.entity.events.objects.SpawnExObject;
+import ru.l2.gameserver.model.entity.events.objects.ZoneObject;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.utils.NpcUtils;
 
 import java.util.List;
 

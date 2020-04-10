@@ -1,9 +1,9 @@
 package ai.primeval_isle;
 
-import ru.j2dev.gameserver.ai.DefaultAI;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.tables.SkillTable;
+import ru.l2.gameserver.ai.DefaultAI;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.tables.SkillTable;
 
 public class SprigantStun extends DefaultAI {
     private static final int TICK_IN_MILISECONDS = 15000;

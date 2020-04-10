@@ -1,21 +1,21 @@
 package quests;
 
-import ru.j2dev.commons.threading.RunnableImpl;
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ThreadPoolManager;
-import ru.j2dev.gameserver.ai.CtrlEvent;
-import ru.j2dev.gameserver.data.xml.holder.NpcTemplateHolder;
-import ru.j2dev.gameserver.model.*;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.model.quest.Quest;
-import ru.j2dev.gameserver.model.quest.QuestState;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.InventoryUpdate;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.tables.PetDataTable;
-import ru.j2dev.gameserver.tables.PetDataTable.L2Pet;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.commons.threading.RunnableImpl;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ThreadPoolManager;
+import ru.l2.gameserver.ai.CtrlEvent;
+import ru.l2.gameserver.data.xml.holder.NpcTemplateHolder;
+import ru.l2.gameserver.model.*;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.model.quest.Quest;
+import ru.l2.gameserver.model.quest.QuestState;
+import ru.l2.gameserver.network.lineage2.serverpackets.InventoryUpdate;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.tables.PetDataTable;
+import ru.l2.gameserver.tables.PetDataTable.L2Pet;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.utils.Location;
 
 import java.util.ArrayList;
 import java.util.List;

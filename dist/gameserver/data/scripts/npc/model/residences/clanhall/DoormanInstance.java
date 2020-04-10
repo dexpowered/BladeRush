@@ -1,7 +1,7 @@
 package npc.model.residences.clanhall;
 
-import ru.j2dev.gameserver.model.entity.residence.Residence;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.model.entity.residence.Residence;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public class DoormanInstance extends npc.model.residences.DoormanInstance {
     public DoormanInstance(final int objectId, final NpcTemplate template) {

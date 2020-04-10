@@ -1,20 +1,20 @@
 package ai.isle_of_prayer;
 
-import ru.j2dev.commons.threading.RunnableImpl;
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ThreadPoolManager;
-import ru.j2dev.gameserver.ai.Fighter;
-import ru.j2dev.gameserver.data.xml.holder.NpcTemplateHolder;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.SimpleSpawner;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.stats.Stats;
-import ru.j2dev.gameserver.stats.funcs.EFunction;
-import ru.j2dev.gameserver.stats.funcs.FuncTemplate;
-import ru.j2dev.gameserver.utils.ItemFunctions;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.commons.threading.RunnableImpl;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ThreadPoolManager;
+import ru.l2.gameserver.ai.Fighter;
+import ru.l2.gameserver.data.xml.holder.NpcTemplateHolder;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.SimpleSpawner;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.stats.Stats;
+import ru.l2.gameserver.stats.funcs.EFunction;
+import ru.l2.gameserver.stats.funcs.FuncTemplate;
+import ru.l2.gameserver.utils.ItemFunctions;
+import ru.l2.gameserver.utils.Location;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,12 +1,12 @@
 package ai;
 
-import ru.j2dev.gameserver.ai.CtrlIntention;
-import ru.j2dev.gameserver.ai.Fighter;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.quest.QuestEventType;
-import ru.j2dev.gameserver.model.quest.QuestState;
+import ru.l2.gameserver.ai.CtrlIntention;
+import ru.l2.gameserver.ai.Fighter;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.quest.QuestEventType;
+import ru.l2.gameserver.model.quest.QuestState;
 
 import java.util.List;
 

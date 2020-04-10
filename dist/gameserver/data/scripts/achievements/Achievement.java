@@ -1,13 +1,13 @@
 package achievements;
 
 import achievements.AchievementInfo.AchievementInfoLevel;
-import ru.j2dev.commons.lang.reference.HardReference;
-import ru.j2dev.commons.threading.RunnableImpl;
-import ru.j2dev.gameserver.ThreadPoolManager;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.network.lineage2.components.CustomMessage;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ExShowScreenMessage;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
+import ru.l2.commons.lang.reference.HardReference;
+import ru.l2.commons.threading.RunnableImpl;
+import ru.l2.gameserver.ThreadPoolManager;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.network.lineage2.components.CustomMessage;
+import ru.l2.gameserver.network.lineage2.serverpackets.ExShowScreenMessage;
+import ru.l2.gameserver.network.lineage2.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 
 public class Achievement {
     public static final int BASE_ACHIEVEMENT_LEVEL = 1;

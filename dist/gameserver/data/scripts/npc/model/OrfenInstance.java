@@ -1,14 +1,14 @@
 package npc.model;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ai.CtrlIntention;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.instances.BossInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.PlaySound;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.PlaySound.Type;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ai.CtrlIntention;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.instances.BossInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.PlaySound;
+import ru.l2.gameserver.network.lineage2.serverpackets.PlaySound.Type;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.utils.Location;
 
 public class OrfenInstance extends BossInstance {
     public static final Location nest = new Location(43728, 17220, -4342);

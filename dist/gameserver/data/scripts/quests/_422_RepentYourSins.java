@@ -1,11 +1,11 @@
 package quests;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.model.Summon;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.model.quest.Quest;
-import ru.j2dev.gameserver.model.quest.QuestState;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.model.Summon;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.model.quest.Quest;
+import ru.l2.gameserver.model.quest.QuestState;
 
 public class _422_RepentYourSins extends Quest {
     private static final int SCAVENGER_WERERAT_SKULL = 4326;

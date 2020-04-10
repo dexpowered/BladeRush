@@ -1,8 +1,8 @@
 package handler.items;
 
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.scripts.Functions;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.scripts.Functions;
 
 public class Special extends SimpleItemHandler {
     private static final int[] ITEM_IDS = {8060};

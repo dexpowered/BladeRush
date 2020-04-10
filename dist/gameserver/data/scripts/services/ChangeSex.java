@@ -1,14 +1,14 @@
 package services;
 
-import ru.j2dev.commons.dbutils.DbUtils;
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.database.DatabaseFactory;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.utils.ItemFunctions;
-import ru.j2dev.gameserver.utils.Log;
+import ru.l2.commons.dbutils.DbUtils;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.database.DatabaseFactory;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.utils.ItemFunctions;
+import ru.l2.gameserver.utils.Log;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,8 +1,8 @@
 package handler.usercommands;
 
-import ru.j2dev.gameserver.handler.usercommands.IUserCommandHandler;
-import ru.j2dev.gameserver.handler.usercommands.UserCommandHandler;
-import ru.j2dev.gameserver.listener.script.OnInitScriptListener;
+import ru.l2.gameserver.handler.usercommands.IUserCommandHandler;
+import ru.l2.gameserver.handler.usercommands.UserCommandHandler;
+import ru.l2.gameserver.listener.script.OnInitScriptListener;
 
 public abstract class ScriptUserCommand implements IUserCommandHandler, OnInitScriptListener {
     @Override

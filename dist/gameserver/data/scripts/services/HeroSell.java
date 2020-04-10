@@ -1,11 +1,11 @@
 package services;
 
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.SocialAction;
-import ru.j2dev.gameserver.scripts.Functions;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
+import ru.l2.gameserver.network.lineage2.serverpackets.SocialAction;
+import ru.l2.gameserver.scripts.Functions;
 
 public class HeroSell extends Functions {
     private static boolean makeCustomHero(final Player player, final long customHeroDuration) {

@@ -1,10 +1,10 @@
 package ai;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ai.DefaultAI;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MagicSkillUse;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ai.DefaultAI;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
 
 public class NihilInvaderChest extends DefaultAI {
     private static final int[] _firstLevelItems = {4039, 4040, 4041, 4042, 4043, 4044};

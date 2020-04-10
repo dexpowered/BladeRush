@@ -1,8 +1,11 @@
 /out
 /build
 /todo
-/build.log
+/ant/build.log
 /.idea
 /build_archive
-/build_jars.log
-/build_jars_obf.log
+/ant/build_jars.log
+/ant/build_jars_obf.log
+*.iws
+*.iml
+*.ipr

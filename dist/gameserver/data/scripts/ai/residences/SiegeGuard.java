@@ -1,18 +1,18 @@
 package ai.residences;
 
 import npc.model.residences.SiegeGuardInstance;
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.ai.CtrlIntention;
-import ru.j2dev.gameserver.ai.DefaultAI;
-import ru.j2dev.gameserver.geodata.GeoEngine;
-import ru.j2dev.gameserver.model.AggroList.AggroInfo;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.World;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.ai.CtrlIntention;
+import ru.l2.gameserver.ai.DefaultAI;
+import ru.l2.gameserver.geodata.GeoEngine;
+import ru.l2.gameserver.model.AggroList.AggroInfo;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.World;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.utils.Location;
 
 import java.util.List;
 

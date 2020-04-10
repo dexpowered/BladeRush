@@ -1,17 +1,17 @@
 package handler.items;
 
 import gnu.trove.set.hash.TIntHashSet;
-import ru.j2dev.gameserver.cache.Msg;
-import ru.j2dev.gameserver.data.xml.holder.DoorHolder;
-import ru.j2dev.gameserver.model.GameObject;
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.DoorInstance;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.network.lineage2.components.CustomMessage;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.SystemMessage2;
-import ru.j2dev.gameserver.templates.DoorTemplate;
+import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.xml.holder.DoorHolder;
+import ru.l2.gameserver.model.GameObject;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.DoorInstance;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.network.lineage2.components.CustomMessage;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage2;
+import ru.l2.gameserver.templates.DoorTemplate;
 
 public class Keys extends ScriptItemHandler {
     private int[] _itemIds;

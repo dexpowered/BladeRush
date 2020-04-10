@@ -1,12 +1,12 @@
 package npc.model.residences.clanhall;
 
-import ru.j2dev.gameserver.data.xml.holder.ResidenceHolder;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.entity.residence.ClanHall;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
-import ru.j2dev.gameserver.utils.TimeUtils;
+import ru.l2.gameserver.data.xml.holder.ResidenceHolder;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.entity.residence.ClanHall;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.utils.TimeUtils;
 
 public class BrakelInstance extends NpcInstance {
     public BrakelInstance(final int objectId, final NpcTemplate template) {

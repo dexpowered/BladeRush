@@ -1,9 +1,9 @@
 package achievements;
 
-import ru.j2dev.commons.time.cron.NextTime;
-import ru.j2dev.gameserver.data.xml.holder.StringHolder;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.reward.RewardData;
+import ru.l2.commons.time.cron.NextTime;
+import ru.l2.gameserver.data.xml.holder.StringHolder;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.reward.RewardData;
 
 import java.util.*;
 

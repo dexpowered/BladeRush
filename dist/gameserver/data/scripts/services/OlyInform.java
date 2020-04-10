@@ -1,12 +1,12 @@
 package services;
 
-import ru.j2dev.gameserver.Announcements;
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.listener.actor.player.OnPlayerEnterListener;
-import ru.j2dev.gameserver.listener.script.OnInitScriptListener;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.actor.listener.PlayerListenerList;
-import ru.j2dev.gameserver.model.entity.olympiad.OlympiadSystemManager;
+import ru.l2.gameserver.Announcements;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.listener.actor.player.OnPlayerEnterListener;
+import ru.l2.gameserver.listener.script.OnInitScriptListener;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.actor.listener.PlayerListenerList;
+import ru.l2.gameserver.model.entity.olympiad.OlympiadSystemManager;
 
 public class OlyInform implements OnInitScriptListener {
     private static final long SECONDS_IN_MINUTE = 60L;

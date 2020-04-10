@@ -1,11 +1,11 @@
 package handler.items;
 
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.model.pledge.Clan;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.SystemMessage;
-import ru.j2dev.gameserver.scripts.Functions;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.model.pledge.Clan;
+import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage;
+import ru.l2.gameserver.scripts.Functions;
 
 public class ClanReputation extends SimpleItemHandler {
     private static final int[] ITEM_IDS = {Config.ITEM_CLAN_REPUTATION_ID};

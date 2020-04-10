@@ -1,9 +1,9 @@
 package quests;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.quest.Quest;
-import ru.j2dev.gameserver.model.quest.QuestState;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.quest.Quest;
+import ru.l2.gameserver.model.quest.QuestState;
 
 public class _617_GatherTheFlames extends Quest {
     public static final int[] Recipes = {6881, 6883, 6885, 6887, 7580, 6891, 6893, 6895, 6897, 6899};

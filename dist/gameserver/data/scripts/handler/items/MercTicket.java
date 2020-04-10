@@ -2,21 +2,21 @@ package handler.items;
 
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
-import ru.j2dev.gameserver.dao.CastleHiredGuardDAO;
-import ru.j2dev.gameserver.data.xml.holder.ResidenceHolder;
-import ru.j2dev.gameserver.manager.ReflectionManager;
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.entity.residence.Castle;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.model.pledge.Privilege;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ActionFail;
-import ru.j2dev.gameserver.templates.item.support.MerchantGuard;
-import ru.j2dev.gameserver.utils.Location;
-import ru.j2dev.gameserver.utils.Log;
-import ru.j2dev.gameserver.utils.Log.ItemLog;
-import ru.j2dev.gameserver.utils.PositionUtils;
+import ru.l2.gameserver.dao.CastleHiredGuardDAO;
+import ru.l2.gameserver.data.xml.holder.ResidenceHolder;
+import ru.l2.gameserver.manager.ReflectionManager;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.entity.residence.Castle;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.model.pledge.Privilege;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.network.lineage2.serverpackets.ActionFail;
+import ru.l2.gameserver.templates.item.support.MerchantGuard;
+import ru.l2.gameserver.utils.Location;
+import ru.l2.gameserver.utils.Log;
+import ru.l2.gameserver.utils.Log.ItemLog;
+import ru.l2.gameserver.utils.PositionUtils;
 
 import java.util.Collection;
 

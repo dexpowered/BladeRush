@@ -1,10 +1,10 @@
 package handler.items;
 
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MagicSkillUse;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.SystemMessage;
-import ru.j2dev.gameserver.tables.SkillTable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
+import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage;
+import ru.l2.gameserver.tables.SkillTable;
 
 public class Potions extends SimpleItemHandler {
     private static final int[] ITEM_IDS = {7906, 7907, 7908, 7909, 7910, 7911};

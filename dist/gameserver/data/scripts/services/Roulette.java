@@ -1,16 +1,16 @@
 package services;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.cache.HtmCache;
-import ru.j2dev.gameserver.cache.Msg;
-import ru.j2dev.gameserver.handler.npcdialog.INpcDialogAppender;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.network.lineage2.components.CustomMessage;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.utils.GameStats;
-import ru.j2dev.gameserver.utils.Util;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.cache.HtmCache;
+import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.handler.npcdialog.INpcDialogAppender;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.network.lineage2.components.CustomMessage;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.utils.GameStats;
+import ru.l2.gameserver.utils.Util;
 
 import java.util.Arrays;
 import java.util.List;

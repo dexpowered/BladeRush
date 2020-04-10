@@ -1,11 +1,11 @@
 package services;
 
-import ru.j2dev.gameserver.model.Party;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.utils.Location;
-import ru.j2dev.gameserver.utils.MapUtils;
+import ru.l2.gameserver.model.Party;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.utils.Location;
+import ru.l2.gameserver.utils.MapUtils;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,16 +1,16 @@
 package npc.model.residences;
 
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.base.Experience;
-import ru.j2dev.gameserver.model.entity.events.impl.SiegeEvent;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.pledge.Clan;
-import ru.j2dev.gameserver.model.reward.RewardItem;
-import ru.j2dev.gameserver.model.reward.RewardList;
-import ru.j2dev.gameserver.model.reward.RewardType;
-import ru.j2dev.gameserver.stats.Stats;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.base.Experience;
+import ru.l2.gameserver.model.entity.events.impl.SiegeEvent;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.pledge.Clan;
+import ru.l2.gameserver.model.reward.RewardItem;
+import ru.l2.gameserver.model.reward.RewardList;
+import ru.l2.gameserver.model.reward.RewardType;
+import ru.l2.gameserver.stats.Stats;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 import java.util.List;
 import java.util.Map.Entry;

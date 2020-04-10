@@ -1,9 +1,9 @@
 package npc.model;
 
-import ru.j2dev.gameserver.manager.SpawnManager;
-import ru.j2dev.gameserver.model.instances.DoorInstance;
-import ru.j2dev.gameserver.model.instances.RaidBossInstance;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.manager.SpawnManager;
+import ru.l2.gameserver.model.instances.DoorInstance;
+import ru.l2.gameserver.model.instances.RaidBossInstance;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 import java.util.Objects;
 import java.util.stream.IntStream;

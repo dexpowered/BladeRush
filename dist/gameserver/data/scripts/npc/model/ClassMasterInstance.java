@@ -2,22 +2,22 @@ package npc.model;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.cache.Msg;
-import ru.j2dev.gameserver.data.xml.holder.ItemTemplateHolder;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.base.ClassId;
-import ru.j2dev.gameserver.model.instances.MerchantInstance;
-import ru.j2dev.gameserver.network.lineage2.components.CustomMessage;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MagicSkillUse;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.SocialAction;
-import ru.j2dev.gameserver.templates.item.ItemTemplate;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
-import ru.j2dev.gameserver.utils.HtmlUtils;
-import ru.j2dev.gameserver.utils.ItemFunctions;
-import ru.j2dev.gameserver.utils.Util;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.xml.holder.ItemTemplateHolder;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.base.ClassId;
+import ru.l2.gameserver.model.instances.MerchantInstance;
+import ru.l2.gameserver.network.lineage2.components.CustomMessage;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
+import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
+import ru.l2.gameserver.network.lineage2.serverpackets.SocialAction;
+import ru.l2.gameserver.templates.item.ItemTemplate;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.utils.HtmlUtils;
+import ru.l2.gameserver.utils.ItemFunctions;
+import ru.l2.gameserver.utils.Util;
 
 import java.util.StringTokenizer;
 

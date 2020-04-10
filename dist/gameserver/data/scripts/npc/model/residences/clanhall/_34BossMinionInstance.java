@@ -1,9 +1,9 @@
 package npc.model.residences.clanhall;
 
 import npc.model.residences.SiegeGuardInstance;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public abstract class _34BossMinionInstance extends SiegeGuardInstance implements _34SiegeGuard {
     public _34BossMinionInstance(final int objectId, final NpcTemplate template) {

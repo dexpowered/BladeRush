@@ -1,12 +1,12 @@
 package ai;
 
-import ru.j2dev.commons.lang.reference.HardReference;
-import ru.j2dev.commons.lang.reference.HardReferences;
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ai.DefaultAI;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.World;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
+import ru.l2.commons.lang.reference.HardReference;
+import ru.l2.commons.lang.reference.HardReferences;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ai.DefaultAI;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.World;
+import ru.l2.gameserver.model.instances.NpcInstance;
 
 public class EdwinFollower extends DefaultAI {
     private static final int EDWIN_ID = 32072;

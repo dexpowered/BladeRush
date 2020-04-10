@@ -1,14 +1,14 @@
 package ai.residences.clanhall;
 
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.ai.CtrlIntention;
-import ru.j2dev.gameserver.ai.Fighter;
-import ru.j2dev.gameserver.geodata.GeoEngine;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.World;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.instances.residences.clanhall.CTBBossInstance;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.ai.CtrlIntention;
+import ru.l2.gameserver.ai.Fighter;
+import ru.l2.gameserver.geodata.GeoEngine;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.World;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.instances.residences.clanhall.CTBBossInstance;
+import ru.l2.gameserver.utils.Location;
 
 import java.util.List;
 

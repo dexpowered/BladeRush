@@ -1,22 +1,22 @@
 package services;
 
 import org.apache.commons.lang3.ArrayUtils;
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.Config.RateBonusInfo;
-import ru.j2dev.gameserver.cache.HtmCache;
-import ru.j2dev.gameserver.cache.Msg;
-import ru.j2dev.gameserver.dao.AccountBonusDAO;
-import ru.j2dev.gameserver.data.xml.holder.ItemTemplateHolder;
-import ru.j2dev.gameserver.data.xml.holder.StringHolder;
-import ru.j2dev.gameserver.handler.voicecommands.IVoicedCommandHandler;
-import ru.j2dev.gameserver.handler.voicecommands.VoicedCommandHandler;
-import ru.j2dev.gameserver.listener.script.OnInitScriptListener;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.utils.ItemFunctions;
-import ru.j2dev.gameserver.utils.Log;
-import ru.j2dev.gameserver.utils.TimeUtils;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.Config.RateBonusInfo;
+import ru.l2.gameserver.cache.HtmCache;
+import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.dao.AccountBonusDAO;
+import ru.l2.gameserver.data.xml.holder.ItemTemplateHolder;
+import ru.l2.gameserver.data.xml.holder.StringHolder;
+import ru.l2.gameserver.handler.voicecommands.IVoicedCommandHandler;
+import ru.l2.gameserver.handler.voicecommands.VoicedCommandHandler;
+import ru.l2.gameserver.listener.script.OnInitScriptListener;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.utils.ItemFunctions;
+import ru.l2.gameserver.utils.Log;
+import ru.l2.gameserver.utils.TimeUtils;
 
 import java.util.Locale;
 

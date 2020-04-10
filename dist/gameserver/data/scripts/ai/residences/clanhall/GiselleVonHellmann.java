@@ -1,17 +1,17 @@
 package ai.residences.clanhall;
 
 import ai.residences.SiegeGuardMystic;
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.Zone;
-import ru.j2dev.gameserver.model.entity.events.impl.ClanHallSiegeEvent;
-import ru.j2dev.gameserver.model.entity.events.objects.SpawnExObject;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.tables.SkillTable;
-import ru.j2dev.gameserver.utils.PositionUtils;
-import ru.j2dev.gameserver.utils.ReflectionUtils;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.Zone;
+import ru.l2.gameserver.model.entity.events.impl.ClanHallSiegeEvent;
+import ru.l2.gameserver.model.entity.events.objects.SpawnExObject;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.tables.SkillTable;
+import ru.l2.gameserver.utils.PositionUtils;
+import ru.l2.gameserver.utils.ReflectionUtils;
 
 public class GiselleVonHellmann extends SiegeGuardMystic {
     private static final Skill DAMAGE_SKILL = SkillTable.getInstance().getInfo(5003, 1);

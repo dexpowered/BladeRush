@@ -1,14 +1,14 @@
 package achievements;
 
-import ru.j2dev.commons.time.cron.SchedulingPattern;
-import ru.j2dev.gameserver.model.AggroList.AggroInfo;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.entity.olympiad.OlympiadGame;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.instances.RaidBossInstance;
-import ru.j2dev.gameserver.model.quest.Quest;
-import ru.j2dev.gameserver.model.quest.QuestState;
+import ru.l2.commons.time.cron.SchedulingPattern;
+import ru.l2.gameserver.model.AggroList.AggroInfo;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.entity.olympiad.OlympiadGame;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.instances.RaidBossInstance;
+import ru.l2.gameserver.model.quest.Quest;
+import ru.l2.gameserver.model.quest.QuestState;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

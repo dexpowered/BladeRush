@@ -1,13 +1,13 @@
 package npc.model.residences.castle;
 
-import ru.j2dev.gameserver.ai.CtrlIntention;
-import ru.j2dev.gameserver.manager.CastleManorManager;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MyTargetSelected;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ValidateLocation;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.ai.CtrlIntention;
+import ru.l2.gameserver.manager.CastleManorManager;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.MyTargetSelected;
+import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
+import ru.l2.gameserver.network.lineage2.serverpackets.ValidateLocation;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public class BlacksmithInstance extends NpcInstance {
     protected static final int COND_ALL_FALSE = 0;

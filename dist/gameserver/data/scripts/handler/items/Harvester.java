@@ -1,12 +1,12 @@
 package handler.items;
 
-import ru.j2dev.gameserver.model.GameObject;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.instances.MonsterInstance;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
-import ru.j2dev.gameserver.tables.SkillTable;
+import ru.l2.gameserver.model.GameObject;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.instances.MonsterInstance;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.tables.SkillTable;
 
 public class Harvester extends SimpleItemHandler {
     private static final int[] ITEM_IDS = {5125};

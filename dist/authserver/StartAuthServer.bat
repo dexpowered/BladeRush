@@ -3,7 +3,7 @@
 :start
 echo Starting AuthServer.
 echo.
-java -server -Duser.timezone=GMT+3 -Dfile.encoding=UTF-8 -Xmx256m -cp config;../lib/* ru.j2dev.authserver.AuthServer
+java -server -Duser.timezone=GMT+3 -Dfile.encoding=UTF-8 -Xmx256m -cp config;../lib/* ru.l2.authserver.AuthServer
 if ERRORLEVEL 2 goto restart
 if ERRORLEVEL 1 goto error
 goto end

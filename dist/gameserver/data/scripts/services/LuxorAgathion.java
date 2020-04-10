@@ -1,9 +1,9 @@
 package services;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.scripts.Functions;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.scripts.Functions;
 
 public class LuxorAgathion extends Functions {
     private static final int[][] INGRIDIENTS = {{6471, 25}, {5094, 50}, {9814, 4}, {9816, 5}, {9817, 5}, {9815, 3}, {57, 7500000}};

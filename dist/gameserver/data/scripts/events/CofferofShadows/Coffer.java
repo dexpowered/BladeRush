@@ -1,14 +1,14 @@
 package events.CofferofShadows;
 
 import handler.items.ScriptItemHandler;
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.model.reward.RewardData;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.SystemMessage2;
-import ru.j2dev.gameserver.utils.ItemFunctions;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.model.reward.RewardData;
+import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage2;
+import ru.l2.gameserver.utils.ItemFunctions;
 
 import java.util.HashMap;
 import java.util.Map;

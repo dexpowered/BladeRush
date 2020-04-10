@@ -1,15 +1,15 @@
 package ai;
 
 import npc.model.QueenAntInstance;
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ThreadPoolManager;
-import ru.j2dev.gameserver.ai.Priest;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.instances.MinionInstance;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MagicSkillUse;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ThreadPoolManager;
+import ru.l2.gameserver.ai.Priest;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.instances.MinionInstance;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
+import ru.l2.gameserver.utils.Location;
 
 public class QueenAntNurse extends Priest {
     public QueenAntNurse(final NpcInstance actor) {

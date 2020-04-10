@@ -1,10 +1,10 @@
 package npc.model.residences.castle;
 
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.entity.events.impl.CastleSiegeEvent;
-import ru.j2dev.gameserver.model.entity.events.objects.CastleDamageZoneObject;
-import ru.j2dev.gameserver.model.instances.residences.SiegeToggleNpcInstance;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.entity.events.impl.CastleSiegeEvent;
+import ru.l2.gameserver.model.entity.events.objects.CastleDamageZoneObject;
+import ru.l2.gameserver.model.instances.residences.SiegeToggleNpcInstance;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 import java.util.List;
 import java.util.Set;

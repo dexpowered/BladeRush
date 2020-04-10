@@ -1,18 +1,18 @@
 package events.TheFallHarvest;
 
 import npc.model.SquashInstance;
-import ru.j2dev.commons.threading.RunnableImpl;
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ThreadPoolManager;
-import ru.j2dev.gameserver.ai.Fighter;
-import ru.j2dev.gameserver.data.xml.holder.NpcTemplateHolder;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.SimpleSpawner;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MagicSkillUse;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.utils.Log;
+import ru.l2.commons.threading.RunnableImpl;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ThreadPoolManager;
+import ru.l2.gameserver.ai.Fighter;
+import ru.l2.gameserver.data.xml.holder.NpcTemplateHolder;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.SimpleSpawner;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.utils.Log;
 
 import java.util.concurrent.ScheduledFuture;
 

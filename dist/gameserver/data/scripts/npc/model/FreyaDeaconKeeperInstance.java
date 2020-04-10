@@ -1,21 +1,21 @@
 package npc.model;
 
-import ru.j2dev.commons.listener.Listener;
-import ru.j2dev.commons.threading.RunnableImpl;
-import ru.j2dev.gameserver.ThreadPoolManager;
-import ru.j2dev.gameserver.listener.actor.OnDeathListener;
-import ru.j2dev.gameserver.manager.SpawnManager;
-import ru.j2dev.gameserver.model.*;
-import ru.j2dev.gameserver.model.instances.DoorInstance;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.network.lineage2.components.CustomMessage;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ExShowScreenMessage;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.tables.SkillTable;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
-import ru.j2dev.gameserver.utils.Location;
-import ru.j2dev.gameserver.utils.ReflectionUtils;
+import ru.l2.commons.listener.Listener;
+import ru.l2.commons.threading.RunnableImpl;
+import ru.l2.gameserver.ThreadPoolManager;
+import ru.l2.gameserver.listener.actor.OnDeathListener;
+import ru.l2.gameserver.manager.SpawnManager;
+import ru.l2.gameserver.model.*;
+import ru.l2.gameserver.model.instances.DoorInstance;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.network.lineage2.components.CustomMessage;
+import ru.l2.gameserver.network.lineage2.serverpackets.ExShowScreenMessage;
+import ru.l2.gameserver.network.lineage2.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.tables.SkillTable;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.utils.Location;
+import ru.l2.gameserver.utils.ReflectionUtils;
 
 import java.lang.ref.SoftReference;
 import java.util.concurrent.Future;

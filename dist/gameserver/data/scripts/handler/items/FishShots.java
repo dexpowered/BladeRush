@@ -1,14 +1,14 @@
 package handler.items;
 
-import ru.j2dev.gameserver.cache.Msg;
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ExAutoSoulShot;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MagicSkillUse;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.SystemMessage;
-import ru.j2dev.gameserver.templates.item.WeaponTemplate;
-import ru.j2dev.gameserver.templates.item.WeaponTemplate.WeaponType;
+import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.ExAutoSoulShot;
+import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
+import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage;
+import ru.l2.gameserver.templates.item.WeaponTemplate;
+import ru.l2.gameserver.templates.item.WeaponTemplate.WeaponType;
 
 public class FishShots extends ScriptItemHandler {
     private static final int[] _itemIds = {6535, 6536, 6537, 6538, 6539, 6540};

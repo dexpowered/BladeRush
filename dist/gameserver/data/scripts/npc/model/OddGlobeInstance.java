@@ -1,14 +1,14 @@
 package npc.model;
 
-import ru.j2dev.gameserver.listener.zone.OnZoneEnterLeaveListener;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Zone;
-import ru.j2dev.gameserver.model.entity.Reflection;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.EventTrigger;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
-import ru.j2dev.gameserver.utils.ReflectionUtils;
+import ru.l2.gameserver.listener.zone.OnZoneEnterLeaveListener;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Zone;
+import ru.l2.gameserver.model.entity.Reflection;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.EventTrigger;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.utils.ReflectionUtils;
 
 public final class OddGlobeInstance extends NpcInstance {
     private static final int instancedZoneId = 151;

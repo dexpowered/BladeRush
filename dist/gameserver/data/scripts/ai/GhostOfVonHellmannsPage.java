@@ -1,10 +1,10 @@
 package ai;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ai.DefaultAI;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ai.DefaultAI;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.utils.Location;
 
 public class GhostOfVonHellmannsPage extends DefaultAI {
     static final Location[] points = {new Location(51462, -54539, -3176), new Location(51870, -54398, -3176), new Location(52164, -53964, -3176), new Location(52390, -53282, -3176), new Location(52058, -52071, -3104), new Location(52237, -51483, -3112), new Location(52024, -51262, -3096)};

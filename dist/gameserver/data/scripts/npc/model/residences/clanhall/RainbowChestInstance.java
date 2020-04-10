@@ -1,11 +1,11 @@
 package npc.model.residences.clanhall;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.instances.MonsterInstance;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.instances.MonsterInstance;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public class RainbowChestInstance extends MonsterInstance {
     private static final int ItemA = 8035;

@@ -1,10 +1,10 @@
 package handler.admincommands;
 
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.GameObject;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.base.TeamType;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.GameObject;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.base.TeamType;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
 
 public class AdminTeam extends ScriptAdminCommand {
     @Override

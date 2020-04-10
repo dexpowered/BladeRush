@@ -1,16 +1,16 @@
 package events.Halloween;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ai.DefaultAI;
-import ru.j2dev.gameserver.idfactory.IdFactory;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MagicSkillLaunched;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MagicSkillUse;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.tables.SkillTable;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ai.DefaultAI;
+import ru.l2.gameserver.idfactory.IdFactory;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillLaunched;
+import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.tables.SkillTable;
+import ru.l2.gameserver.utils.Location;
 
 import java.util.concurrent.atomic.AtomicInteger;
 

@@ -1,12 +1,12 @@
 package ai;
 
-import ru.j2dev.gameserver.ai.CtrlIntention;
-import ru.j2dev.gameserver.ai.Mystic;
-import ru.j2dev.gameserver.geodata.GeoEngine;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.scripts.Functions;
+import ru.l2.gameserver.ai.CtrlIntention;
+import ru.l2.gameserver.ai.Mystic;
+import ru.l2.gameserver.geodata.GeoEngine;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.scripts.Functions;
 
 public class PaganGuard extends Mystic {
     public PaganGuard(final NpcInstance actor) {

@@ -1,8 +1,8 @@
 package npc.model;
 
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public class SnowmanInstance extends NpcInstance {
     public SnowmanInstance(final int objectId, final NpcTemplate template) {

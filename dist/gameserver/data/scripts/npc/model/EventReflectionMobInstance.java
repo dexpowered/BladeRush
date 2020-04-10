@@ -1,10 +1,10 @@
 package npc.model;
 
-import ru.j2dev.gameserver.manager.ReflectionManager;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.instances.DoorInstance;
-import ru.j2dev.gameserver.model.instances.MonsterInstance;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.manager.ReflectionManager;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.instances.DoorInstance;
+import ru.l2.gameserver.model.instances.MonsterInstance;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public class EventReflectionMobInstance extends MonsterInstance {
     public EventReflectionMobInstance(final int objectId, final NpcTemplate template) {

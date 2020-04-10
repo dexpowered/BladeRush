@@ -1,7 +1,7 @@
 package services.community.custom;
 
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.base.TeamType;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.base.TeamType;
 
 public class CommunityTools {
     public static boolean checkConditions(final Player player) {

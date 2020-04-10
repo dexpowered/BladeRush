@@ -1,20 +1,20 @@
 package quests;
 
-import ru.j2dev.commons.listener.Listener;
-import ru.j2dev.commons.threading.RunnableImpl;
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ThreadPoolManager;
-import ru.j2dev.gameserver.data.xml.holder.NpcTemplateHolder;
-import ru.j2dev.gameserver.listener.actor.OnDeathListener;
-import ru.j2dev.gameserver.manager.ServerVariables;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.GameObjectsStorage;
-import ru.j2dev.gameserver.model.SimpleSpawner;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.quest.Quest;
-import ru.j2dev.gameserver.model.quest.QuestState;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.commons.listener.Listener;
+import ru.l2.commons.threading.RunnableImpl;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ThreadPoolManager;
+import ru.l2.gameserver.data.xml.holder.NpcTemplateHolder;
+import ru.l2.gameserver.listener.actor.OnDeathListener;
+import ru.l2.gameserver.manager.ServerVariables;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.GameObjectsStorage;
+import ru.l2.gameserver.model.SimpleSpawner;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.quest.Quest;
+import ru.l2.gameserver.model.quest.QuestState;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public class _625_TheFinestIngredientsPart2 extends Quest {
     private static final int Jeremy = 31521;

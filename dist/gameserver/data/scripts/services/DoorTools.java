@@ -2,14 +2,14 @@ package services;
 
 import org.apache.commons.lang3.mutable.Mutable;
 import org.apache.commons.lang3.mutable.MutableObject;
-import ru.j2dev.commons.threading.RunnableImpl;
-import ru.j2dev.commons.time.cron.SchedulingPattern;
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.ThreadPoolManager;
-import ru.j2dev.gameserver.listener.script.OnInitScriptListener;
-import ru.j2dev.gameserver.manager.ReflectionManager;
-import ru.j2dev.gameserver.model.instances.DoorInstance;
-import ru.j2dev.gameserver.scripts.Functions;
+import ru.l2.commons.threading.RunnableImpl;
+import ru.l2.commons.time.cron.SchedulingPattern;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.ThreadPoolManager;
+import ru.l2.gameserver.listener.script.OnInitScriptListener;
+import ru.l2.gameserver.manager.ReflectionManager;
+import ru.l2.gameserver.model.instances.DoorInstance;
+import ru.l2.gameserver.scripts.Functions;
 
 import java.util.concurrent.ScheduledFuture;
 

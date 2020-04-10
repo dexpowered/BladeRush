@@ -1,12 +1,12 @@
 package npc.model;
 
 import org.apache.commons.lang3.ArrayUtils;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.DoorInstance;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ExChangeClientEffectInfo;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.DoorInstance;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.ExChangeClientEffectInfo;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.utils.Location;
 
 public class SirraInstance extends NpcInstance {
     private static final int[] questInstances = {140, 138, 141};

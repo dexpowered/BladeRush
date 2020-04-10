@@ -1,10 +1,10 @@
 package handler.items;
 
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.tables.PetDataTable;
-import ru.j2dev.gameserver.tables.SkillTable;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.tables.PetDataTable;
+import ru.l2.gameserver.tables.SkillTable;
 
 public class PetSummon extends ScriptItemHandler {
     private static final int[] _itemIds = PetDataTable.getPetControlItems();

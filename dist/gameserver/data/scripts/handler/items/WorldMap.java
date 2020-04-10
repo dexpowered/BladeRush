@@ -1,9 +1,9 @@
 package handler.items;
 
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ShowMiniMap;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.ShowMiniMap;
 
 public class WorldMap extends ScriptItemHandler {
     private static final int[] _itemIds = {1665, 1863};

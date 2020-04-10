@@ -2,19 +2,19 @@ package quests;
 
 import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.LoggerFactory;
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.data.xml.holder.HennaHolder;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.model.quest.Quest;
-import ru.j2dev.gameserver.model.quest.QuestState;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MagicSkillUse;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.TutorialCloseHtml;
-import ru.j2dev.gameserver.tables.SkillTable;
-import ru.j2dev.gameserver.templates.Henna;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.data.xml.holder.HennaHolder;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.model.quest.Quest;
+import ru.l2.gameserver.model.quest.QuestState;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
+import ru.l2.gameserver.network.lineage2.serverpackets.TutorialCloseHtml;
+import ru.l2.gameserver.tables.SkillTable;
+import ru.l2.gameserver.templates.Henna;
 import org.slf4j.Logger;
 
 public class _777_AltStartPlayer extends Quest {

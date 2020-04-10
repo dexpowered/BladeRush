@@ -1,7 +1,7 @@
 package npc.model;
 
-import ru.j2dev.gameserver.model.instances.MonsterInstance;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.model.instances.MonsterInstance;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public final class SpecialMinionInstance extends MonsterInstance {
     public SpecialMinionInstance(final int objectId, final NpcTemplate template) {

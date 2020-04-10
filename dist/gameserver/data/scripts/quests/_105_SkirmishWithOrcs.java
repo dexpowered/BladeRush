@@ -1,12 +1,12 @@
 package quests;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.model.base.Race;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.quest.Quest;
-import ru.j2dev.gameserver.model.quest.QuestState;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ExShowScreenMessage;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.model.base.Race;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.quest.Quest;
+import ru.l2.gameserver.model.quest.QuestState;
+import ru.l2.gameserver.network.lineage2.serverpackets.ExShowScreenMessage;
+import ru.l2.gameserver.network.lineage2.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 
 public class _105_SkirmishWithOrcs extends Quest {
     private static final int Kendell = 30218;

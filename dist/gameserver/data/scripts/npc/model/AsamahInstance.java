@@ -1,11 +1,11 @@
 package npc.model;
 
 import quests._111_ElrokianHuntersProof;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.quest.QuestState;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.quest.QuestState;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public class AsamahInstance extends NpcInstance {
     private static final int ElrokianTrap = 8763;

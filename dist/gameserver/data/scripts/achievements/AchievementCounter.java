@@ -2,10 +2,10 @@ package achievements;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.j2dev.commons.dbutils.DbUtils;
-import ru.j2dev.gameserver.dao.CharacterDAO;
-import ru.j2dev.gameserver.database.DatabaseFactory;
-import ru.j2dev.gameserver.listener.game.OnCharacterDeleteListener;
+import ru.l2.commons.dbutils.DbUtils;
+import ru.l2.gameserver.dao.CharacterDAO;
+import ru.l2.gameserver.database.DatabaseFactory;
+import ru.l2.gameserver.listener.game.OnCharacterDeleteListener;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

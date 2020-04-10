@@ -1,18 +1,18 @@
 package npc.model.residences.clanhall;
 
-import ru.j2dev.gameserver.dao.SiegeClanDAO;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.entity.events.impl.ClanHallMiniGameEvent;
-import ru.j2dev.gameserver.model.entity.events.objects.CMGSiegeClanObject;
-import ru.j2dev.gameserver.model.entity.events.objects.SiegeClanObject;
-import ru.j2dev.gameserver.model.entity.residence.ClanHall;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.pledge.Clan;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
-import ru.j2dev.gameserver.utils.ItemFunctions;
-import ru.j2dev.gameserver.utils.TimeUtils;
+import ru.l2.gameserver.dao.SiegeClanDAO;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.entity.events.impl.ClanHallMiniGameEvent;
+import ru.l2.gameserver.model.entity.events.objects.CMGSiegeClanObject;
+import ru.l2.gameserver.model.entity.events.objects.SiegeClanObject;
+import ru.l2.gameserver.model.entity.residence.ClanHall;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.pledge.Clan;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.utils.ItemFunctions;
+import ru.l2.gameserver.utils.TimeUtils;
 
 public class RainbowMessengerInstance extends NpcInstance {
     public static final int ITEM_ID = 8034;

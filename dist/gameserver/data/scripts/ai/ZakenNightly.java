@@ -1,20 +1,20 @@
 package ai;
 
-import ru.j2dev.commons.lang.reference.HardReference;
-import ru.j2dev.commons.threading.RunnableImpl;
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.GameTimeController;
-import ru.j2dev.gameserver.ThreadPoolManager;
-import ru.j2dev.gameserver.ai.Fighter;
-import ru.j2dev.gameserver.listener.game.OnDayNightChangeListener;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.entity.Reflection;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.PlaySound;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.PlaySound.Type;
-import ru.j2dev.gameserver.tables.SkillTable;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.commons.lang.reference.HardReference;
+import ru.l2.commons.threading.RunnableImpl;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.GameTimeController;
+import ru.l2.gameserver.ThreadPoolManager;
+import ru.l2.gameserver.ai.Fighter;
+import ru.l2.gameserver.listener.game.OnDayNightChangeListener;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.entity.Reflection;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.PlaySound;
+import ru.l2.gameserver.network.lineage2.serverpackets.PlaySound.Type;
+import ru.l2.gameserver.tables.SkillTable;
+import ru.l2.gameserver.utils.Location;
 
 import java.util.stream.IntStream;
 

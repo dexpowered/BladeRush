@@ -1,9 +1,9 @@
 package quests;
 
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.quest.Quest;
-import ru.j2dev.gameserver.model.quest.QuestState;
-import ru.j2dev.gameserver.tables.SkillTable;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.quest.Quest;
+import ru.l2.gameserver.model.quest.QuestState;
+import ru.l2.gameserver.tables.SkillTable;
 
 public class _609_MagicalPowerofWater1 extends Quest {
     private static final int WAHKAN = 31371;

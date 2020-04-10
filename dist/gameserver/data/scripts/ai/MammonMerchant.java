@@ -1,10 +1,10 @@
 package ai;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ThreadPoolManager;
-import ru.j2dev.gameserver.ai.DefaultAI;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ThreadPoolManager;
+import ru.l2.gameserver.ai.DefaultAI;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.utils.Location;
 
 public class MammonMerchant extends DefaultAI {
     private static final Location[] _teleports = {new Location(-52172, 78884, -4741, 0), new Location(-41350, 209876, -5087, 16384), new Location(-21657, 77164, -5173, 0), new Location(45029, 123802, -5413, 49152), new Location(83175, 208998, -5439, 0), new Location(111337, 173804, -5439, 0), new Location(118343, 132578, -4831, 0), new Location(172373, -17833, -4901, 0)};

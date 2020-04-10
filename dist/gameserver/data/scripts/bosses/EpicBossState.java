@@ -2,8 +2,8 @@ package bosses;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.j2dev.commons.dbutils.DbUtils;
-import ru.j2dev.gameserver.database.DatabaseFactory;
+import ru.l2.commons.dbutils.DbUtils;
+import ru.l2.gameserver.database.DatabaseFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

@@ -1,10 +1,10 @@
 package npc.model;
 
 import bosses.SailrenManager;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
-import ru.j2dev.gameserver.utils.ItemFunctions;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.utils.ItemFunctions;
 
 public final class SairlenGatekeeperInstance extends NpcInstance {
     private static final int GAZKH = 8784;

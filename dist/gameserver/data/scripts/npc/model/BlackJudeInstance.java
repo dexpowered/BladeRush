@@ -1,10 +1,10 @@
 package npc.model;
 
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
-import ru.j2dev.gameserver.tables.SkillTable;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.tables.SkillTable;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public class BlackJudeInstance extends NpcInstance {
     public BlackJudeInstance(final int objectId, final NpcTemplate template) {

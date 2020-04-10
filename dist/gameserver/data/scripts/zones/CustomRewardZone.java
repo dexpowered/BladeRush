@@ -1,16 +1,16 @@
 package zones;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.handler.admincommands.AdminCommandHandler;
-import ru.j2dev.gameserver.handler.admincommands.IAdminCommandHandler;
-import ru.j2dev.gameserver.listener.actor.player.OnPvpPkKillListener;
-import ru.j2dev.gameserver.listener.script.OnInitScriptListener;
-import ru.j2dev.gameserver.listener.zone.OnZoneEnterLeaveListener;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Zone;
-import ru.j2dev.gameserver.utils.ItemFunctions;
-import ru.j2dev.gameserver.utils.ReflectionUtils;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.handler.admincommands.AdminCommandHandler;
+import ru.l2.gameserver.handler.admincommands.IAdminCommandHandler;
+import ru.l2.gameserver.listener.actor.player.OnPvpPkKillListener;
+import ru.l2.gameserver.listener.script.OnInitScriptListener;
+import ru.l2.gameserver.listener.zone.OnZoneEnterLeaveListener;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Zone;
+import ru.l2.gameserver.utils.ItemFunctions;
+import ru.l2.gameserver.utils.ReflectionUtils;
 
 import java.util.ArrayList;
 import java.util.Arrays;

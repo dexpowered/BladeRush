@@ -4,15 +4,15 @@ import gnu.trove.set.hash.TIntHashSet;
 import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.j2dev.gameserver.listener.script.OnInitScriptListener;
-import ru.j2dev.gameserver.listener.zone.OnZoneEnterLeaveListener;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Summon;
-import ru.j2dev.gameserver.model.Zone;
-import ru.j2dev.gameserver.network.lineage2.components.CustomMessage;
-import ru.j2dev.gameserver.utils.Location;
-import ru.j2dev.gameserver.utils.ReflectionUtils;
+import ru.l2.gameserver.listener.script.OnInitScriptListener;
+import ru.l2.gameserver.listener.zone.OnZoneEnterLeaveListener;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Summon;
+import ru.l2.gameserver.model.Zone;
+import ru.l2.gameserver.network.lineage2.components.CustomMessage;
+import ru.l2.gameserver.utils.Location;
+import ru.l2.gameserver.utils.ReflectionUtils;
 
 public class ClassIdLimitZone implements OnInitScriptListener {
     private static final Logger LOGGER = LoggerFactory.getLogger(ClassIdLimitZone.class);

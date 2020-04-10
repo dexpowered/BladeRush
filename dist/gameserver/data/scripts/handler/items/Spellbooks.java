@@ -1,16 +1,16 @@
 package handler.items;
 
 import gnu.trove.set.hash.TIntHashSet;
-import ru.j2dev.gameserver.data.xml.holder.SkillAcquireHolder;
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.SkillLearn;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MagicSkillUse;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.SystemMessage2;
-import ru.j2dev.gameserver.tables.SkillTable;
+import ru.l2.gameserver.data.xml.holder.SkillAcquireHolder;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.SkillLearn;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
+import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage2;
+import ru.l2.gameserver.tables.SkillTable;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
 package handler.admincommands;
 
-import ru.j2dev.gameserver.handler.admincommands.AdminCommandHandler;
-import ru.j2dev.gameserver.handler.admincommands.IAdminCommandHandler;
-import ru.j2dev.gameserver.listener.script.OnInitScriptListener;
+import ru.l2.gameserver.handler.admincommands.AdminCommandHandler;
+import ru.l2.gameserver.handler.admincommands.IAdminCommandHandler;
+import ru.l2.gameserver.listener.script.OnInitScriptListener;
 
 public abstract class ScriptAdminCommand implements IAdminCommandHandler, OnInitScriptListener {
     @Override

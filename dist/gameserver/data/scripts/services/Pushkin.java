@@ -1,19 +1,19 @@
 package services;
 
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.data.xml.holder.ItemTemplateHolder;
-import ru.j2dev.gameserver.data.xml.holder.MultiSellHolder;
-import ru.j2dev.gameserver.data.xml.holder.MultiSellHolder.MultiSellListContainer;
-import ru.j2dev.gameserver.handler.npcdialog.INpcDialogAppender;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.base.MultiSellEntry;
-import ru.j2dev.gameserver.model.base.MultiSellIngredient;
-import ru.j2dev.gameserver.model.entity.residence.Castle;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.items.Inventory;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.templates.item.ItemTemplate;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.data.xml.holder.ItemTemplateHolder;
+import ru.l2.gameserver.data.xml.holder.MultiSellHolder;
+import ru.l2.gameserver.data.xml.holder.MultiSellHolder.MultiSellListContainer;
+import ru.l2.gameserver.handler.npcdialog.INpcDialogAppender;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.base.MultiSellEntry;
+import ru.l2.gameserver.model.base.MultiSellIngredient;
+import ru.l2.gameserver.model.entity.residence.Castle;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.items.Inventory;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.templates.item.ItemTemplate;
 
 import java.util.Arrays;
 import java.util.List;

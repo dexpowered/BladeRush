@@ -1,19 +1,19 @@
 package services;
 
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.cache.Msg;
-import ru.j2dev.gameserver.handler.npcdialog.INpcDialogAppender;
-import ru.j2dev.gameserver.listener.script.OnInitScriptListener;
-import ru.j2dev.gameserver.listener.zone.OnZoneEnterLeaveListener;
-import ru.j2dev.gameserver.manager.ReflectionManager;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Zone;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.utils.Location;
-import ru.j2dev.gameserver.utils.PositionUtils;
-import ru.j2dev.gameserver.utils.ReflectionUtils;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.handler.npcdialog.INpcDialogAppender;
+import ru.l2.gameserver.listener.script.OnInitScriptListener;
+import ru.l2.gameserver.listener.zone.OnZoneEnterLeaveListener;
+import ru.l2.gameserver.manager.ReflectionManager;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Zone;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.utils.Location;
+import ru.l2.gameserver.utils.PositionUtils;
+import ru.l2.gameserver.utils.ReflectionUtils;
 
 import java.util.Arrays;
 import java.util.List;

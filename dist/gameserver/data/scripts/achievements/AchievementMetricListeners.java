@@ -1,19 +1,19 @@
 package achievements;
 
-import ru.j2dev.commons.listener.Listener;
-import ru.j2dev.gameserver.listener.CharListener;
-import ru.j2dev.gameserver.listener.PlayerListener;
-import ru.j2dev.gameserver.listener.actor.OnDeathListener;
-import ru.j2dev.gameserver.listener.actor.OnKillListener;
-import ru.j2dev.gameserver.listener.actor.player.*;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.actor.listener.CharListenerList;
-import ru.j2dev.gameserver.model.actor.listener.PlayerListenerList;
-import ru.j2dev.gameserver.model.entity.olympiad.OlympiadGame;
-import ru.j2dev.gameserver.model.instances.RaidBossInstance;
-import ru.j2dev.gameserver.model.quest.QuestState;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.commons.listener.Listener;
+import ru.l2.gameserver.listener.CharListener;
+import ru.l2.gameserver.listener.PlayerListener;
+import ru.l2.gameserver.listener.actor.OnDeathListener;
+import ru.l2.gameserver.listener.actor.OnKillListener;
+import ru.l2.gameserver.listener.actor.player.*;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.actor.listener.CharListenerList;
+import ru.l2.gameserver.model.actor.listener.PlayerListenerList;
+import ru.l2.gameserver.model.entity.olympiad.OlympiadGame;
+import ru.l2.gameserver.model.instances.RaidBossInstance;
+import ru.l2.gameserver.model.quest.QuestState;
+import ru.l2.gameserver.utils.Location;
 
 import java.util.*;
 import java.util.stream.Collectors;

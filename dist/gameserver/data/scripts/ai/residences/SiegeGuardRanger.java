@@ -1,6 +1,6 @@
 package ai.residences;
 
-import ru.j2dev.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.instances.NpcInstance;
 
 public class SiegeGuardRanger extends SiegeGuard {
     public SiegeGuardRanger(final NpcInstance actor) {

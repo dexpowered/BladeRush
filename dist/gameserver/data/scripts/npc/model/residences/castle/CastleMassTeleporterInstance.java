@@ -1,15 +1,15 @@
 package npc.model.residences.castle;
 
-import ru.j2dev.commons.threading.RunnableImpl;
-import ru.j2dev.gameserver.ThreadPoolManager;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.World;
-import ru.j2dev.gameserver.model.entity.events.impl.SiegeEvent;
-import ru.j2dev.gameserver.model.entity.events.objects.SiegeToggleNpcObject;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.commons.threading.RunnableImpl;
+import ru.l2.gameserver.ThreadPoolManager;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.World;
+import ru.l2.gameserver.model.entity.events.impl.SiegeEvent;
+import ru.l2.gameserver.model.entity.events.objects.SiegeToggleNpcObject;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.utils.Location;
 
 import java.util.List;
 import java.util.concurrent.Future;

@@ -1,9 +1,9 @@
 package npc.model.residences.castle;
 
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Spawner;
-import ru.j2dev.gameserver.model.instances.residences.SiegeToggleNpcInstance;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Spawner;
+import ru.l2.gameserver.model.instances.residences.SiegeToggleNpcInstance;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 import java.util.HashSet;
 import java.util.Set;

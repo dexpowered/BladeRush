@@ -1,13 +1,13 @@
 package ai;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ai.DefaultAI;
-import ru.j2dev.gameserver.model.Effect;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.World;
-import ru.j2dev.gameserver.model.entity.SevenSigns;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ai.DefaultAI;
+import ru.l2.gameserver.model.Effect;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.World;
+import ru.l2.gameserver.model.entity.SevenSigns;
+import ru.l2.gameserver.model.instances.NpcInstance;
 
 import java.util.List;
 

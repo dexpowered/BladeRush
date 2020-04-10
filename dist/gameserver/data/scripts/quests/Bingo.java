@@ -1,6 +1,6 @@
 package quests;
 
-import ru.j2dev.commons.util.Rnd;
+import ru.l2.commons.util.Rnd;
 
 import java.util.ArrayList;
 import java.util.List;

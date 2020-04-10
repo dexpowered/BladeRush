@@ -1,10 +1,10 @@
 package npc.model;
 
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.MerchantInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.PackageToList;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
-import ru.j2dev.gameserver.utils.WarehouseFunctions;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.MerchantInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.PackageToList;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.utils.WarehouseFunctions;
 
 public class FreightSenderInstance extends MerchantInstance {
     public FreightSenderInstance(final int objectId, final NpcTemplate template) {

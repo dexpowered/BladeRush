@@ -1,10 +1,10 @@
 package npc.model;
 
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.DoorInstance;
-import ru.j2dev.gameserver.model.instances.GuardInstance;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
-import ru.j2dev.gameserver.utils.ReflectionUtils;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.DoorInstance;
+import ru.l2.gameserver.model.instances.GuardInstance;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.utils.ReflectionUtils;
 
 public class BorderOutpostDoormanInstance extends GuardInstance {
     public BorderOutpostDoormanInstance(final int objectId, final NpcTemplate template) {

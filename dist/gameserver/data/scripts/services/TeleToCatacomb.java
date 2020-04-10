@@ -1,9 +1,9 @@
 package services;
 
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.handler.npcdialog.INpcDialogAppender;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.handler.npcdialog.INpcDialogAppender;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.NpcInstance;
 
 import java.util.Arrays;
 import java.util.List;

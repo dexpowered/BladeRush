@@ -1,15 +1,15 @@
 package ai.isle_of_prayer;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ai.CtrlEvent;
-import ru.j2dev.gameserver.ai.Mystic;
-import ru.j2dev.gameserver.data.xml.holder.NpcTemplateHolder;
-import ru.j2dev.gameserver.idfactory.IdFactory;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Party;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.MonsterInstance;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ai.CtrlEvent;
+import ru.l2.gameserver.ai.Mystic;
+import ru.l2.gameserver.data.xml.holder.NpcTemplateHolder;
+import ru.l2.gameserver.idfactory.IdFactory;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Party;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.MonsterInstance;
+import ru.l2.gameserver.model.instances.NpcInstance;
 
 public class IsleOfPrayerMystic extends Mystic {
     private static final int[] PENALTY_MOBS = {18364, 18365, 18366};

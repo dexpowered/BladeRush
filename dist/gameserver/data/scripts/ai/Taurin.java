@@ -1,12 +1,12 @@
 package ai;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ai.DefaultAI;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MagicSkillUse;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ai.DefaultAI;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.utils.Location;
 
 public class Taurin extends DefaultAI {
     static final Location[] points = {new Location(80752, 146400, -3533), new Location(80250, 146988, -3559), new Location(80070, 146942, -3559), new Location(80048, 146705, -3547), new Location(79784, 146561, -3546), new Location(79476, 146800, -3547), new Location(79490, 147480, -3559), new Location(79812, 148310, -3559), new Location(79692, 148564, -3559), new Location(77569, 148495, -3623), new Location(77495, 148191, -3622), new Location(77569, 148495, -3623), new Location(79819, 148740, -3559), new Location(79773, 149110, -3559), new Location(79291, 149523, -3559), new Location(79569, 150214, -3548), new Location(79679, 150717, -3543), new Location(80106, 150630, -3547), new Location(81207, 150276, -3559), new Location(81820, 150666, -3559), new Location(82038, 150589, -3559), new Location(82394, 149943, -3559), new Location(82038, 150589, -3559), new Location(81820, 150666, -3559), new Location(81582, 150590, -3559), new Location(81535, 149653, -3495), new Location(83814, 148630, -3420), new Location(87001, 148637, -3428), new Location(83814, 148630, -3420), new Location(82921, 148467, -3495), new Location(82060, 148070, -3495), new Location(82060, 148070, -3495), new Location(82060, 148070, -3495), new Location(82060, 148070, -3495), new Location(81544, 147514, -3491), new Location(81691, 146578, -3559), new Location(83190, 146687, -3491), new Location(81691, 146578, -3559), new Location(81331, 146915, -3559), new Location(81067, 146925, -3559), new Location(80752, 146400, -3533)};

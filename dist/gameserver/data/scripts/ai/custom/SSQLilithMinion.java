@@ -1,11 +1,11 @@
 package ai.custom;
 
 import org.apache.commons.lang3.ArrayUtils;
-import ru.j2dev.commons.threading.RunnableImpl;
-import ru.j2dev.gameserver.ThreadPoolManager;
-import ru.j2dev.gameserver.ai.CtrlEvent;
-import ru.j2dev.gameserver.ai.Fighter;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
+import ru.l2.commons.threading.RunnableImpl;
+import ru.l2.gameserver.ThreadPoolManager;
+import ru.l2.gameserver.ai.CtrlEvent;
+import ru.l2.gameserver.ai.Fighter;
+import ru.l2.gameserver.model.instances.NpcInstance;
 
 import java.util.List;
 

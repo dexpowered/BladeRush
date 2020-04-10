@@ -1,13 +1,13 @@
 package npc.model.residences.castle;
 
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.entity.residence.Castle;
-import ru.j2dev.gameserver.model.entity.residence.Residence;
-import ru.j2dev.gameserver.model.pledge.Clan;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
-import ru.j2dev.gameserver.utils.Location;
-import ru.j2dev.gameserver.utils.ReflectionUtils;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.entity.residence.Castle;
+import ru.l2.gameserver.model.entity.residence.Residence;
+import ru.l2.gameserver.model.pledge.Clan;
+import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.utils.Location;
+import ru.l2.gameserver.utils.ReflectionUtils;
 
 public class DoormanInstance extends npc.model.residences.DoormanInstance {
     private final Location[] _locs;

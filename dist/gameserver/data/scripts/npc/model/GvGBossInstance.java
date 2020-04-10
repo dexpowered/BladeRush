@@ -1,8 +1,8 @@
 package npc.model;
 
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.MonsterInstance;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.MonsterInstance;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public final class GvGBossInstance extends MonsterInstance {
     public GvGBossInstance(final int objectId, final NpcTemplate template) {

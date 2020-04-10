@@ -1,12 +1,12 @@
 package ai;
 
-import ru.j2dev.gameserver.ai.CtrlEvent;
-import ru.j2dev.gameserver.ai.Mystic;
-import ru.j2dev.gameserver.data.xml.holder.NpcTemplateHolder;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.SimpleSpawner;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.gameserver.ai.CtrlEvent;
+import ru.l2.gameserver.ai.Mystic;
+import ru.l2.gameserver.data.xml.holder.NpcTemplateHolder;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.SimpleSpawner;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.utils.Location;
 
 public class SeerFlouros extends Mystic {
     private static final int MOB = 18560;

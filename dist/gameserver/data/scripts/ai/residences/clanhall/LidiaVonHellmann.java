@@ -1,13 +1,13 @@
 package ai.residences.clanhall;
 
 import ai.residences.SiegeGuardFighter;
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.tables.SkillTable;
-import ru.j2dev.gameserver.utils.PositionUtils;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.tables.SkillTable;
+import ru.l2.gameserver.utils.PositionUtils;
 
 public class LidiaVonHellmann extends SiegeGuardFighter {
     private static final Skill DRAIN_SKILL = SkillTable.getInstance().getInfo(4999, 1);

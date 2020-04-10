@@ -1,10 +1,10 @@
 package npc.model.residences.castle;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.utils.Location;
 
 public class VenomTeleportCubicInstance extends NpcInstance {
     public static final Location[] LOCS = {new Location(11913, -48851, -1088), new Location(11918, -49447, -1088)};

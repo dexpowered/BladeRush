@@ -1,12 +1,12 @@
 package services;
 
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.Config.RateBonusInfo;
-import ru.j2dev.gameserver.dao.AccountBonusDAO;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.SocialAction;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.utils.ItemFunctions;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.Config.RateBonusInfo;
+import ru.l2.gameserver.dao.AccountBonusDAO;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.network.lineage2.serverpackets.SocialAction;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.utils.ItemFunctions;
 
 public class GlobalServices extends Functions {
     public static boolean makeCustomHero(final Player player, final long customHeroDuration) {

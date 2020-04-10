@@ -1,8 +1,8 @@
 package zones;
 
 
-import ru.j2dev.commons.configuration.PropertiesParser;
-import ru.j2dev.gameserver.Config;
+import ru.l2.commons.configuration.PropertiesParser;
+import ru.l2.gameserver.Config;
 
 import java.io.File;
 

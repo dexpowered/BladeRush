@@ -1,7 +1,7 @@
 package handler.petition;
 
-import ru.j2dev.gameserver.handler.petition.IPetitionHandler;
-import ru.j2dev.gameserver.model.Player;
+import ru.l2.gameserver.handler.petition.IPetitionHandler;
+import ru.l2.gameserver.model.Player;
 
 public class SimplePetitionHandler implements IPetitionHandler {
     @Override

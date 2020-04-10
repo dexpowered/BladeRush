@@ -1,11 +1,11 @@
 package quests;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ai.CtrlEvent;
-import ru.j2dev.gameserver.model.GameObjectsStorage;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.quest.Quest;
-import ru.j2dev.gameserver.model.quest.QuestState;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ai.CtrlEvent;
+import ru.l2.gameserver.model.GameObjectsStorage;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.quest.Quest;
+import ru.l2.gameserver.model.quest.QuestState;
 
 public class _229_TestOfWitchcraft extends Quest {
     private static final int Orim = 30630;

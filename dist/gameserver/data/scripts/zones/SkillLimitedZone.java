@@ -2,11 +2,11 @@ package zones;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.j2dev.gameserver.ThreadPoolManager;
-import ru.j2dev.gameserver.listener.script.OnInitScriptListener;
-import ru.j2dev.gameserver.listener.zone.OnZoneEnterLeaveListener;
-import ru.j2dev.gameserver.model.*;
-import ru.j2dev.gameserver.utils.ReflectionUtils;
+import ru.l2.gameserver.ThreadPoolManager;
+import ru.l2.gameserver.listener.script.OnInitScriptListener;
+import ru.l2.gameserver.listener.zone.OnZoneEnterLeaveListener;
+import ru.l2.gameserver.model.*;
+import ru.l2.gameserver.utils.ReflectionUtils;
 
 import java.util.ArrayList;
 

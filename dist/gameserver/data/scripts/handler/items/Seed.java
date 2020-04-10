@@ -1,19 +1,19 @@
 package handler.items;
 
-import ru.j2dev.gameserver.cache.Msg;
-import ru.j2dev.gameserver.manager.MapRegionManager;
-import ru.j2dev.gameserver.model.Manor;
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.instances.ChestInstance;
-import ru.j2dev.gameserver.model.instances.MinionInstance;
-import ru.j2dev.gameserver.model.instances.MonsterInstance;
-import ru.j2dev.gameserver.model.instances.RaidBossInstance;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
-import ru.j2dev.gameserver.tables.SkillTable;
-import ru.j2dev.gameserver.templates.mapregion.DomainArea;
+import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.manager.MapRegionManager;
+import ru.l2.gameserver.model.Manor;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.instances.ChestInstance;
+import ru.l2.gameserver.model.instances.MinionInstance;
+import ru.l2.gameserver.model.instances.MonsterInstance;
+import ru.l2.gameserver.model.instances.RaidBossInstance;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.tables.SkillTable;
+import ru.l2.gameserver.templates.mapregion.DomainArea;
 
 public class Seed extends ScriptItemHandler {
     private static int[] _itemIds;

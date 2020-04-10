@@ -1,9 +1,9 @@
 package ai.freya;
 
 import bosses.ValakasManager;
-import ru.j2dev.gameserver.ai.CtrlEvent;
-import ru.j2dev.gameserver.ai.Mystic;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.ai.CtrlEvent;
+import ru.l2.gameserver.ai.Mystic;
+import ru.l2.gameserver.model.instances.NpcInstance;
 
 public class ValakasMinion extends Mystic {
     public ValakasMinion(final NpcInstance actor) {

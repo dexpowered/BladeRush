@@ -1,10 +1,10 @@
 package handler.items;
 
-import ru.j2dev.gameserver.data.xml.holder.EnchantItemHolder;
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ChooseInventoryItem;
+import ru.l2.gameserver.data.xml.holder.EnchantItemHolder;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.ChooseInventoryItem;
 
 public class EnchantScrolls extends ScriptItemHandler {
     private static int[] ITEM_IDS;

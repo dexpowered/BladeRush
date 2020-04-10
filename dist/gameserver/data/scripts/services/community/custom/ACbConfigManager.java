@@ -2,11 +2,11 @@ package services.community.custom;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.j2dev.commons.configuration.PropertiesParser;
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.handler.bbs.ICommunityBoardHandler;
-import ru.j2dev.gameserver.listener.script.OnInitScriptListener;
-import ru.j2dev.gameserver.model.Player;
+import ru.l2.commons.configuration.PropertiesParser;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.handler.bbs.ICommunityBoardHandler;
+import ru.l2.gameserver.listener.script.OnInitScriptListener;
+import ru.l2.gameserver.model.Player;
 
 import java.util.ArrayList;
 import java.util.StringTokenizer;

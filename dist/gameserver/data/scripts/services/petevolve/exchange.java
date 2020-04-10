@@ -1,19 +1,19 @@
 package services.petevolve;
 
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.cache.Msg;
-import ru.j2dev.gameserver.data.xml.holder.ItemTemplateHolder;
-import ru.j2dev.gameserver.handler.npcdialog.INpcDialogAppender;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Summon;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.instances.PetInstance;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.InventoryUpdate;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.templates.item.ItemTemplate;
-import ru.j2dev.gameserver.utils.Util;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.xml.holder.ItemTemplateHolder;
+import ru.l2.gameserver.handler.npcdialog.INpcDialogAppender;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Summon;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.instances.PetInstance;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.network.lineage2.serverpackets.InventoryUpdate;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.templates.item.ItemTemplate;
+import ru.l2.gameserver.utils.Util;
 
 import java.util.Arrays;
 import java.util.List;

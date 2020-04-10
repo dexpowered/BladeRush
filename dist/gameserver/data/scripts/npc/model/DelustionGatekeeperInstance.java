@@ -1,15 +1,15 @@
 package npc.model;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.cache.Msg;
-import ru.j2dev.gameserver.manager.DimensionalRiftManager;
-import ru.j2dev.gameserver.manager.DimensionalRiftManager.DimensionalRiftRoom;
-import ru.j2dev.gameserver.model.Party;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.entity.DelusionChamber;
-import ru.j2dev.gameserver.model.entity.Reflection;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.manager.DimensionalRiftManager;
+import ru.l2.gameserver.manager.DimensionalRiftManager.DimensionalRiftRoom;
+import ru.l2.gameserver.model.Party;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.entity.DelusionChamber;
+import ru.l2.gameserver.model.entity.Reflection;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 import java.util.Map;
 

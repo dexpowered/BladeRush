@@ -2,10 +2,10 @@ package handler.admincommands;
 
 import events.TvT2.PvPEvent;
 import events.TvT2.PvPEvent.PvPEventRule;
-import ru.j2dev.gameserver.manager.ServerVariables;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.j2dev.gameserver.scripts.Scripts;
+import ru.l2.gameserver.manager.ServerVariables;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
+import ru.l2.gameserver.scripts.Scripts;
 
 public class AdminPvPEvent extends ScriptAdminCommand {
     @Override

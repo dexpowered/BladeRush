@@ -1,15 +1,15 @@
 package zones;
 
 
-import ru.j2dev.gameserver.listener.script.OnInitScriptListener;
-import ru.j2dev.gameserver.listener.zone.OnZoneEnterLeaveListener;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Zone;
-import ru.j2dev.gameserver.model.Zone.ZoneType;
-import ru.j2dev.gameserver.model.entity.events.impl.DuelEvent;
-import ru.j2dev.gameserver.model.entity.events.impl.PlayerVsPlayerDuelEvent;
-import ru.j2dev.gameserver.utils.ReflectionUtils;
+import ru.l2.gameserver.listener.script.OnInitScriptListener;
+import ru.l2.gameserver.listener.zone.OnZoneEnterLeaveListener;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Zone;
+import ru.l2.gameserver.model.Zone.ZoneType;
+import ru.l2.gameserver.model.entity.events.impl.DuelEvent;
+import ru.l2.gameserver.model.entity.events.impl.PlayerVsPlayerDuelEvent;
+import ru.l2.gameserver.utils.ReflectionUtils;
 
 import java.util.List;
 

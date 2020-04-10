@@ -1,12 +1,12 @@
 package npc.model.residences;
 
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.entity.events.impl.SiegeEvent;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.pledge.Clan;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.entity.events.impl.SiegeEvent;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.pledge.Clan;
+import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public class TeleportSiegeGuardInstance extends NpcInstance {
     protected static final int COND_ALL_FALSE = 0;

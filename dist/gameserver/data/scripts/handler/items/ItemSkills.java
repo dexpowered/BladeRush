@@ -1,13 +1,13 @@
 package handler.items;
 
 import gnu.trove.set.hash.TIntHashSet;
-import ru.j2dev.gameserver.data.xml.holder.ItemTemplateHolder;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.templates.item.ItemTemplate;
+import ru.l2.gameserver.data.xml.holder.ItemTemplateHolder;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.templates.item.ItemTemplate;
 
 public class ItemSkills extends ScriptItemHandler {
     private final int[] _itemIds;

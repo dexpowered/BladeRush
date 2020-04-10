@@ -1,11 +1,11 @@
 package npc.model;
 
-import ru.j2dev.commons.lang.reference.HardReference;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Skill;
-import ru.j2dev.gameserver.model.instances.SpecialMonsterInstance;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.commons.lang.reference.HardReference;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Skill;
+import ru.l2.gameserver.model.instances.SpecialMonsterInstance;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public class MeleonInstance extends SpecialMonsterInstance {
     public static final int Young_Watermelon = 13271;

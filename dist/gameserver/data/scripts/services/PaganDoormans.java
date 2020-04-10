@@ -1,11 +1,11 @@
 package services;
 
-import ru.j2dev.gameserver.cache.Msg;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.instances.DoorInstance;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.scripts.Functions;
-import ru.j2dev.gameserver.utils.ReflectionUtils;
+import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.instances.DoorInstance;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.utils.ReflectionUtils;
 
 public class PaganDoormans extends Functions {
     private static final int MainDoorId = 19160001;

@@ -1,14 +1,14 @@
 package npc.model.residences.clanhall;
 
-import ru.j2dev.gameserver.model.Party;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.entity.events.impl.ClanHallMiniGameEvent;
-import ru.j2dev.gameserver.model.entity.events.objects.CMGSiegeClanObject;
-import ru.j2dev.gameserver.model.entity.events.objects.SpawnExObject;
-import ru.j2dev.gameserver.model.entity.residence.ClanHall;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
-import ru.j2dev.gameserver.utils.Location;
+import ru.l2.gameserver.model.Party;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.entity.events.impl.ClanHallMiniGameEvent;
+import ru.l2.gameserver.model.entity.events.objects.CMGSiegeClanObject;
+import ru.l2.gameserver.model.entity.events.objects.SpawnExObject;
+import ru.l2.gameserver.model.entity.residence.ClanHall;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.utils.Location;
 
 import java.util.List;
 

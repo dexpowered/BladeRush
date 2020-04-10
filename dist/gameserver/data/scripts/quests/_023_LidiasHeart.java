@@ -1,9 +1,9 @@
 package quests;
 
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.model.quest.Quest;
-import ru.j2dev.gameserver.model.quest.QuestState;
-import ru.j2dev.gameserver.scripts.Functions;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.model.quest.Quest;
+import ru.l2.gameserver.model.quest.QuestState;
+import ru.l2.gameserver.scripts.Functions;
 
 public class _023_LidiasHeart extends Quest {
     private static final int highpriest_innocentin = 31328;

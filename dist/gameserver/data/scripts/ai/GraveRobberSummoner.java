@@ -1,14 +1,14 @@
 package ai;
 
-import ru.j2dev.commons.util.Rnd;
-import ru.j2dev.gameserver.ai.Mystic;
-import ru.j2dev.gameserver.model.Creature;
-import ru.j2dev.gameserver.model.instances.MonsterInstance;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.stats.Env;
-import ru.j2dev.gameserver.stats.Stats;
-import ru.j2dev.gameserver.stats.funcs.Func;
-import ru.j2dev.gameserver.templates.npc.MinionData;
+import ru.l2.commons.util.Rnd;
+import ru.l2.gameserver.ai.Mystic;
+import ru.l2.gameserver.model.Creature;
+import ru.l2.gameserver.model.instances.MonsterInstance;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.stats.Env;
+import ru.l2.gameserver.stats.Stats;
+import ru.l2.gameserver.stats.funcs.Func;
+import ru.l2.gameserver.templates.npc.MinionData;
 
 public class GraveRobberSummoner extends Mystic {
     private static final int[] Servitors = {22683, 22684, 22685, 22686};

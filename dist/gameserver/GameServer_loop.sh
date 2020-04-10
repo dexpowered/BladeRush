@@ -8,7 +8,7 @@ do
   #mysqldump --host=127.0.0.1 --port=3306 --user=root --password=qwerty x10 | gzip > "backup/`date +%Y-%m-%d_%H:%M:%S`-x10_gameserver.gz"
   #mysqlcheck --host=127.0.0.1 --port=3306 --user=root --password=qwerty -s -r x10>>"log/`date +%Y-%m-%d_%H:%M:%S`-sql_check.log"
   #mysqldump --host=127.0.0.1 --port=3306 --user=root --password=qwerty x10 | gzip > "backup/`date +%Y-%m-%d_%H:%M:%S`-x10_gameserver.gz"
-	java -server -Duser.timezone=GMT+3 -Dfile.encoding=UTF-8 -Xmx4G -cp config:../lib/* ru.j2dev.gameserver.GameServer > log/stdout.log 2>&1
+	java -server -Duser.timezone=GMT+3 -Dfile.encoding=UTF-8 -Xmx4G -cp config:../lib/* ru.l2.gameserver.GameServer > log/stdout.log 2>&1
 
 	[ $? -ne 2 ] && break
 	sleep 30;

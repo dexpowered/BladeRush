@@ -1,10 +1,10 @@
 package npc.model.residences.castle;
 
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.entity.residence.Castle;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.CastleSiegeInfo;
-import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.entity.residence.Castle;
+import ru.l2.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.CastleSiegeInfo;
+import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public class CastleMessengerInstance extends NpcInstance {
     public CastleMessengerInstance(final int objectID, final NpcTemplate template) {

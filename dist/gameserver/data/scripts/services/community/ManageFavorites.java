@@ -2,15 +2,15 @@ package services.community;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.j2dev.commons.dbutils.DbUtils;
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.cache.HtmCache;
-import ru.j2dev.gameserver.database.DatabaseFactory;
-import ru.j2dev.gameserver.handler.bbs.CommunityBoardManager;
-import ru.j2dev.gameserver.handler.bbs.ICommunityBoardHandler;
-import ru.j2dev.gameserver.listener.script.OnInitScriptListener;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ShowBoard;
+import ru.l2.commons.dbutils.DbUtils;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.cache.HtmCache;
+import ru.l2.gameserver.database.DatabaseFactory;
+import ru.l2.gameserver.handler.bbs.CommunityBoardManager;
+import ru.l2.gameserver.handler.bbs.ICommunityBoardHandler;
+import ru.l2.gameserver.listener.script.OnInitScriptListener;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.network.lineage2.serverpackets.ShowBoard;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

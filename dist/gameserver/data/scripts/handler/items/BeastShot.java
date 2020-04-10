@@ -1,11 +1,11 @@
 package handler.items;
 
-import ru.j2dev.gameserver.cache.Msg;
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.Summon;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.MagicSkillUse;
+import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.Summon;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
 
 public class BeastShot extends ScriptItemHandler {
     private static final int[] _itemIds = {6645, 6646, 6647};

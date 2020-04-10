@@ -1,7 +1,7 @@
 package ai;
 
-import ru.j2dev.gameserver.ai.Guard;
-import ru.j2dev.gameserver.model.instances.NpcInstance;
+import ru.l2.gameserver.ai.Guard;
+import ru.l2.gameserver.model.instances.NpcInstance;
 
 public class GuardRndWalkAndAnim extends Guard {
     public GuardRndWalkAndAnim(final NpcInstance actor) {

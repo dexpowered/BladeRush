@@ -1,9 +1,9 @@
 package handler.items;
 
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.SSQStatus;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.ShowXMasSeal;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.network.lineage2.serverpackets.SSQStatus;
+import ru.l2.gameserver.network.lineage2.serverpackets.ShowXMasSeal;
 
 public class Books extends SimpleItemHandler {
     private static final int[] ITEM_IDS = {5555, 5707};

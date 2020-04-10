@@ -1,10 +1,10 @@
 package services;
 
-import ru.j2dev.gameserver.Config;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.network.lineage2.components.SystemMsg;
-import ru.j2dev.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.j2dev.gameserver.scripts.Functions;
+import ru.l2.gameserver.Config;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.network.lineage2.components.SystemMsg;
+import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
+import ru.l2.gameserver.scripts.Functions;
 
 public class KarmaClean extends Functions {
     public void karmaclean_page() {

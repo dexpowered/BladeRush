@@ -1,15 +1,15 @@
 package handler.items;
 
-import ru.j2dev.gameserver.data.xml.holder.ItemTemplateHolder;
-import ru.j2dev.gameserver.handler.items.IItemHandler;
-import ru.j2dev.gameserver.handler.items.ItemHandler;
-import ru.j2dev.gameserver.listener.script.OnInitScriptListener;
-import ru.j2dev.gameserver.model.Playable;
-import ru.j2dev.gameserver.model.Player;
-import ru.j2dev.gameserver.model.items.ItemInstance;
-import ru.j2dev.gameserver.utils.Location;
-import ru.j2dev.gameserver.utils.Log;
-import ru.j2dev.gameserver.utils.Log.ItemLog;
+import ru.l2.gameserver.data.xml.holder.ItemTemplateHolder;
+import ru.l2.gameserver.handler.items.IItemHandler;
+import ru.l2.gameserver.handler.items.ItemHandler;
+import ru.l2.gameserver.listener.script.OnInitScriptListener;
+import ru.l2.gameserver.model.Playable;
+import ru.l2.gameserver.model.Player;
+import ru.l2.gameserver.model.items.ItemInstance;
+import ru.l2.gameserver.utils.Location;
+import ru.l2.gameserver.utils.Log;
+import ru.l2.gameserver.utils.Log.ItemLog;
 
 import java.util.Objects;
 import java.util.stream.IntStream;
