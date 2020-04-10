@@ -141,8 +141,7 @@ public class RequestEnterWorld extends L2GameClientPacket {
         }
         if (first) {
             activeChar.getFriendList().notifyFriends(true);
-            //loadTutorial(activeChar);
-            loadAltStartPlayer(activeChar);
+            loadTutorial(activeChar);
             activeChar.restoreDisableSkills();
         }
         sendPacket(new L2FriendList(activeChar), new QuestList(activeChar), new EtcStatusUpdate(activeChar));
@@ -304,10 +303,4 @@ public class RequestEnterWorld extends L2GameClientPacket {
         }
     }
 
-    private void loadAltStartPlayer(final Player player) {
-        final Quest q = QuestManager.getQuest(777);
-        if (q != null) {
-            player.processQuestEvent(q.getName(), "Prof", null);
-        }
-    }
 }

@@ -4,7 +4,7 @@ set PATH=C:\Program Files\MariaDB 10.2\bin\
 
 set USER=root
 set PASS=root
-set DBNAME=j2dev_it_game
+set DBNAME=it_game
 set DBHOST=localhost
 
 mysql -h %DBHOST% -u %USER% --password=%PASS% -Bse "use %DBNAME%" > nul 2>&1

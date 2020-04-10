@@ -11,7 +11,6 @@ public enum ItemFlags {
     FREIGHTABLE(false), // возможность передать в рамках аккаунта
     AUGMENTABLE(true), // возможность аугментировать
     ENCHANTABLE(true), // возможность заточить
-    ATTRIBUTABLE(true), // возможность заточить атрибутом
     SELLABLE(true), // возможность продать
     TRADEABLE(true), // возможность передать
     STOREABLE(true); // возможность положить в ВХ

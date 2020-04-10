@@ -148,7 +148,7 @@ public class DelayedItemsManager extends RunnableImpl {
                         if (notify && ITEM_COUNT > 0L) {
                             player.sendPacket(SystemMessage2.obtainItems(ITEM_ID, stackable ? ITEM_COUNT : 1L, ITEM_ENCHANT));
                         }
-                        player.sendMessage(new CustomMessage("ru.j2dev.gameserver.taskmanager.DelayedItemsManager.ItemSendMessage", player));
+                        player.sendMessage(new CustomMessage("ru.l2.gameserver.taskmanager.DelayedItemsManager.ItemSendMessage", player));
                     }
                     if (!success) {
                         continue;

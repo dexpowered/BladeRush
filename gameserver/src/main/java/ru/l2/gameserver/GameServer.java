@@ -45,7 +45,7 @@ import ru.l2.gameserver.network.lineage2.CGMHelper;
 import ru.l2.gameserver.network.lineage2.GameClient;
 import ru.l2.gameserver.network.lineage2.GamePacketHandler;
 import ru.l2.gameserver.network.telnet.TelnetServer;
-import ru.l2.gameserver.phantoms.PhantomLoader;
+import ru.custom.phantoms.PhantomLoader;
 import ru.l2.gameserver.scripts.Scripts;
 import ru.l2.gameserver.tables.*;
 import ru.l2.gameserver.taskmanager.ItemsAutoDestroy;

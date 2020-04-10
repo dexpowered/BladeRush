@@ -163,7 +163,7 @@ public class L2TopRuManager {
         }
         final Player player = GameObjectsStorage.getPlayer(charObjId);
         if (player != null) {
-            player.sendMessage(new CustomMessage("ru.j2dev.gameserver.taskmanager.L2TopRuManager", player).addItemName(player.getInventory().addItem(itemId, itemCount)));
+            player.sendMessage(new CustomMessage("ru.l2.gameserver.taskmanager.L2TopRuManager", player).addItemName(player.getInventory().addItem(itemId, itemCount)));
         } else {
             final ItemInstance newItem = new ItemInstance(IdFactory.getInstance().getNextId(), itemId);
             newItem.setCount(itemCount);

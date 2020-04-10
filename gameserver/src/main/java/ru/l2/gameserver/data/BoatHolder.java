@@ -29,7 +29,7 @@ public final class BoatHolder extends AbstractHolder {
 
     public Boat initBoat(final String name, final String clazz) {
         try {
-            final Class<?> cl = Class.forName("ru.j2dev.gameserver.model.entity.boat." + clazz);
+            final Class<?> cl = Class.forName("ru.l2.gameserver.model.entity.boat." + clazz);
             final Constructor<?> constructor = cl.getConstructor(Integer.TYPE, CharTemplate.class);
             final Boat boat = (Boat) constructor.newInstance(IdFactory.getInstance().getNextId(), TEMPLATE);
             boat.setName(name);

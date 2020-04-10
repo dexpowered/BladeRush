@@ -1,4 +1,4 @@
 USER=root
 PASS=root
-DBNAME=j2dev_it_game
+DBNAME=it_game
 DBHOST=localhost

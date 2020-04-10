@@ -46,7 +46,6 @@ public abstract class Parsers {
         CapsuleItemParser.getInstance().load();
         //Custom content
         PolymorphedParser.getInstance().load();
-        AltStartParser.getInstance().load();
         ShadowTradeParser.getInstance().load();
         //CustomEventsArenas parsers
         CtFArenaParser.getInstance().load();

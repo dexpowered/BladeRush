@@ -7,9 +7,6 @@ package ru.l2.gameserver.templates.item;
 public enum Bodypart {
     NONE(0),
     CHEST(0x400),
-    BELT(0x10000000),
-    RIGHT_BRACELET(0x100000),
-    LEFT_BRACELET(0x200000),
     FULL_ARMOR(0x8000),
     HEAD(0x40),
     HAIR(0x10000),

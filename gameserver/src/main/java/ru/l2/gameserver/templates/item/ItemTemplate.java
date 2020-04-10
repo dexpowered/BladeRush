@@ -134,9 +134,6 @@ public abstract class ItemTemplate extends StatTemplate {
                 if (f == ItemFlags.TRADEABLE && Config.ALT_PVP_ITEMS_TREDABLE) {
                     flag = true;
                 }
-                if (f == ItemFlags.ATTRIBUTABLE && Config.ALT_PVP_ITEMS_ATTRIBUTABLE) {
-                    flag = true;
-                }
                 if (f == ItemFlags.AUGMENTABLE && Config.ALT_PVP_ITEMS_AUGMENTABLE) {
                     flag = true;
                 }
@@ -366,14 +363,6 @@ public abstract class ItemTemplate extends StatTemplate {
         return type == EtcItemType.ARROW;
     }
 
-    public boolean isBelt() {
-        return _bodyPart == 0x10000000;
-    }
-
-    public boolean isBracelet() {
-        return _bodyPart == 0x100000 || _bodyPart == 0x200000;
-    }
-
     public boolean isUnderwear() {
         return _bodyPart == 0x1;
     }
@@ -382,7 +371,7 @@ public abstract class ItemTemplate extends StatTemplate {
         return _bodyPart == 0x2000;
     }
 
-    public boolean isTalisman() {
+    public boolean isTalisman() { //todo не понятное г
         return _bodyPart == 4194304;
     }
 
@@ -498,10 +487,6 @@ public abstract class ItemTemplate extends StatTemplate {
 
     public final boolean isAugmentable() {
         return hasFlag(ItemFlags.AUGMENTABLE);
-    }
-
-    public final boolean isAttributable() {
-        return hasFlag(ItemFlags.ATTRIBUTABLE);
     }
 
     public final boolean isStoreable() {

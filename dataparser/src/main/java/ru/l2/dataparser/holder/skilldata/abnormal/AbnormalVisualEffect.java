@@ -19,8 +19,6 @@ public enum AbnormalVisualEffect {
     ave_death_mark(0x40000000, AbnormalVisualEffectType.NORMAL),
     ave_real_target(0x20000000, AbnormalVisualEffectType.NORMAL),
     ave_big_head(0x00002000, AbnormalVisualEffectType.NORMAL),
-    ave_vp_up(0x10000000, AbnormalVisualEffectType.NORMAL),
-    ave_vp_keep(0x10000000, AbnormalVisualEffectType.NORMAL), // Not find
     ave_magic_square(0x00800000, AbnormalVisualEffectType.NORMAL),
     ave_big_body(0x00010000, AbnormalVisualEffectType.NORMAL),
     ave_change_texture(0x00008000, AbnormalVisualEffectType.NORMAL),

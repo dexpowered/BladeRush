@@ -365,10 +365,7 @@ public class ItemData {
         alldress(0x20000),
         hair2(0x40000),
         hairall(0x80000),
-        rbracelet(0x100000),
-        lbracelet(0x200000),
-        deco1(0x400000),
-        waist(0x10000000); // Может быть 0x800000?
+        deco1(0x400000);
         public final int type;
 
         ItemSlotBitType(int type) {

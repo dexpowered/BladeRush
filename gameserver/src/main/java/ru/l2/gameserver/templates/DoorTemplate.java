@@ -59,7 +59,7 @@ public class DoorTemplate extends CharTemplate {
     private void setAI(final String ai) {
         Class<DoorAI> classAI;
         try {
-            classAI = (Class<DoorAI>) Class.forName("ru.j2dev.gameserver.ai." + ai);
+            classAI = (Class<DoorAI>) Class.forName("ru.l2.gameserver.ai." + ai);
         } catch (ClassNotFoundException e) {
             classAI = (Class<DoorAI>) Scripts.getInstance().getClasses().get("ai.door." + ai);
         }

@@ -280,7 +280,7 @@
 			JDK=${ant.java.version} ${java.vendor}
 		</concat>
 
-		<concat destfile="${build}/classes/ru/j2dev/gameserver/version.ini">
+		<concat destfile="${build}/classes/ru/l2/gameserver/version.ini">
 			Build-By=${user.name}
 			Version=${build.version}
 			Revision=${build.revision}
@@ -291,7 +291,7 @@
 		<jar destfile="${build}/gameserver.jar" level="9">
 			<fileset dir="${build.classes}" />
 			<manifest>
-				<attribute name="Main-Class" value="ru.j2dev.gameserver.GameServer" />
+				<attribute name="Main-Class" value="ru.l2.gameserver.GameServer" />
 				<attribute name="Class-Path" value="${jar.list} commons.jar" />
 				<attribute name="Build-By" value="${user.name}" />
 				<attribute name="Build-Date" value="${build.tstamp}" />
@@ -414,7 +414,7 @@
 		<jar destfile="${build}/authserver.jar" level="9">
 			<fileset dir="${build.classes}" />
 			<manifest>
-				<attribute name="Main-Class" value="ru.j2dev.authserver.AuthServer" />
+				<attribute name="Main-Class" value="ru.l2.authserver.AuthServer" />
 				<attribute name="Class-Path" value="${jar.list} commons.jar" />
 				<attribute name="Build-By" value="${user.name}" />
 				<attribute name="Build-Date" value="${build.tstamp}" />

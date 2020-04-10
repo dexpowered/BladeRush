@@ -98,7 +98,7 @@ public class Scripts {
         LOGGER.info("Addons: Loading addons...");
         final List<Class<?>> classes = new ArrayList<>();
         boolean result = false;
-        final File[] listFiles = new File("../lib/").listFiles(pathname -> pathname.getName().endsWith(".add.jar"));
+        final File[] listFiles = new File("../lib/").listFiles(pathname -> pathname.getName().endsWith(".ext.jar"));
         for (final File extFile : Objects.requireNonNull(listFiles)) {
             if (extFile.exists()) {
                 JarInputStream stream = null;
@@ -107,7 +107,7 @@ public class Scripts {
                     stream = new JarInputStream(new FileInputStream(extFile));
                     JarEntry entry;
                     while ((entry = stream.getNextJarEntry()) != null) {
-                        if (!entry.getName().startsWith("java/") && !entry.getName().startsWith("ru/j2dev/authserver") && !entry.getName().startsWith("ru/j2dev/commons") && !entry.getName().startsWith("ru/j2dev/gameserver")) {
+                        if (!entry.getName().startsWith("java/") && !entry.getName().startsWith("ru/l2/authserver") && !entry.getName().startsWith("ru/j2dev/commons") && !entry.getName().startsWith("ru/j2dev/gameserver")) {
                             if (entry.getName().contains(INNERCLASS_SEPARATOR) || !entry.getName().endsWith(".class")) {
                                 continue;
                             }

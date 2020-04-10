@@ -69,7 +69,7 @@ public class Config {
     private static final String TVT_FILE = "config/events/TeamVsTeam.ini";
     private static final String CTF_FILE = "config/events/CaptureTheFlag.ini";
     private static final String KOREAN_STYLE_CONFIG_FILE = "config/events/KoreanStyle.ini";
-    private static final String J2DEV_CONFIG = "config/j2dev.ini";
+    private static final String J2DEV_CONFIG = "config/debug.ini";
     private static final Logger LOGGER = LoggerFactory.getLogger(Config.class);
     public static int HTM_CACHE_MODE;
     public static boolean HTM_CACHE_COMPRESS;
@@ -509,7 +509,6 @@ public class Config {
     public static int[] ALT_CHAMPION_DROP_CHANCE;
     public static int[] ALT_CHAMPION_DROP_COUNT;
     public static boolean ALT_PVP_ITEMS_TREDABLE;
-    public static boolean ALT_PVP_ITEMS_ATTRIBUTABLE;
     public static boolean ALT_PVP_ITEMS_AUGMENTABLE;
     public static int[] ALT_INITIAL_QUESTS;
     public static int[] ALT_NOLOAD_QUESTS;
@@ -1709,7 +1708,6 @@ public class Config {
         ALT_FISH_CHAMPIONSHIP_REWARD_4 = altSettings.getProperty("AltFishChampionshipReward4", 200000);
         ALT_FISH_CHAMPIONSHIP_REWARD_5 = altSettings.getProperty("AltFishChampionshipReward5", 100000);
         ALT_PVP_ITEMS_TREDABLE = altSettings.getProperty("AltPvPItemsTredable", false);
-        ALT_PVP_ITEMS_ATTRIBUTABLE = altSettings.getProperty("AltPvPItemsAttributable", false);
         ALT_PVP_ITEMS_AUGMENTABLE = altSettings.getProperty("AltPvPItemsAugmentable", false);
         ALT_HBCE_FAIR_PLAY = altSettings.getProperty("HBCEFairPlay", false);
         ALT_PET_INVENTORY_LIMIT = altSettings.getProperty("AltPetInventoryLimit", 12);

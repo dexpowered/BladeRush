@@ -11,7 +11,7 @@ public class ConditionTargetNpcClass extends Condition {
     public ConditionTargetNpcClass(final String name) {
         Class<NpcInstance> classType;
         try {
-            classType = (Class<NpcInstance>) Class.forName("ru.j2dev.gameserver.model.instances." + name + "Instance");
+            classType = (Class<NpcInstance>) Class.forName("ru.l2.gameserver.model.instances." + name + "Instance");
         } catch (ClassNotFoundException e) {
             classType = (Class<NpcInstance>) Scripts.getInstance().getClasses().get("npc.model." + name + "Instance");
         }

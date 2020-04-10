@@ -32,7 +32,7 @@ public final class AccessoryListener implements OnEquipListener {
                 }
             }
         }
-        if (item.isAccessory() || item.getTemplate().isTalisman() || item.getTemplate().isBracelet()) {
+        if (item.isAccessory() || item.getTemplate().isTalisman()) {
             player.sendUserInfo(true);
         } else {
             player.broadcastCharInfo();
@@ -45,7 +45,7 @@ public final class AccessoryListener implements OnEquipListener {
             return;
         }
         final Player player = (Player) actor;
-        if (item.isAccessory() || item.getTemplate().isTalisman() || item.getTemplate().isBracelet()) {
+        if (item.isAccessory() || item.getTemplate().isTalisman()) {
             player.sendUserInfo(true);
         } else {
             player.broadcastCharInfo();
