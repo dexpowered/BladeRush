@@ -105,7 +105,7 @@ public class AdminSpawn implements IAdminCommandHandler {
                 Constructor<?> aiConstructor = null;
                 try {
                     if (!"npc".equalsIgnoreCase(aiName)) {
-                        aiConstructor = Class.forName("ru.j2dev.gameserver.ai." + aiName).getConstructors()[0];
+                        aiConstructor = Class.forName("ru.l2.gameserver.ai." + aiName).getConstructors()[0];
                     }
                 } catch (Exception e) {
                     try {

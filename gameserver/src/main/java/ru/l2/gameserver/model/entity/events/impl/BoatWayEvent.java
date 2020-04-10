@@ -2,7 +2,7 @@ package ru.l2.gameserver.model.entity.events.impl;
 
 import ru.l2.commons.collections.MultiValueSet;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.data.BoatHolder;
+import ru.l2.gameserver.data.xml.holder.BoatHolder;
 import ru.l2.gameserver.model.GameObjectsStorage;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.World;

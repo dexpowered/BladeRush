@@ -11,7 +11,7 @@ import ru.l2.commons.versioning.Version;
 import ru.l2.gameserver.cache.CrestCache;
 import ru.l2.gameserver.dao.CharacterDAO;
 import ru.l2.gameserver.dao.ItemsDAO;
-import ru.l2.gameserver.data.BoatHolder;
+import ru.l2.gameserver.data.xml.holder.BoatHolder;
 import ru.l2.gameserver.data.xml.Parsers;
 import ru.l2.gameserver.data.xml.holder.EventHolder;
 import ru.l2.gameserver.data.xml.holder.ResidenceHolder;

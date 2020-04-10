@@ -11,11 +11,10 @@ import java.util.List;
 
 public class BaiumNpc extends DefaultAI {
     private static final int BAIUM_EARTHQUAKE_TIMEOUT = 900000;
-    private long _wait_timeout;
+    private long _wait_timeout = 0;
 
     public BaiumNpc(final NpcInstance actor) {
         super(actor);
-        _wait_timeout = 0L;
     }
 
     @Override

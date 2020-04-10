@@ -53,7 +53,7 @@ public final class EventParser extends AbstractDirParser<EventHolder> {
             final EventType type = EventType.valueOf(eventElement.getAttributeValue("type"));
             Class<GlobalEvent> eventClass;
             try {
-                eventClass = (Class<GlobalEvent>) Class.forName("ru.j2dev.gameserver.model.entity.events.impl." + impl + "Event");
+                eventClass = (Class<GlobalEvent>) Class.forName("ru.l2.gameserver.model.entity.events.impl." + impl + "Event");
             } catch (ClassNotFoundException e) {
                 info("Not found impl class: " + impl + "; File: " + getCurrentFileName());
                 continue;

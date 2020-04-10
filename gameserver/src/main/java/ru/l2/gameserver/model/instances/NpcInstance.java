@@ -1022,20 +1022,20 @@ public class NpcInstance extends Creature {
                         sb.append(" - ").append((long) (tl.getPrice() * pricemod)).append(" ").append(HtmlUtils.htmlItemName(57));
                     }
                     if (tl.getMinLevel() > 0) {
-                        sb.append(" - ").append(new CustomMessage("ru.j2dev.gameserver.model.instances.NpcInstance.TeleportListMinLevel", player, tl.getMinLevel()));
+                        sb.append(" - ").append(new CustomMessage("ru.l2.gameserver.model.instances.NpcInstance.TeleportListMinLevel", player, tl.getMinLevel()));
                     }
                     if (tl.getMaxLevel() > 0) {
-                        sb.append(" - ").append(new CustomMessage("ru.j2dev.gameserver.model.instances.NpcInstance.TeleportListMaxLevel", player, tl.getMaxLevel()));
+                        sb.append(" - ").append(new CustomMessage("ru.l2.gameserver.model.instances.NpcInstance.TeleportListMaxLevel", player, tl.getMaxLevel()));
                     }
                     sb.append("]<br1>\n");
                 } else {
                     final String name2 = new CustomMessage(tl.getName(), player, new Object[0]).toString();
                     sb.append("[scripts_Util:QuestGatekeeper ").append(tl.getX()).append(" ").append(tl.getY()).append(" ").append(tl.getZ()).append(" ").append(tl.getPrice()).append(" ").append(tl.getItem().getItemId()).append(" @811;F;").append(name2).append("|").append(name2).append(" - ").append(tl.getPrice()).append(" ").append(HtmlUtils.htmlItemName(tl.getItem().getItemId()));
                     if (tl.getMinLevel() > 0) {
-                        sb.append(" - ").append(new CustomMessage("ru.j2dev.gameserver.model.instances.NpcInstance.TeleportListMinLevel", player, tl.getMinLevel()));
+                        sb.append(" - ").append(new CustomMessage("ru.l2.gameserver.model.instances.NpcInstance.TeleportListMinLevel", player, tl.getMinLevel()));
                     }
                     if (tl.getMaxLevel() > 0) {
-                        sb.append(" - ").append(new CustomMessage("ru.j2dev.gameserver.model.instances.NpcInstance.TeleportListMaxLevel", player, tl.getMaxLevel()));
+                        sb.append(" - ").append(new CustomMessage("ru.l2.gameserver.model.instances.NpcInstance.TeleportListMaxLevel", player, tl.getMaxLevel()));
                     }
                     sb.append("]<br1>\n");
                 }

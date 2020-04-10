@@ -1,4 +1,4 @@
-package ru.l2.gameserver.data;
+package ru.l2.gameserver.data.xml.holder;
 
 import ru.l2.commons.data.xml.AbstractHolder;
 import ru.l2.gameserver.idfactory.IdFactory;

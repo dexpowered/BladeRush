@@ -389,7 +389,7 @@ public class Formulas {
         final boolean success = Rnd.get(1000) <= chance * 10;
         // Отображение шанса прохождения скила
         if (Config.SHOW_SKILL_CHANCE && activeChar.isPlayer() && (activeChar.getPlayer().getVarB("SkillsHideChance") || activeChar.getPlayer().isGM())) {
-            activeChar.sendMessage(new CustomMessage("ru.j2dev.gameserver.skills.Formulas.Chance", activeChar.getPlayer()).addString(skill.getName()).addNumber((long) chance));
+            activeChar.sendMessage(new CustomMessage("ru.l2.gameserver.skills.Formulas.Chance", activeChar.getPlayer()).addString(skill.getName()).addNumber((long) chance));
         }
         if (activeChar.getPlayer() != null && activeChar.getPlayer().isGM()) {
             activeChar.sendMessage("[F] skill: " + skill + " is " + success);
@@ -427,7 +427,7 @@ public class Formulas {
         final boolean success = Rnd.chance(chance);
         // Отображение шанса прохождения скила
         if (Config.SHOW_SKILL_CHANCE && activeChar.isPlayer() && (activeChar.getPlayer().getVarB("SkillsHideChance") || activeChar.getPlayer().isGM())) {
-            activeChar.sendMessage(new CustomMessage("ru.j2dev.gameserver.skills.Formulas.Chance", activeChar.getPlayer()).addString(skill.getName()).addNumber((long) chance));
+            activeChar.sendMessage(new CustomMessage("ru.l2.gameserver.skills.Formulas.Chance", activeChar.getPlayer()).addString(skill.getName()).addNumber((long) chance));
         }
         if (activeChar.getPlayer() != null && activeChar.getPlayer().isGM()) {
             activeChar.sendMessage("[F] skill: " + skill + " is " + success);
@@ -507,7 +507,7 @@ public class Formulas {
 
         // Отображение шанса прохождения скила
         if (Config.SHOW_SKILL_CHANCE && activeChar.isPlayer() && (activeChar.getPlayer().getVarB("SkillsHideChance") || activeChar.getPlayer().isGM())) {
-            activeChar.sendMessage(new CustomMessage("ru.j2dev.gameserver.skills.Formulas.Chance", activeChar.getPlayer()).addString(skill.getName()).addNumber((long) chance));
+            activeChar.sendMessage(new CustomMessage("ru.l2.gameserver.skills.Formulas.Chance", activeChar.getPlayer()).addString(skill.getName()).addNumber((long) chance));
         }
         if (activeChar.getPlayer() != null && activeChar.getPlayer().isGM()) {
             activeChar.sendMessage("[F] skill: " + skill + " is " + success);
@@ -1049,7 +1049,7 @@ public class Formulas {
     }
 
     private static void showSkillChance(final Player player, final Skill skill, final EffectTemplate et, final double chance) {
-        player.sendMessage(new CustomMessage("ru.j2dev.gameserver.skills.Formulas.Chance", player).addString(et == null ? skill.getName() : skill.getName() + " effect: " + et._effectType.name()).addNumber(Math.round(chance)));
+        player.sendMessage(new CustomMessage("ru.l2.gameserver.skills.Formulas.Chance", player).addString(et == null ? skill.getName() : skill.getName() + " effect: " + et._effectType.name()).addNumber(Math.round(chance)));
 
     }
 

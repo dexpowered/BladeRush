@@ -45,7 +45,7 @@ public class CustomTradeManagers {
         ShadowTradeLoc tempLoc = ShadowTradeHolder.getInstance().getRndNightLoc();
         int npcId = 45001;
         shadowTrader = NpcUtils.spawnSingle(npcId, tempLoc);
-        Announcements.getInstance().announceByCustomMessage("ru.j2dev.gameserver.instancemanager.ShadowTraderManager", null);
+        Announcements.getInstance().announceByCustomMessage("ru.l2.gameserver.instancemanager.ShadowTraderManager", null);
         if (tempLoc.getDecription() != null && !tempLoc.getDecription().isEmpty()) {
             Announcements.getInstance().announceToAll(tempLoc.getDecription());
         }
@@ -56,7 +56,7 @@ public class CustomTradeManagers {
         ShadowTradeLoc tempLoc = ShadowTradeHolder.getInstance().getRndDayLoc();
         int npcId = 45002;
         dayTrader = NpcUtils.spawnSingle(npcId, tempLoc);
-        Announcements.getInstance().announceByCustomMessage("ru.j2dev.gameserver.instancemanager.DayTraderManger", null);
+        Announcements.getInstance().announceByCustomMessage("ru.l2.gameserver.instancemanager.DayTraderManger", null);
         if (tempLoc.getDecription() != null && !tempLoc.getDecription().isEmpty()) {
             Announcements.getInstance().announceToAll(tempLoc.getDecription());
         }

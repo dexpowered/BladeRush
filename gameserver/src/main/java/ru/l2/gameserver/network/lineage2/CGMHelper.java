@@ -42,9 +42,9 @@ public abstract class CGMHelper {
 
     public enum CGMType {
         NONE(null),
-        LAMEGUARD("ru.j2dev.gameserver.network.lineage2.cgm.LameGuardHelperImpl"),
-        SMARTGUARD("ru.j2dev.gameserver.network.lineage2.cgm.SmartGuardHelperImpl"),
-        STRIXGUARD("ru.j2dev.gameserver.network.lineage2.cgm.StrixGuardHelperImpl");
+        LAMEGUARD("ru.l2.gameserver.network.lineage2.cgm.LameGuardHelperImpl"),
+        SMARTGUARD("ru.l2.gameserver.network.lineage2.cgm.SmartGuardHelperImpl"),
+        STRIXGUARD("ru.l2.gameserver.network.lineage2.cgm.StrixGuardHelperImpl");
 
         private final String _implClassName;
 

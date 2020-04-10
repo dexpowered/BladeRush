@@ -136,7 +136,7 @@ public final class NpcTemplate extends CharTemplate {
     private void setType(final String type) {
         Class<NpcInstance> classType;
         try {
-            classType = (Class<NpcInstance>) Class.forName("ru.j2dev.gameserver.model.instances." + type + "Instance");
+            classType = (Class<NpcInstance>) Class.forName("ru.l2.gameserver.model.instances." + type + "Instance");
         }
         catch(ClassNotFoundException e) {
             classType = (Class<NpcInstance>) Scripts.getInstance().getClasses().get("npc.model." + type + "Instance");
@@ -168,7 +168,7 @@ public final class NpcTemplate extends CharTemplate {
     private void setAI(final String ai) {
         Class<CharacterAI> classAI;
         try {
-            classAI = (Class<CharacterAI>) Class.forName("ru.j2dev.gameserver.ai." + ai);
+            classAI = (Class<CharacterAI>) Class.forName("ru.l2.gameserver.ai." + ai);
         } catch (ClassNotFoundException e) {
             classAI = (Class<CharacterAI>) Scripts.getInstance().getClasses().get("ai." + ai);
         }

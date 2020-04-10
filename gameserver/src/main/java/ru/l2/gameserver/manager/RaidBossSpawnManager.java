@@ -63,7 +63,7 @@ public class RaidBossSpawnManager {
                     public void runImpl() {
                         final NpcTemplate npcTemplate = NpcTemplateHolder.getInstance().getTemplate(npcId);
                         if (npcTemplate != null) {
-                            Announcements.getInstance().announceByCustomMessage("ru.j2dev.gameserver.instancemanager.RaidBossSpawnManager.AltAnnounceRaidbossSpawnSoon", new String[]{npcTemplate.getName()});
+                            Announcements.getInstance().announceByCustomMessage("ru.l2.gameserver.instancemanager.RaidBossSpawnManager.AltAnnounceRaidbossSpawnSoon", new String[]{npcTemplate.getName()});
                         }
                     }
                 }, (respawnDelay - Config.ALT_RAID_BOSS_SPAWN_ANNOUNCE_DELAY - now) * 1000L);
@@ -182,7 +182,7 @@ public class RaidBossSpawnManager {
         //Log.add("onBossSpawned npc=" + bossId + " current_hp=" + raidboss.getCurrentHp() + " current_mp=" + raidboss.getCurrentMp(), "RaidBossSpawnManager");
         GmListTable.broadcastMessageToGMs("Spawning RaidBoss " + raidboss.getName());
         if (ArrayUtils.contains(Config.ALT_RAID_BOSS_SPAWN_ANNOUNCE_IDS, raidboss.getNpcId())) {
-            Announcements.getInstance().announceByCustomMessage("ru.j2dev.gameserver.instancemanager.RaidBossSpawnManager.AltAnnounceRaidbossSpawn", new String[]{raidboss.getName()});
+            Announcements.getInstance().announceByCustomMessage("ru.l2.gameserver.instancemanager.RaidBossSpawnManager.AltAnnounceRaidbossSpawn", new String[]{raidboss.getName()});
         }
     }
 

@@ -50,7 +50,7 @@ public final class ResidenceParser extends AbstractDirParser<ResidenceHolder> {
         rootElement.getAttributes().forEach(element -> set.set(element.getName(), element.getValue()));
         Residence residence;
         try {
-            clazz = Class.forName("ru.j2dev.gameserver.model.entity.residence." + impl);
+            clazz = Class.forName("ru.l2.gameserver.model.entity.residence." + impl);
             final Constructor constructor = clazz.getConstructor(StatsSet.class);
             residence = (Residence) constructor.newInstance(set);
             holder.addResidence(residence);
