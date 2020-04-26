@@ -13,11 +13,8 @@ import ru.l2.authserver.utils.Log;
 import javax.crypto.Cipher;
 
 public class RequestAuthLogin extends L2LoginClientPacket {
-    private final byte[] _raw;
 
-    public RequestAuthLogin() {
-        _raw = new byte[128];
-    }
+    private byte[] _raw = new byte[128];
 
     @Override
     protected void readImpl() {

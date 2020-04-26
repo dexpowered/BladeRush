@@ -7,6 +7,7 @@ public enum ServerType {
     NO_LABEL,
     RESTRICTED,
     EVENT,
+    CLASSIC,
     FREE;
 
     private final int _mask;

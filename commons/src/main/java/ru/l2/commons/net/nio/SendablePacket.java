@@ -4,7 +4,10 @@ public abstract class SendablePacket<T> extends AbstractPacket<T> {
     protected void writeC(final int data) {
         getByteBuffer().put((byte) data);
     }
-
+    protected void writeC(boolean paramBoolean)
+    {
+        writeC(paramBoolean ? 1 : 0);
+    }
     protected void writeF(final double value) {
         getByteBuffer().putDouble(value);
     }

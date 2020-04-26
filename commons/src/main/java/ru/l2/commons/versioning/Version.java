@@ -18,9 +18,9 @@ public class Version {
     private String _versionNumber = "-1";
     private String _buildDate = "";
     private String _buildJdk = "";
-    private String _teamName = "j2dev.ru";
-    private String _teamSite = "http://j2dev.ru";
-    private String _licenseType = "Demo license";
+    private String _teamName = "R";
+    private String _teamSite = "http://bladerush.club";
+    private String _licenseType = "Test license";
     private String _coreDev = "";
     private String _dataDev = "";
     private String _jarSignature = "";

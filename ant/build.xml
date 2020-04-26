@@ -280,7 +280,7 @@
 			JDK=${ant.java.version} ${java.vendor}
 		</concat>
 
-		<concat destfile="${build}/classes/ru/j2dev/gameserver/version.ini">
+		<concat destfile="${build}/classes/ru/l2/gameserver/version.ini">
 			Build-By=${user.name}
 			Version=${build.version}
 			Revision=${build.revision}

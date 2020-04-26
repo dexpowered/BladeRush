@@ -107,7 +107,7 @@ public class Scripts {
                     stream = new JarInputStream(new FileInputStream(extFile));
                     JarEntry entry;
                     while ((entry = stream.getNextJarEntry()) != null) {
-                        if (!entry.getName().startsWith("java/") && !entry.getName().startsWith("ru/l2/authserver") && !entry.getName().startsWith("ru/j2dev/commons") && !entry.getName().startsWith("ru/j2dev/gameserver")) {
+                        if (!entry.getName().startsWith("java/") && !entry.getName().startsWith("ru/l2/authserver") && !entry.getName().startsWith("ru/l2/commons") && !entry.getName().startsWith("ru/l2/gameserver")) {
                             if (entry.getName().contains(INNERCLASS_SEPARATOR) || !entry.getName().endsWith(".class")) {
                                 continue;
                             }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="Build All" default="dist" basedir=".">
 
-	<property name="debug" value="true" />
+	<property name="debug" value="false" />
 	<property name="debuglevel" value="lines,vars,source" />
 	<property name="optimize" value="true" />
 	<property name="nowarn" value="true" />
@@ -28,9 +28,9 @@
 	<property name="build.dist.lib" location="${build.dist}/lib" />
 	<property name="build.dist.tools" location="${build.dist}/tools" />
 	<property name="build.version" value="Interlude" />
-	<property name="build.team" value="" />
-	<property name="build.teamsite" value="" />
-	<property name="build.licensetype" value="" />
+	<property name="build.team" value="R" />
+	<property name="build.teamsite" value="r-g.club" />
+	<property name="build.licensetype" value="Free" />
 	<property name="build.coredev" value="" />
 	<property name="build.datadev" value="" />
 
@@ -305,29 +305,6 @@
 				<attribute name="Data-Dev" value="${build.datadev}" />
 			</manifest>
 		</jar>
-		<!-- Protect by Stringer -->
-		<stringer srcFile="${build}/gameserver.jar"
-                  destFile="${build}/gameserver.jar"
-        >
-			<verbose>false</verbose>
-			<optimize>false</optimize>
-			<protectionElements>
-				<protectionElement>
-					<stringEncryption>
-						<mode>annotations</mode>
-					</stringEncryption>
-					<resourceEncryption>
-						<mode>off</mode>
-					</resourceEncryption>
-					<hideAccess>
-						<mode>annotations</mode>
-					</hideAccess>
-					<integrityControl>
-						<mode>off</mode>
-					</integrityControl>
-				</protectionElement>
-			</protectionElements>
-		</stringer>
 
 	</target>
 
@@ -657,9 +634,9 @@
 		<fail unless="JDK8.present" message="Java 1.8 is required. But your version is Java ${ant.java.version} and probably JDK is not installed." />
 	</target>
 
-	<target name="dist" depends="gameserver">
-	<!-- <target name="dist" depends="authserver, gameserver, dataparser, cgm, scripts">
-		 cleanup -->
+	<!--<target name="dist" depends="gameserver"> cleanup -->
+	<target name="dist" depends="authserver, gameserver, dataparser, cgm, scripts">
+		<!-- cleanup -->
 		<delete file="${build}/authserver.jar" />
 		<delete file="${build}/cgm.jar" />
 		<delete file="${build}/commons.jar" />
@@ -668,7 +645,7 @@
 		<delete file="${build}/scripts.jar" />
 		<delete dir="${build.classes}" />
 		<echo message="Creating Zip archive"/>
- 		<zip destfile="${build_archive}/${build.team}_${build.version}_Rev.${build.revision}.zip" basedir="${build.dist}" update="true" level="9" />
+		<zip destfile="${build_archive}/${build.team}_${build.version}_Rev.${build.revision}.zip" basedir="${build.dist}" update="true" level="9" />
 		<echo message="Creating Zip archive done"/>
 	</target>
 </project>

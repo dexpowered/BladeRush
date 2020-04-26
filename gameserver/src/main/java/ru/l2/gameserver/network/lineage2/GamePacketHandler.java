@@ -39,7 +39,7 @@ public final class GamePacketHandler implements IPacketHandler<GameClient>, ICli
                             break;
                         }
                         default:
-                            LOGGER.error("Unknown packet on state: CONNECTED, opcode: " + Integer.toHexString(id) + " from " + client.getConnection().getSocket().getInetAddress().getHostAddress());
+                            LOGGER.error("Unknown packet on state: CONNECTED, opcode: " + Integer.toHexString(id).toLowerCase() + " from " + client.getConnection().getSocket().getInetAddress().getHostAddress());
                             client.onUnknownPacket();
                             break;
                     }

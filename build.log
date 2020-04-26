@@ -1,0 +1,354 @@
+
+checkRequirements:
+     [echo] Check ANT version
+     [echo] Check JDK version
+
+init:
+    [mkdir] Created dir: D:\BladeRush\build\classes
+
+compile-commons:
+   [delete] Deleting directory D:\BladeRush\build\classes
+    [mkdir] Created dir: D:\BladeRush\build\classes
+    [javac] Compiling 109 source files to D:\BladeRush\build\classes
+    [javac] Note: D:\BladeRush\commons\src\main\java\ru\l2\commons\net\io\IOContext.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+
+commons-jar:
+     [echo] Current Revision 6
+      [jar] Building jar: D:\BladeRush\build\commons.jar
+ [stringer] Stringer Java Obfuscator Standard v3.0.3 (20170228), LICEL CORPORATION
+ [stringer] License file: D:\BladeRush\stringer\stringer.jar
+ [stringer] 
+ [stringer] Stringer Java Obfuscator Standard
+ [stringer] Version: 3.0.3
+ [stringer] Build id: 20170228
+ [stringer] 
+ [stringer] Licensed to: coolman@paradi.se [Cracked]
+ [stringer] 
+ [stringer] 
+ [stringer] (c) Copyright LICEL CORPORATION 2011-2017.  All rights reserved.
+ [stringer] Visit https://jfxstore.com/stringer
+ [stringer] 
+ [stringer] Third-Party Licenses. Information about third-party components and
+ [stringer]  its licenses can be found in distribution
+ [stringer] [Protecting commons.jar]
+ [stringer] [Analyzing commons.jar]
+ [stringer] Found ru/l2/commons/util/SystemUtil,openStream
+ [stringer] Found ru/l2/commons/util/SystemUtil,openStream
+ [stringer] Contains signature: false
+ [stringer] [Finishing commons.jar]
+ [stringer] Total strings processed: 0
+ [stringer] Total classes processed: 0
+ [stringer] Total resources processed: 0
+ [stringer] Total bytes processed: 350370, ratio 1.0185489625253303
+
+compile-authserver:
+   [delete] Deleting directory D:\BladeRush\build\classes
+    [mkdir] Created dir: D:\BladeRush\build\classes
+    [javac] Compiling 54 source files to D:\BladeRush\build\classes
+
+authserver-jar:
+      [jar] Building jar: D:\BladeRush\build\authserver.jar
+ [stringer] Stringer Java Obfuscator Standard v3.0.3 (20170228), LICEL CORPORATION
+ [stringer] License file: D:\BladeRush\stringer\stringer.jar
+ [stringer] 
+ [stringer] Stringer Java Obfuscator Standard
+ [stringer] Version: 3.0.3
+ [stringer] Build id: 20170228
+ [stringer] 
+ [stringer] Licensed to: coolman@paradi.se [Cracked]
+ [stringer] 
+ [stringer] 
+ [stringer] (c) Copyright LICEL CORPORATION 2011-2017.  All rights reserved.
+ [stringer] Visit https://jfxstore.com/stringer
+ [stringer] 
+ [stringer] Third-Party Licenses. Information about third-party components and
+ [stringer]  its licenses can be found in distribution
+ [stringer] [Protecting authserver.jar]
+ [stringer] [Analyzing authserver.jar]
+ [stringer] Contains signature: false
+ [stringer] [Finishing authserver.jar]
+ [stringer] Total strings processed: 0
+ [stringer] Total classes processed: 0
+ [stringer] Total resources processed: 0
+ [stringer] Total bytes processed: 145191, ratio 1.0413593129050698
+
+authserver:
+     [copy] Copying 2 files to D:\BladeRush\build\dist\lib
+
+compile-gameserver:
+   [delete] Deleting directory D:\BladeRush\build\classes
+    [mkdir] Created dir: D:\BladeRush\build\classes
+    [javac] Compiling 1700 source files to D:\BladeRush\build\classes
+    [javac] D:\BladeRush\gameserver\src\main\java\ru\l2\gameserver\cache\HtmCache.java:44: warning: [unchecked] unchecked conversion
+    [javac]     private final Cache<String, String>[] caffeine_cache = new Cache[Language.VALUES.length];
+    [javac]                                                            ^
+    [javac]   required: Cache<String,String>[]
+    [javac]   found:    Cache[]
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 1 warning
+
+gameserver-jar:
+     [echo] Current Revision 6
+      [jar] Building jar: D:\BladeRush\build\gameserver.jar
+ [stringer] Stringer Java Obfuscator Standard v3.0.3 (20170228), LICEL CORPORATION
+ [stringer] License file: D:\BladeRush\stringer\stringer.jar
+ [stringer] 
+ [stringer] Stringer Java Obfuscator Standard
+ [stringer] Version: 3.0.3
+ [stringer] Build id: 20170228
+ [stringer] 
+ [stringer] Licensed to: coolman@paradi.se [Cracked]
+ [stringer] 
+ [stringer] 
+ [stringer] (c) Copyright LICEL CORPORATION 2011-2017.  All rights reserved.
+ [stringer] Visit https://jfxstore.com/stringer
+ [stringer] 
+ [stringer] Third-Party Licenses. Information about third-party components and
+ [stringer]  its licenses can be found in distribution
+ [stringer] [Protecting gameserver.jar]
+ [stringer] [Analyzing gameserver.jar]
+ [stringer] Found ru/l2/gameserver/taskmanager/L2TopRuManager,openConnection
+ [stringer] Contains signature: false
+ [stringer] [Finishing gameserver.jar]
+ [stringer] Total strings processed: 860
+ [stringer] Total classes processed: 115
+ [stringer] Total resources processed: 0
+ [stringer] Total bytes processed: 6682844, ratio 1.0489110624159415
+
+gameserver:
+     [copy] Copying 1 file to D:\BladeRush\build\dist\lib
+   [delete] Deleting directory D:\BladeRush\build\classes
+
+compile-dataparser:
+    [mkdir] Created dir: D:\BladeRush\build\classes
+    [javac] Compiling 320 source files to D:\BladeRush\build\classes
+
+dataparser-jar:
+      [jar] Building jar: D:\BladeRush\build\dataparser.jar
+ [stringer] Stringer Java Obfuscator Standard v3.0.3 (20170228), LICEL CORPORATION
+ [stringer] License file: D:\BladeRush\stringer\stringer.jar
+ [stringer] 
+ [stringer] Stringer Java Obfuscator Standard
+ [stringer] Version: 3.0.3
+ [stringer] Build id: 20170228
+ [stringer] 
+ [stringer] Licensed to: coolman@paradi.se [Cracked]
+ [stringer] 
+ [stringer] 
+ [stringer] (c) Copyright LICEL CORPORATION 2011-2017.  All rights reserved.
+ [stringer] Visit https://jfxstore.com/stringer
+ [stringer] 
+ [stringer] Third-Party Licenses. Information about third-party components and
+ [stringer]  its licenses can be found in distribution
+ [stringer] [Protecting dataparser.jar]
+ [stringer] [Analyzing dataparser.jar]
+ [stringer] Contains signature: false
+ [stringer] [Finishing dataparser.jar]
+ [stringer] Total strings processed: 0
+ [stringer] Total classes processed: 0
+ [stringer] Total resources processed: 0
+ [stringer] Total bytes processed: 639573, ratio 1.0102740422125387
+
+dataparser:
+     [copy] Copying 1 file to D:\BladeRush\build\dist\lib
+
+compile-cgm:
+   [delete] Deleting directory D:\BladeRush\build\classes
+    [mkdir] Created dir: D:\BladeRush\build\classes
+    [javac] Compiling 25 source files to D:\BladeRush\build\classes
+    [javac] Note: D:\BladeRush\cgm\src\main\java\ru\l2\gameserver\network\lineage2\cgm\sg\ClientWrapper.java uses or overrides a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+
+cgm-jar:
+      [jar] Building jar: D:\BladeRush\build\cgm.jar
+ [stringer] Stringer Java Obfuscator Standard v3.0.3 (20170228), LICEL CORPORATION
+ [stringer] License file: D:\BladeRush\stringer\stringer.jar
+ [stringer] 
+ [stringer] Stringer Java Obfuscator Standard
+ [stringer] Version: 3.0.3
+ [stringer] Build id: 20170228
+ [stringer] 
+ [stringer] Licensed to: coolman@paradi.se [Cracked]
+ [stringer] 
+ [stringer] 
+ [stringer] (c) Copyright LICEL CORPORATION 2011-2017.  All rights reserved.
+ [stringer] Visit https://jfxstore.com/stringer
+ [stringer] 
+ [stringer] Third-Party Licenses. Information about third-party components and
+ [stringer]  its licenses can be found in distribution
+ [stringer] [Protecting cgm.jar]
+ [stringer] [Analyzing cgm.jar]
+ [stringer] Contains signature: false
+ [stringer] [Finishing cgm.jar]
+ [stringer] Total strings processed: 0
+ [stringer] Total classes processed: 0
+ [stringer] Total resources processed: 0
+ [stringer] Total bytes processed: 44881, ratio 1.1446714645395601
+
+cgm:
+     [copy] Copying 1 file to D:\BladeRush\build\dist\lib
+
+compile-scripts:
+    [mkdir] Created dir: D:\BladeRush\build\classes\scripts
+    [javac] Compiling 742 source files to D:\BladeRush\build\classes
+    [javac] D:\BladeRush\dist\gameserver\data\scripts\achievements\AchievementCondition.java:27: warning: [unchecked] unchecked cast
+    [javac]                     final Class<? extends AchievementCondition> achievementClass = (Class<? extends AchievementCondition>) clazz;
+    [javac]                                                                                                                            ^
+    [javac]   required: Class<? extends AchievementCondition>
+    [javac]   found:    Class<CAP#1>
+    [javac]   where CAP#1 is a fresh type-variable:
+    [javac]     CAP#1 extends Object from capture of ?
+    [javac] D:\BladeRush\dist\gameserver\data\scripts\bosses\FrintezzaManager.java:329: warning: [unchecked] unchecked method invocation: method addListener in class Creature is applied to given types
+    [javac]         allSpawned.forEach(spawnedNpc -> spawnedNpc.addListener((Listener) listener));
+    [javac]                                                                ^
+    [javac]   required: T
+    [javac]   found: Listener
+    [javac]   where T is a type-variable:
+    [javac]     T extends Listener<Creature> declared in method <T>addListener(T)
+    [javac] D:\BladeRush\dist\gameserver\data\scripts\bosses\FrintezzaManager.java:329: warning: [unchecked] unchecked method invocation: method forEach in interface Iterable is applied to given types
+    [javac]         allSpawned.forEach(spawnedNpc -> spawnedNpc.addListener((Listener) listener));
+    [javac]                           ^
+    [javac]   required: Consumer<? super T>
+    [javac]   found: Consumer<NpcInstance>
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in interface Iterable
+    [javac] D:\BladeRush\dist\gameserver\data\scripts\bosses\FrintezzaManager.java:334: warning: [unchecked] unchecked method invocation: method removeListener in class Creature is applied to given types
+    [javac]         allSpawned.forEach(spawnedNpc -> spawnedNpc.removeListener((Listener) listener));
+    [javac]                                                                   ^
+    [javac]   required: T
+    [javac]   found: Listener
+    [javac]   where T is a type-variable:
+    [javac]     T extends Listener<Creature> declared in method <T>removeListener(T)
+    [javac] D:\BladeRush\dist\gameserver\data\scripts\bosses\FrintezzaManager.java:334: warning: [unchecked] unchecked method invocation: method forEach in interface Iterable is applied to given types
+    [javac]         allSpawned.forEach(spawnedNpc -> spawnedNpc.removeListener((Listener) listener));
+    [javac]                           ^
+    [javac]   required: Consumer<? super T>
+    [javac]   found: Consumer<NpcInstance>
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in interface Iterable
+    [javac] D:\BladeRush\dist\gameserver\data\scripts\bosses\FrintezzaManager.java:694: warning: [unchecked] unchecked method invocation: method addListener in class Creature is applied to given types
+    [javac]                         weakScarlet.addListener((Listener) _currentHpListener);
+    [javac]                                                ^
+    [javac]   required: T
+    [javac]   found: Listener
+    [javac]   where T is a type-variable:
+    [javac]     T extends Listener<Creature> declared in method <T>addListener(T)
+    [javac] D:\BladeRush\dist\gameserver\data\scripts\instances\GvGInstance.java:282: warning: [unchecked] unchecked method invocation: method addListener in class Creature is applied to given types
+    [javac]         npc.addListener((Listener) _deathListener);
+    [javac]                        ^
+    [javac]   required: T
+    [javac]   found: Listener
+    [javac]   where T is a type-variable:
+    [javac]     T extends Listener<Creature> declared in method <T>addListener(T)
+    [javac] D:\BladeRush\dist\gameserver\data\scripts\npc\model\FreyaDeaconKeeperInstance.java:146: warning: [unchecked] unchecked method invocation: method addListener in class Creature is applied to given types
+    [javac]                 sirr.addListener((Listener) _listner);
+    [javac]                                 ^
+    [javac]   required: T
+    [javac]   found: Listener
+    [javac]   where T is a type-variable:
+    [javac]     T extends Listener<Creature> declared in method <T>addListener(T)
+    [javac] D:\BladeRush\dist\gameserver\data\scripts\npc\model\FreyaDeaconKeeperInstance.java:155: warning: [unchecked] unchecked method invocation: method removeListener in class Creature is applied to given types
+    [javac]                     sirr.removeListener((Listener) _listner);
+    [javac]                                        ^
+    [javac]   required: T
+    [javac]   found: Listener
+    [javac]   where T is a type-variable:
+    [javac]     T extends Listener<Creature> declared in method <T>removeListener(T)
+    [javac] D:\BladeRush\dist\gameserver\data\scripts\quests\_610_MagicalPowerofWater2.java:49: warning: [unchecked] unchecked method invocation: method addListener in class Creature is applied to given types
+    [javac]                 (SoulOfWaterAshutarSpawn = st.addSpawn(25316, 104825, -36926, -1136)).addListener((Listener) new DeathListener());
+    [javac]                                                                                                  ^
+    [javac]   required: T
+    [javac]   found: Listener
+    [javac]   where T is a type-variable:
+    [javac]     T extends Listener<Creature> declared in method <T>addListener(T)
+    [javac] D:\BladeRush\dist\gameserver\data\scripts\quests\_610_MagicalPowerofWater2.java:102: warning: [unchecked] unchecked method invocation: method addListener in class Creature is applied to given types
+    [javac]                     (SoulOfWaterAshutarSpawn = st.addSpawn(25316, 104825, -36926, -1136)).addListener((Listener) new DeathListener());
+    [javac]                                                                                                      ^
+    [javac]   required: T
+    [javac]   found: Listener
+    [javac]   where T is a type-variable:
+    [javac]     T extends Listener<Creature> declared in method <T>addListener(T)
+    [javac] D:\BladeRush\dist\gameserver\data\scripts\quests\_616_MagicalPowerofFire2.java:49: warning: [unchecked] unchecked method invocation: method addListener in class Creature is applied to given types
+    [javac]                 (SoulOfFireNastronSpawn = st.addSpawn(25306, 142528, -82528, -6496)).addListener((Listener) new DeathListener());
+    [javac]                                                                                                 ^
+    [javac]   required: T
+    [javac]   found: Listener
+    [javac]   where T is a type-variable:
+    [javac]     T extends Listener<Creature> declared in method <T>addListener(T)
+    [javac] D:\BladeRush\dist\gameserver\data\scripts\quests\_616_MagicalPowerofFire2.java:123: warning: [unchecked] unchecked method invocation: method addListener in class Creature is applied to given types
+    [javac]                     (SoulOfFireNastronSpawn = st.addSpawn(25306, 142528, -82528, -6496)).addListener((Listener) new DeathListener());
+    [javac]                                                                                                     ^
+    [javac]   required: T
+    [javac]   found: Listener
+    [javac]   where T is a type-variable:
+    [javac]     T extends Listener<Creature> declared in method <T>addListener(T)
+    [javac] D:\BladeRush\dist\gameserver\data\scripts\quests\_625_TheFinestIngredientsPart2.java:183: warning: [unchecked] unchecked method invocation: method addListener in class Creature is applied to given types
+    [javac]                 _npc.addListener((Listener) new DeathListener());
+    [javac]                                 ^
+    [javac]   required: T
+    [javac]   found: Listener
+    [javac]   where T is a type-variable:
+    [javac]     T extends Listener<Creature> declared in method <T>addListener(T)
+    [javac] D:\BladeRush\dist\gameserver\data\scripts\services\QuestSell.java:212: warning: [unchecked] unchecked conversion
+    [javac]         return filterAvailableQuests(player, parseQuestSellList(Config.QUEST_SELL_QUEST_PRICES));
+    [javac]                                     ^
+    [javac]   required: Pair<Set<Quest>,List<Pair<Integer,Long>>>[]
+    [javac]   found:    Pair[]
+    [javac] D:\BladeRush\dist\gameserver\data\scripts\services\SupportMagic.java:68: warning: [unchecked] unchecked method invocation: method toArray in interface List is applied to given types
+    [javac]         return new NewbieBuffsList(type, listMinLevel, listMaxLevel, buffsList.toArray(new Pair[buffsList.size()]));
+    [javac]                                                                                       ^
+    [javac]   required: T[]
+    [javac]   found: Pair[]
+    [javac]   where T is a type-variable:
+    [javac]     T extends Object declared in method <T>toArray(T[])
+    [javac] D:\BladeRush\dist\gameserver\data\scripts\services\SupportMagic.java:68: warning: [unchecked] unchecked method invocation: constructor <init> in class NewbieBuffsList is applied to given types
+    [javac]         return new NewbieBuffsList(type, listMinLevel, listMaxLevel, buffsList.toArray(new Pair[buffsList.size()]));
+    [javac]                ^
+    [javac]   required: NewbieBuffsListType,int,int,Pair<Integer,Skill>[]
+    [javac]   found: NewbieBuffsListType,int,int,Pair[]
+    [javac] D:\BladeRush\dist\gameserver\data\scripts\services\SupportMagic.java:68: warning: [unchecked] unchecked conversion
+    [javac]         return new NewbieBuffsList(type, listMinLevel, listMaxLevel, buffsList.toArray(new Pair[buffsList.size()]));
+    [javac]                                                                                       ^
+    [javac]   required: Pair<Integer,Skill>[]
+    [javac]   found:    Pair[]
+    [javac] Note: Some input files use or override a deprecated API.
+    [javac] Note: Recompile with -Xlint:deprecation for details.
+    [javac] 18 warnings
+
+scripts-jar:
+      [jar] Building jar: D:\BladeRush\build\scripts.jar
+ [stringer] Stringer Java Obfuscator Standard v3.0.3 (20170228), LICEL CORPORATION
+ [stringer] License file: D:\BladeRush\stringer\stringer.jar
+ [stringer] 
+ [stringer] Stringer Java Obfuscator Standard
+ [stringer] Version: 3.0.3
+ [stringer] Build id: 20170228
+ [stringer] 
+ [stringer] Licensed to: coolman@paradi.se [Cracked]
+ [stringer] 
+ [stringer] 
+ [stringer] (c) Copyright LICEL CORPORATION 2011-2017.  All rights reserved.
+ [stringer] Visit https://jfxstore.com/stringer
+ [stringer] 
+ [stringer] Third-Party Licenses. Information about third-party components and
+ [stringer]  its licenses can be found in distribution
+ [stringer] [Protecting scripts.jar]
+ [stringer] [Analyzing scripts.jar]
+ [stringer] Found services/L2TopZoneService,openConnection
+ [stringer] Contains signature: false
+ [stringer] [Finishing scripts.jar]
+ [stringer] Total strings processed: 0
+ [stringer] Total classes processed: 0
+ [stringer] Total resources processed: 0
+ [stringer] Total bytes processed: 3772587, ratio 1.001721895346615
+
+scripts:
+     [copy] Copying 1 file to D:\BladeRush\build\dist\lib
+
+dist:
+   [delete] Deleting directory D:\BladeRush\build\classes
+
+BUILD SUCCESSFUL
+Total time: 11 minutes 0 seconds

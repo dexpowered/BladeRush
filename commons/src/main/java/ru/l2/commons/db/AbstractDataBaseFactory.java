@@ -10,11 +10,6 @@ import java.sql.SQLException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-/**
- * Created by JunkyFunky
- * on 17.11.2017 17:22
- * group j2dev
- */
 public abstract class AbstractDataBaseFactory {
 
     protected final Logger LOGGER = LoggerFactory.getLogger(getClass());

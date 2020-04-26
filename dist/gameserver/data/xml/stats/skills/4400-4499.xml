@@ -219,7 +219,6 @@
 		</for>
 	</skill>
 	<skill id="4415" levels="26" name="Bare Hands">
-		<!-- Done by JunkyFunky http://j2dev.ru -->
 		<set name="icon" val="icon.skill0000" />
 		<table name="#pAtk">1 1.38 1 1.38 1 1.38 0.87 1.21 2.22 2.5 1 1.38 1.16 1.62 1.16 1.62 1.16 1.62 1.16 1.62 1.08 1.62 0.93 1.62 1.38 1.62</table>
 		<table name="#pAtkSpd">1 0.71 1 0.71 1 0.71 1.14 0.82 0.89 0.64 1 0.71 0.85 0.61 0.85 0.61 0.85 0.61 0.85 0.61 0.92 0.61 1.07 0.61 0.62 0.61</table>
@@ -233,7 +232,6 @@
 		</for>
 	</skill>
 	<skill id="4416" levels="26" name="Race">
-		<!-- Done by JunkyFunky http://j2dev.ru -->
 		<table name="#icons">icon.skill4290 icon.skill4291 icon.skill4292 icon.skill4293 icon.skill4294 icon.skill4295 icon.skill4296 icon.skill4297 icon.skill4298 icon.skill4299 icon.skill4300 icon.skill4301 icon.skill4302 icon.skill4416_human icon.skill4416_elf icon.skill4416_darkelf icon.skill4416_orc icon.skill4416_dwarf icon.skill4416_etc icon.skill4416_none icon.skill4416_siegeweapon icon.skill4416_castleguard icon.skill4416_mercenary icon.skill4416_none icon.skill4296 icon.skill4296</table>
 		<table name="#pDefBlunts">1 1 1 1 1 1 1 1 0.85 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</table>
 		<table name="#pDefBows">1 1 1 0.85 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</table>
@@ -385,7 +383,6 @@
 		</for>
 	</skill>
 	<skill id="4424" levels="5" name="Resist Hand-to-hand Weapons">
-		<!-- Done by JunkyFunky http://j2dev.ru -->
 		<table name="#fistRcpt">15 20 25 30 35</table>
 		<set name="icon" val="icon.skill4424" />
 		<set name="magicLevel" val="1" />

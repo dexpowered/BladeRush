@@ -18,8 +18,8 @@
 	<property name="build.classes" location="${build}/classes" />
 
 	<property name="build.version" value="Interlude" />
-	<property name="build.team" value="j2dev" />
-	<property name="build.teamsite" value="http://j2dev.ru" />
+	<property name="build.team" value="" />
+	<property name="build.teamsite" value="http://.ru" />
 	<property name="build.licensetype" value="Private" />
 	<property name="build.coredev" value="JunkyFunky" />
 	<property name="build.datadev" value="JunkyFunky" />
@@ -199,7 +199,7 @@
 		</exec>
 		<echo>Current Revision ${build.revision}</echo>
 
-		<concat destfile="${build}/classes/ru/j2dev/gameserver/version.ini">
+		<concat destfile="${build}/classes/ru//gameserver/version.ini">
 			Build-By=${user.name}
 			Version=${build.version}
 			Revision=${build.revision}
