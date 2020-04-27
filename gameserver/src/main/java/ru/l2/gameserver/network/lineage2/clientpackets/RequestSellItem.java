@@ -3,7 +3,7 @@ package ru.l2.gameserver.network.lineage2.clientpackets;
 import org.apache.commons.lang3.ArrayUtils;
 import ru.l2.commons.math.SafeMath;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.model.items.ItemInstance;

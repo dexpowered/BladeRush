@@ -21,7 +21,7 @@ import ru.l2.gameserver.model.base.TeamType;
 import ru.l2.gameserver.model.entity.olympiad.OlympiadPlayersManager;
 import ru.l2.gameserver.model.entity.residence.Castle;
 import ru.l2.gameserver.network.lineage2.components.CustomMessage;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.templates.InstantZone;
 import ru.l2.gameserver.utils.Location;
 import ru.l2.gameserver.utils.TimeUtils;

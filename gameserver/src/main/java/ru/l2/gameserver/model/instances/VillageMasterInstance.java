@@ -2,7 +2,7 @@ package ru.l2.gameserver.model.instances;
 
 import ru.l2.commons.lang.ArrayUtils;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.data.xml.holder.ResidenceHolder;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.SubClass;
@@ -20,7 +20,7 @@ import ru.l2.gameserver.model.pledge.UnitMember;
 import ru.l2.gameserver.network.lineage2.components.CustomMessage;
 import ru.l2.gameserver.network.lineage2.components.SystemMsg;
 import ru.l2.gameserver.network.lineage2.serverpackets.*;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.tables.ClanTable;
 import ru.l2.gameserver.tables.SkillTable;
 import ru.l2.gameserver.templates.npc.NpcTemplate;

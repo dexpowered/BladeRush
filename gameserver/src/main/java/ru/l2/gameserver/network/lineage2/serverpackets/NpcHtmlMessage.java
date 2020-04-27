@@ -3,7 +3,7 @@ package ru.l2.gameserver.network.lineage2.serverpackets;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.l2.gameserver.cache.HtmCache;
+import ru.l2.gameserver.data.cache.HtmCache;
 import ru.l2.gameserver.handler.npcdialog.INpcDialogAppender;
 import ru.l2.gameserver.handler.npcdialog.NpcDialogAppenderHolder;
 import ru.l2.gameserver.model.Player;

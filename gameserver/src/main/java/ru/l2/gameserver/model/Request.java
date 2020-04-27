@@ -6,7 +6,7 @@ import ru.l2.commons.collections.MultiValueSet;
 import ru.l2.commons.lang.reference.HardReference;
 import ru.l2.commons.threading.RunnableImpl;
 import ru.l2.gameserver.ThreadPoolManager;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 
 import java.util.concurrent.Future;
 import java.util.concurrent.atomic.AtomicInteger;

@@ -9,7 +9,7 @@ import ru.l2.gameserver.ThreadPoolManager;
 import ru.l2.gameserver.listener.script.OnInitScriptListener;
 import ru.l2.gameserver.manager.ReflectionManager;
 import ru.l2.gameserver.model.instances.DoorInstance;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 import java.util.concurrent.ScheduledFuture;
 

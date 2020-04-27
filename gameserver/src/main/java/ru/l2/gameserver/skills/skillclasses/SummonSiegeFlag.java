@@ -1,7 +1,7 @@
 package ru.l2.gameserver.skills.skillclasses;
 
 import ru.l2.gameserver.data.xml.holder.NpcTemplateHolder;
-import ru.l2.gameserver.geodata.GeoEngine;
+import ru.custom.geoengine.GeoEngine;
 import ru.l2.gameserver.model.Creature;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.Skill;

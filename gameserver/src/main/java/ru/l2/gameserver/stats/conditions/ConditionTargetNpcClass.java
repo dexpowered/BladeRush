@@ -1,7 +1,7 @@
 package ru.l2.gameserver.stats.conditions;
 
 import ru.l2.gameserver.model.instances.NpcInstance;
-import ru.l2.gameserver.scripts.Scripts;
+import ru.l2.gameserver.data.scripts.Scripts;
 import ru.l2.gameserver.stats.Env;
 
 public class ConditionTargetNpcClass extends Condition {

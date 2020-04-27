@@ -14,7 +14,7 @@ import ru.l2.gameserver.model.Skill;
 import ru.l2.gameserver.model.base.Race;
 import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.tables.SkillTable;
 
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -25,7 +25,7 @@ import java.util.List;
 
 public class SupportMagic extends Functions implements OnInitScriptListener {
     private static final Logger LOG = LoggerFactory.getLogger(SupportMagic.class);
-    private static final File NEWBIE_BUFFS_XML_FILE = new File(Config.DATAPACK_ROOT, "data/newbie_buffs.xml");
+    private static final File NEWBIE_BUFFS_XML_FILE = new File(Config.DATAPACK_ROOT, "data/xml/stats/buffs/newbie_buffs.xml");
     private static List<NewbieBuffsList> NEWBIE_BUFFS;
 
     public static void doSupportMagic(final NpcInstance npc, final Player player, final boolean servitor) {

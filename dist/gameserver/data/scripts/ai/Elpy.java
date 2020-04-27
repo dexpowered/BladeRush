@@ -2,7 +2,7 @@ package ai;
 
 import ru.l2.commons.util.Rnd;
 import ru.l2.gameserver.ai.Fighter;
-import ru.l2.gameserver.geodata.GeoEngine;
+import ru.custom.geoengine.GeoEngine;
 import ru.l2.gameserver.model.Creature;
 import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.utils.Location;

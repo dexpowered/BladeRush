@@ -3,7 +3,7 @@ package ai.residences.clanhall;
 import ru.l2.gameserver.Config;
 import ru.l2.gameserver.ai.CtrlIntention;
 import ru.l2.gameserver.ai.Fighter;
-import ru.l2.gameserver.geodata.GeoEngine;
+import ru.custom.geoengine.GeoEngine;
 import ru.l2.gameserver.model.Creature;
 import ru.l2.gameserver.model.World;
 import ru.l2.gameserver.model.instances.NpcInstance;

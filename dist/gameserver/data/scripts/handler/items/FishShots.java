@@ -1,6 +1,6 @@
 package handler.items;
 
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.model.Playable;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.items.ItemInstance;

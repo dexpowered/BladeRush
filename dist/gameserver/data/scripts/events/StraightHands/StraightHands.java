@@ -9,7 +9,7 @@ import ru.l2.gameserver.listener.script.OnInitScriptListener;
 import ru.l2.gameserver.model.GameObjectsStorage;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.network.lineage2.components.CustomMessage;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.templates.item.ItemTemplate;
 
 import java.util.ArrayList;

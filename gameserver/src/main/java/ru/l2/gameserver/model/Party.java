@@ -4,7 +4,7 @@ import ru.l2.commons.threading.RunnableImpl;
 import ru.l2.commons.util.Rnd;
 import ru.l2.gameserver.Config;
 import ru.l2.gameserver.ThreadPoolManager;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.manager.ReflectionManager;
 import ru.l2.gameserver.model.base.Experience;
 import ru.l2.gameserver.model.entity.DimensionalRift;

@@ -1,6 +1,6 @@
 package ru.l2.gameserver.network.lineage2.clientpackets;
 
-import ru.l2.gameserver.cache.ItemInfoCache;
+import ru.l2.gameserver.data.cache.ItemInfoCache;
 import ru.l2.gameserver.model.items.ItemInfo;
 import ru.l2.gameserver.network.lineage2.serverpackets.ActionFail;
 import ru.l2.gameserver.network.lineage2.serverpackets.ExRpItemLink;

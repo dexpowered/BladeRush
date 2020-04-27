@@ -6,7 +6,7 @@ import ru.l2.gameserver.model.pledge.Clan;
 import ru.l2.gameserver.network.lineage2.components.SystemMsg;
 import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
 import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 public class ClanReputationSell extends Functions {
     public void clan_reputation_page() {

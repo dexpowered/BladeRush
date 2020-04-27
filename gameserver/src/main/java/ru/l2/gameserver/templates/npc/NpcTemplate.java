@@ -21,7 +21,7 @@ import ru.l2.gameserver.model.quest.Quest;
 import ru.l2.gameserver.model.quest.QuestEventType;
 import ru.l2.gameserver.model.reward.RewardList;
 import ru.l2.gameserver.model.reward.RewardType;
-import ru.l2.gameserver.scripts.Scripts;
+import ru.l2.gameserver.data.scripts.Scripts;
 import ru.l2.gameserver.skills.effects.EffectTemplate;
 import ru.l2.gameserver.templates.CharTemplate;
 import ru.l2.gameserver.templates.StatsSet;

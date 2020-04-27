@@ -2,7 +2,7 @@ package ru.l2.gameserver.utils;
 
 import org.apache.commons.lang3.ArrayUtils;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.data.xml.holder.ItemTemplateHolder;
 import ru.l2.gameserver.idfactory.IdFactory;
 import ru.l2.gameserver.manager.CursedWeaponsManager;

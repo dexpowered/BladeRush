@@ -1,7 +1,7 @@
 package actions;
 
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.base.Experience;
 import ru.l2.gameserver.model.instances.ChestInstance;
@@ -14,7 +14,7 @@ import ru.l2.gameserver.model.reward.RewardType;
 import ru.l2.gameserver.network.lineage2.components.SystemMsg;
 import ru.l2.gameserver.network.lineage2.serverpackets.ActionFail;
 import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.stats.Stats;
 import ru.l2.gameserver.utils.HtmlUtils;
 

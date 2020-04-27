@@ -3,7 +3,7 @@ package services.villagemasters;
 import ru.l2.gameserver.Config;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.instances.NpcInstance;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 public class Clan extends Functions {
     public void CheckCreateClan() {

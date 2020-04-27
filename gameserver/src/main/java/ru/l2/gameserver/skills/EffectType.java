@@ -3,6 +3,7 @@ package ru.l2.gameserver.skills;
 import org.apache.commons.lang3.tuple.Pair;
 import ru.l2.gameserver.model.Effect;
 import ru.l2.gameserver.skills.effects.*;
+import ru.l2.gameserver.skills.skillclasses.AgathionSummon;
 import ru.l2.gameserver.stats.Env;
 import ru.l2.gameserver.stats.Stats;
 
@@ -10,6 +11,7 @@ import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 
 public enum EffectType {
+
     AddSkills(EffectAddSkills.class, null, false),
     AgathionResurrect(EffectAgathionRes.class, null, true),
     Aggression(EffectAggression.class, null, true),

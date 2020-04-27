@@ -1,6 +1,6 @@
 package ru.l2.gameserver.data.xml;
 
-import ru.l2.gameserver.cache.HtmCache;
+import ru.l2.gameserver.data.cache.HtmCache;
 import ru.l2.gameserver.data.xml.holder.BuyListHolder;
 import ru.l2.gameserver.data.xml.holder.MultiSellHolder;
 import ru.l2.gameserver.data.xml.parser.*;

@@ -15,7 +15,7 @@ import ru.l2.gameserver.handler.voicecommands.VoicedCommandHandler;
 import ru.l2.gameserver.listener.script.OnInitScriptListener;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.reward.RewardData;
-import ru.l2.gameserver.scripts.Scripts;
+import ru.l2.gameserver.data.scripts.Scripts;
 
 import java.io.File;
 import java.util.*;

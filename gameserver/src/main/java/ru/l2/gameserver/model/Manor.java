@@ -160,9 +160,9 @@ public class Manor {
     public long getCropPuchaseLimit(final int cropId) {
         return _seeds.values().stream().filter(seed -> seed.getCrop() == cropId).findFirst().map(SeedData::getCropLimit).orElse(0L);
     }
-
+//todo parse xml
     private void parseData() {
-        final File seedData = new File(Config.DATAPACK_ROOT, "data/seeds.csv");
+        final File seedData = new File(Config.DATAPACK_ROOT, "data/xml/seeds.csv");
         try (LineNumberReader lnr = new LineNumberReader(new BufferedReader(new FileReader(seedData)))) {
             String line;
             while ((line = lnr.readLine()) != null) {

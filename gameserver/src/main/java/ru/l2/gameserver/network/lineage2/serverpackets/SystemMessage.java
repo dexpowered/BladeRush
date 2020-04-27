@@ -11,7 +11,6 @@ import ru.l2.gameserver.utils.Location;
 import java.util.ArrayList;
 import java.util.List;
 
-@Deprecated
 public class SystemMessage extends L2GameServerPacket {
     public static final int YOU_HAVE_BEEN_DISCONNECTED_FROM_THE_SERVER = 0;
     public static final int THE_SERVER_WILL_BE_COMING_DOWN_IN_S1_SECONDS__PLEASE_FIND_A_SAFE_PLACE_TO_LOG_OUT = 1;

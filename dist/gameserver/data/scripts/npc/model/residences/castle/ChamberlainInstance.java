@@ -1,8 +1,8 @@
 package npc.model.residences.castle;
 
 import npc.model.residences.ResidenceManager;
-import ru.l2.gameserver.dao.CastleDamageZoneDAO;
-import ru.l2.gameserver.dao.CastleDoorUpgradeDAO;
+import ru.l2.gameserver.data.dao.CastleDamageZoneDAO;
+import ru.l2.gameserver.data.dao.CastleDoorUpgradeDAO;
 import ru.l2.gameserver.data.xml.holder.ResidenceHolder;
 import ru.l2.gameserver.manager.CastleManorManager;
 import ru.l2.gameserver.model.Player;

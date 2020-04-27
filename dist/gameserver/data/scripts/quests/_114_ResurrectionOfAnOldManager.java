@@ -7,7 +7,7 @@ import ru.l2.gameserver.model.quest.Quest;
 import ru.l2.gameserver.model.quest.QuestState;
 import ru.l2.gameserver.network.lineage2.serverpackets.ExShowScreenMessage;
 import ru.l2.gameserver.network.lineage2.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 public class _114_ResurrectionOfAnOldManager extends Quest {
     private static final int NEWYEAR = 31961;

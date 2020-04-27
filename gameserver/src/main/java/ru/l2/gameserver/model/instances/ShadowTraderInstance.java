@@ -8,7 +8,7 @@ import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.items.ItemInstance;
 import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
 import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage2;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.templates.item.ItemGrade;
 import ru.l2.gameserver.templates.npc.NpcTemplate;
 import ru.l2.gameserver.templates.shadowtrade.ShadowTradeItem;

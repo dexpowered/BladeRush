@@ -1,6 +1,6 @@
 package ru.l2.gameserver.stats.conditions;
 
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.stats.Env;
 
 public class ConditionPlayerChargesMax extends Condition {

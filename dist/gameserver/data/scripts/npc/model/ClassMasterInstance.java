@@ -3,7 +3,7 @@ package npc.model;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.data.xml.holder.ItemTemplateHolder;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.base.ClassId;

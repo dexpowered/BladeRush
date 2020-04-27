@@ -7,7 +7,7 @@ import ru.l2.commons.dbutils.DbUtils;
 import ru.l2.commons.threading.RunnableImpl;
 import ru.l2.gameserver.Config;
 import ru.l2.gameserver.ThreadPoolManager;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.database.DatabaseFactory;
 import ru.l2.gameserver.idfactory.IdFactory;
 import ru.l2.gameserver.model.*;

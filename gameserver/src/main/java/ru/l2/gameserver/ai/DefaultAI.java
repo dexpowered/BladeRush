@@ -7,7 +7,7 @@ import ru.l2.commons.util.Rnd;
 import ru.l2.gameserver.Config;
 import ru.l2.gameserver.ThreadPoolManager;
 import ru.l2.gameserver.data.xml.holder.NpcTemplateHolder;
-import ru.l2.gameserver.geodata.GeoEngine;
+import ru.custom.geoengine.GeoEngine;
 import ru.l2.gameserver.model.AggroList.AggroInfo;
 import ru.l2.gameserver.model.*;
 import ru.l2.gameserver.model.Skill.SkillTargetType;

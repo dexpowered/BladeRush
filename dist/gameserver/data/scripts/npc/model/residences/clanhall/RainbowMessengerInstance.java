@@ -1,6 +1,6 @@
 package npc.model.residences.clanhall;
 
-import ru.l2.gameserver.dao.SiegeClanDAO;
+import ru.l2.gameserver.data.dao.SiegeClanDAO;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.entity.events.impl.ClanHallMiniGameEvent;
 import ru.l2.gameserver.model.entity.events.objects.CMGSiegeClanObject;

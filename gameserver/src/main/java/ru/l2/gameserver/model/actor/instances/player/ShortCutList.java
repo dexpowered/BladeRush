@@ -3,7 +3,7 @@ package ru.l2.gameserver.model.actor.instances.player;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.l2.commons.dbutils.DbUtils;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.database.DatabaseFactory;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.network.lineage2.serverpackets.ExAutoSoulShot;

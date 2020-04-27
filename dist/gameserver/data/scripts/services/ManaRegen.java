@@ -1,9 +1,9 @@
 package services;
 
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 public class ManaRegen extends Functions {
     private static final int ADENA = 57;

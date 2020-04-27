@@ -5,7 +5,7 @@ import ru.l2.gameserver.ai.CtrlEvent;
 import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.model.quest.Quest;
 import ru.l2.gameserver.model.quest.QuestState;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 public class _022_TragedyInVonHellmannForest extends Quest {
     private static final int umul = 31527;

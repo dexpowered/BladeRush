@@ -6,7 +6,7 @@ import ru.l2.commons.collections.MultiValueSet;
 import ru.l2.commons.time.cron.NextTime;
 import ru.l2.commons.util.Rnd;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.geodata.GeoEngine;
+import ru.custom.geoengine.GeoEngine;
 import ru.l2.gameserver.manager.ReflectionManager;
 import ru.l2.gameserver.model.entity.Reflection;
 import ru.l2.gameserver.model.entity.events.EventOwner;

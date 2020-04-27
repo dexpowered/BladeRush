@@ -3,7 +3,7 @@ package ru.l2.gameserver.data.xml.holder;
 import ru.l2.commons.data.xml.AbstractHolder;
 import ru.l2.commons.util.Rnd;
 import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.templates.shadowtrade.ShadowTradeGroup;
 import ru.l2.gameserver.templates.shadowtrade.ShadowTradeItem;
 import ru.l2.gameserver.templates.shadowtrade.ShadowTradeLoc;

@@ -5,7 +5,7 @@ import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.Skill;
 import ru.l2.gameserver.model.base.TeamType;
 import ru.l2.gameserver.network.lineage2.components.CustomMessage;
-import ru.l2.gameserver.scripts.Scripts;
+import ru.l2.gameserver.data.scripts.Scripts;
 import ru.l2.gameserver.tables.SkillTable;
 
 public class Escape implements IUserCommandHandler {

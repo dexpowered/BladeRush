@@ -4,7 +4,7 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.data.xml.holder.ItemTemplateHolder;
 import ru.l2.gameserver.data.xml.holder.StringHolder;
 import ru.l2.gameserver.listener.script.OnInitScriptListener;
@@ -15,7 +15,7 @@ import ru.l2.gameserver.model.quest.Quest;
 import ru.l2.gameserver.model.quest.QuestState;
 import ru.l2.gameserver.network.lineage2.components.CustomMessage;
 import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.templates.item.ItemTemplate;
 import ru.l2.gameserver.utils.ItemFunctions;
 

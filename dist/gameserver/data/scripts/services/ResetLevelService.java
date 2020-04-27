@@ -5,7 +5,7 @@ import ru.l2.gameserver.model.Playable;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.base.Experience;
 import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 public class ResetLevelService extends Functions {
     public void reset_service_page() {

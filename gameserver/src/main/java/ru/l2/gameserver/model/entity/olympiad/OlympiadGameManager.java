@@ -9,7 +9,7 @@ import org.slf4j.LoggerFactory;
 import ru.l2.commons.dbutils.DbUtils;
 import ru.l2.gameserver.Config;
 import ru.l2.gameserver.ThreadPoolManager;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.data.xml.holder.StringHolder;
 import ru.l2.gameserver.database.DatabaseFactory;
 import ru.l2.gameserver.model.Player;

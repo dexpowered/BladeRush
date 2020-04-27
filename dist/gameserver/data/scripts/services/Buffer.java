@@ -9,8 +9,8 @@ import org.slf4j.LoggerFactory;
 import ru.l2.commons.threading.RunnableImpl;
 import ru.l2.gameserver.Config;
 import ru.l2.gameserver.ThreadPoolManager;
-import ru.l2.gameserver.cache.HtmCache;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.HtmCache;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.data.xml.holder.ItemTemplateHolder;
 import ru.l2.gameserver.handler.items.IItemHandler;
 import ru.l2.gameserver.handler.items.ItemHandler;
@@ -25,7 +25,7 @@ import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
 import ru.l2.gameserver.network.lineage2.serverpackets.ShowBoard;
 import ru.l2.gameserver.network.lineage2.serverpackets.SkillCoolTime;
 import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.skills.TimeStamp;
 import ru.l2.gameserver.tables.SkillTable;
 import ru.l2.gameserver.templates.item.ItemTemplate;
@@ -56,7 +56,7 @@ public class Buffer extends Functions implements OnInitScriptListener {
     private static final int PROFILE_BASE_MENU_ID = -1000;
     private static final int PROFILE_SAVE_MENU_ID = -2000;
     private static final SAXBuilder READER = new SAXBuilder();
-    private static final File BUFF_TEMPLATES_FILE = new File(Config.DATAPACK_ROOT, "data/buff_templates.xml");
+    private static final File BUFF_TEMPLATES_FILE = new File(Config.DATAPACK_ROOT, "data/xml/stats/buffs/buff_templates.xml");
     private static BuffItemHandler BUFF_ITEMS_HANDLER;
     private static int[] BUFF_ITEMS_IDS;
 

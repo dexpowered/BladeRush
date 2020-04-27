@@ -17,7 +17,7 @@ import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.actor.listener.CharListenerList;
 import ru.l2.gameserver.model.instances.*;
 import ru.l2.gameserver.network.lineage2.components.CustomMessage;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 import java.util.Collection;

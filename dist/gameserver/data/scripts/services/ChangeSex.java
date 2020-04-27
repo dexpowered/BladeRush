@@ -6,7 +6,7 @@ import ru.l2.gameserver.database.DatabaseFactory;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.network.lineage2.components.SystemMsg;
 import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.utils.ItemFunctions;
 import ru.l2.gameserver.utils.Log;
 

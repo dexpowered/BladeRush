@@ -1,6 +1,6 @@
 package ru.l2.gameserver.network.lineage2.clientpackets;
 
-import ru.l2.gameserver.cache.CrestCache;
+import ru.l2.gameserver.data.cache.CrestCache;
 import ru.l2.gameserver.network.lineage2.serverpackets.AllianceCrest;
 
 public class RequestAllyCrest extends L2GameClientPacket {

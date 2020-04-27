@@ -1,7 +1,7 @@
 package ru.l2.gameserver.ai;
 
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.model.Creature;
 import ru.l2.gameserver.model.GameObject;
 import ru.l2.gameserver.model.Player;

@@ -2,7 +2,7 @@ package ru.l2.gameserver.network.lineage2.clientpackets;
 
 import org.apache.commons.lang3.tuple.Pair;
 import ru.l2.commons.util.Rnd;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.data.xml.holder.RecipeHolder;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.Recipe;

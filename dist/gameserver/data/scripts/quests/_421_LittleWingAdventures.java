@@ -11,7 +11,7 @@ import ru.l2.gameserver.model.items.ItemInstance;
 import ru.l2.gameserver.model.quest.Quest;
 import ru.l2.gameserver.model.quest.QuestState;
 import ru.l2.gameserver.network.lineage2.serverpackets.InventoryUpdate;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.tables.PetDataTable;
 import ru.l2.gameserver.tables.PetDataTable.L2Pet;
 import ru.l2.gameserver.templates.npc.NpcTemplate;

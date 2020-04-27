@@ -5,7 +5,7 @@ import ru.l2.gameserver.model.base.ClassId;
 import ru.l2.gameserver.model.base.Race;
 import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.model.instances.VillageMasterInstance;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 public class Occupation extends Functions {
     public void onTalk30026() {

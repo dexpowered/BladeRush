@@ -7,7 +7,7 @@ import ru.l2.gameserver.data.xml.holder.NpcTemplateHolder;
 import ru.l2.gameserver.model.Creature;
 import ru.l2.gameserver.model.instances.MonsterInstance;
 import ru.l2.gameserver.model.instances.NpcInstance;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 public class TimakOrcTroopLeader extends Fighter {
     private static final int[] BROTHERS = {20768, 20769, 20770};

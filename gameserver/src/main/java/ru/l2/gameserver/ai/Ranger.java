@@ -1,6 +1,6 @@
 package ru.l2.gameserver.ai;
 
-import ru.l2.gameserver.geodata.GeoEngine;
+import ru.custom.geoengine.GeoEngine;
 import ru.l2.gameserver.model.Creature;
 import ru.l2.gameserver.model.instances.NpcInstance;
 

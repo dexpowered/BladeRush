@@ -2,7 +2,7 @@ package handler.items;
 
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
-import ru.l2.gameserver.dao.CastleHiredGuardDAO;
+import ru.l2.gameserver.data.dao.CastleHiredGuardDAO;
 import ru.l2.gameserver.data.xml.holder.ResidenceHolder;
 import ru.l2.gameserver.manager.ReflectionManager;
 import ru.l2.gameserver.model.Playable;

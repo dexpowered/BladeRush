@@ -1,7 +1,7 @@
 package ru.l2.gameserver.network.lineage2.clientpackets;
 
 import org.apache.commons.lang3.StringUtils;
-import ru.l2.gameserver.dao.CharacterPostFriendDAO;
+import ru.l2.gameserver.data.dao.CharacterPostFriendDAO;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.network.lineage2.components.SystemMsg;
 import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage2;

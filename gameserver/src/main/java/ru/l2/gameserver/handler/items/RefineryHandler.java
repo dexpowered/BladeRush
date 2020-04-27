@@ -4,7 +4,7 @@ import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.l2.commons.util.RandomUtils;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.data.xml.holder.VariationChanceHolder;
 import ru.l2.gameserver.data.xml.holder.VariationGroupHolder;
 import ru.l2.gameserver.model.Player;

@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import ru.l2.commons.geometry.Polygon;
 import ru.l2.commons.util.Rnd;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.geodata.GeoEngine;
+import ru.custom.geoengine.GeoEngine;
 import ru.l2.gameserver.model.World;
 import ru.l2.gameserver.templates.spawn.SpawnRange;
 

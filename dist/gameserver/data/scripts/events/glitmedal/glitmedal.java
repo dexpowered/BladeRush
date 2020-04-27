@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import ru.l2.commons.util.Rnd;
 import ru.l2.gameserver.Announcements;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.data.xml.holder.MultiSellHolder;
 import ru.l2.gameserver.listener.actor.OnDeathListener;
 import ru.l2.gameserver.listener.actor.player.OnPlayerEnterListener;
@@ -16,7 +16,7 @@ import ru.l2.gameserver.model.Playable;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.actor.listener.CharListenerList;
 import ru.l2.gameserver.model.instances.MonsterInstance;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.utils.Util;
 
 import java.io.File;

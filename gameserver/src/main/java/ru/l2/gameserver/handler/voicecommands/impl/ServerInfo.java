@@ -3,7 +3,7 @@ package ru.l2.gameserver.handler.voicecommands.impl;
 import ru.l2.gameserver.GameServer;
 import ru.l2.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import ru.l2.gameserver.model.Player;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;

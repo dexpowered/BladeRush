@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.l2.commons.util.Rnd;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.HtmCache;
+import ru.l2.gameserver.data.cache.HtmCache;
 import ru.l2.gameserver.data.xml.holder.ItemTemplateHolder;
 import ru.l2.gameserver.listener.actor.OnDeathListener;
 import ru.l2.gameserver.listener.actor.OnKillListener;

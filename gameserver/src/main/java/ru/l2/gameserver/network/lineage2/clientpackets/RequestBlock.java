@@ -2,7 +2,7 @@ package ru.l2.gameserver.network.lineage2.clientpackets;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.model.Player;
 
 import java.util.Collection;

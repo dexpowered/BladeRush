@@ -1,7 +1,7 @@
 package services.villagemasters;
 
 import ru.l2.gameserver.model.Player;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 public class Ally extends Functions {
     public void CheckCreateAlly() {

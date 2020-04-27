@@ -1,7 +1,7 @@
 package ru.l2.gameserver.handler.admincommands.impl;
 
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.geodata.GeoEngine;
+import ru.custom.geoengine.GeoEngine;
 import ru.l2.gameserver.handler.admincommands.IAdminCommandHandler;
 import ru.l2.gameserver.model.GameObjectsStorage;
 import ru.l2.gameserver.model.Player;

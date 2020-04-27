@@ -25,7 +25,7 @@ import ru.l2.gameserver.network.lineage2.serverpackets.ExShowScreenMessage.Scree
 import ru.l2.gameserver.network.lineage2.serverpackets.PlaySound;
 import ru.l2.gameserver.network.lineage2.serverpackets.PlaySound.Type;
 import ru.l2.gameserver.network.lineage2.serverpackets.SocialAction;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.utils.Location;
 import ru.l2.gameserver.utils.Log;
 import ru.l2.gameserver.utils.ReflectionUtils;

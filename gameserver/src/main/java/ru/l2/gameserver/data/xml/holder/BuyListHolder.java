@@ -22,7 +22,7 @@ public class BuyListHolder {
 
     private BuyListHolder() {
         try {
-            final File filelists = new File(Config.DATAPACK_ROOT, "data/merchant_filelists.xml");
+            final File filelists = new File(Config.DATAPACK_ROOT, "data/xml/merchants/merchant_filelists.xml");
             final DocumentBuilderFactory factory1 = DocumentBuilderFactory.newInstance();
             factory1.setValidating(false);
             factory1.setIgnoringComments(true);

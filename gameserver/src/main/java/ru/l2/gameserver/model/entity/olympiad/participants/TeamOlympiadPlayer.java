@@ -4,7 +4,7 @@ import com.stringer.annotations.HideAccess;
 import com.stringer.annotations.StringEncryption;
 import ru.l2.commons.lang.reference.HardReference;
 import ru.l2.gameserver.ai.CtrlIntention;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.model.Creature;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.entity.olympiad.OlympiadGame;

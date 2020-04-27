@@ -2,13 +2,13 @@ package ru.l2.gameserver.handler.admincommands.impl;
 
 import org.apache.commons.lang3.math.NumberUtils;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.handler.admincommands.IAdminCommandHandler;
 import ru.l2.gameserver.model.GameObject;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.network.lineage2.serverpackets.*;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.stats.Stats;
 
 import java.io.File;

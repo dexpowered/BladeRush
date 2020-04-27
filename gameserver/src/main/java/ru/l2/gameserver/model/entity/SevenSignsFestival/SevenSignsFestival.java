@@ -12,7 +12,7 @@ import ru.l2.gameserver.model.entity.SevenSigns;
 import ru.l2.gameserver.model.pledge.Clan;
 import ru.l2.gameserver.network.lineage2.serverpackets.PledgeShowInfoUpdate;
 import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.tables.ClanTable;
 import ru.l2.gameserver.templates.StatsSet;
 

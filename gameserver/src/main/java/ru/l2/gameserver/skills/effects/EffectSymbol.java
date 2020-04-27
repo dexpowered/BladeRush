@@ -2,9 +2,9 @@ package ru.l2.gameserver.skills.effects;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.data.xml.holder.NpcTemplateHolder;
-import ru.l2.gameserver.geodata.GeoEngine;
+import ru.custom.geoengine.GeoEngine;
 import ru.l2.gameserver.idfactory.IdFactory;
 import ru.l2.gameserver.model.*;
 import ru.l2.gameserver.model.Skill.SkillTargetType;

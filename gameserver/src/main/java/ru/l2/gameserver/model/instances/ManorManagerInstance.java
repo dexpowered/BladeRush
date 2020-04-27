@@ -1,7 +1,7 @@
 package ru.l2.gameserver.model.instances;
 
 import ru.l2.gameserver.ai.CtrlIntention;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.data.xml.holder.BuyListHolder.NpcTradeList;
 import ru.l2.gameserver.data.xml.holder.ResidenceHolder;
 import ru.l2.gameserver.manager.CastleManorManager;

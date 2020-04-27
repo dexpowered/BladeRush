@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.l2.commons.util.Rnd;
 import ru.l2.gameserver.Announcements;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.data.xml.holder.NpcTemplateHolder;
 import ru.l2.gameserver.handler.npcdialog.INpcDialogAppender;
 import ru.l2.gameserver.listener.actor.player.OnPlayerEnterListener;
@@ -18,7 +18,7 @@ import ru.l2.gameserver.model.reward.RewardData;
 import ru.l2.gameserver.model.reward.RewardGroup;
 import ru.l2.gameserver.model.reward.RewardList;
 import ru.l2.gameserver.model.reward.RewardType;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 import java.util.Collections;
 import java.util.HashMap;

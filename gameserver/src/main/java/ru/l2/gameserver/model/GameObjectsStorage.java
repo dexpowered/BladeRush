@@ -2,7 +2,7 @@ package ru.l2.gameserver.model;
 
 
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.dao.CharacterDAO;
+import ru.l2.gameserver.data.dao.CharacterDAO;
 import ru.l2.gameserver.model.instances.DoorInstance;
 import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.model.instances.SummonInstance;

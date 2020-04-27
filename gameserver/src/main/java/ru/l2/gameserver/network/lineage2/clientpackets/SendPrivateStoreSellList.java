@@ -4,7 +4,7 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.l2.commons.math.SafeMath;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.items.ItemInstance;
 import ru.l2.gameserver.model.items.TradeItem;

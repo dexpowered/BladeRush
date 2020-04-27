@@ -6,7 +6,7 @@ import ru.l2.gameserver.model.World;
 import ru.l2.gameserver.model.base.Experience;
 import ru.l2.gameserver.network.lineage2.components.CustomMessage;
 import ru.l2.gameserver.network.lineage2.serverpackets.RadarControl;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 public class Help extends Functions implements IVoicedCommandHandler {
     private final String[] _commandList;

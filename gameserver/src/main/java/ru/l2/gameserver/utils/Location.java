@@ -4,7 +4,7 @@ import org.jdom2.Element;
 import ru.l2.commons.geometry.Point2D;
 import ru.l2.commons.geometry.Point3D;
 import ru.l2.commons.util.Rnd;
-import ru.l2.gameserver.geodata.GeoEngine;
+import ru.custom.geoengine.GeoEngine;
 import ru.l2.gameserver.model.Creature;
 import ru.l2.gameserver.model.GameObject;
 import ru.l2.gameserver.model.World;

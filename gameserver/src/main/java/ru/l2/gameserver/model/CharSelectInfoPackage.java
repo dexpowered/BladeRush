@@ -1,6 +1,6 @@
 package ru.l2.gameserver.model;
 
-import ru.l2.gameserver.dao.ItemsDAO;
+import ru.l2.gameserver.data.dao.ItemsDAO;
 import ru.l2.gameserver.model.items.ItemInstance;
 import ru.l2.gameserver.model.items.ItemInstance.ItemLocation;
 

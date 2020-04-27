@@ -1,6 +1,6 @@
 package ru.l2.gameserver.skills.skillclasses;
 
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.manager.ReflectionManager;
 import ru.l2.gameserver.model.Creature;
 import ru.l2.gameserver.model.Player;
@@ -10,7 +10,7 @@ import ru.l2.gameserver.model.base.TeamType;
 import ru.l2.gameserver.network.lineage2.components.CustomMessage;
 import ru.l2.gameserver.network.lineage2.components.SystemMsg;
 import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage;
-import ru.l2.gameserver.scripts.Scripts;
+import ru.l2.gameserver.data.scripts.Scripts;
 import ru.l2.gameserver.templates.StatsSet;
 import ru.l2.gameserver.utils.Location;
 

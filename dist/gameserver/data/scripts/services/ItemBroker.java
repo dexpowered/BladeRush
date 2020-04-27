@@ -15,7 +15,7 @@ import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.model.items.ManufactureItem;
 import ru.l2.gameserver.model.items.TradeItem;
 import ru.l2.gameserver.network.lineage2.serverpackets.*;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.templates.item.ItemTemplate;
 import ru.l2.gameserver.templates.item.ItemTemplate.ItemClass;
 import ru.l2.gameserver.utils.Location;

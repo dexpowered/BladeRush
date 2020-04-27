@@ -3,7 +3,7 @@ package ru.l2.gameserver.listener.actor.player.impl;
 import ru.l2.commons.lang.reference.HardReference;
 import ru.l2.gameserver.listener.actor.player.OnAnswerListener;
 import ru.l2.gameserver.model.Player;
-import ru.l2.gameserver.scripts.Scripts;
+import ru.l2.gameserver.data.scripts.Scripts;
 
 public class ScriptAnswerListener implements OnAnswerListener {
     private final HardReference<Player> _playerRef;

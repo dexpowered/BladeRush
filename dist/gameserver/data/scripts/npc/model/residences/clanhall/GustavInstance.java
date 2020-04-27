@@ -14,7 +14,7 @@ import ru.l2.gameserver.model.entity.events.impl.SiegeEvent;
 import ru.l2.gameserver.model.entity.events.objects.SpawnExObject;
 import ru.l2.gameserver.model.pledge.Clan;
 import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.taskmanager.tasks.objecttasks.NotifyAITask;
 import ru.l2.gameserver.templates.npc.NpcTemplate;
 import ru.l2.gameserver.utils.Location;

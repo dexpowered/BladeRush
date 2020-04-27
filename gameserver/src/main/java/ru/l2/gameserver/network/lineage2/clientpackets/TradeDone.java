@@ -1,7 +1,7 @@
 package ru.l2.gameserver.network.lineage2.clientpackets;
 
 import ru.l2.commons.math.SafeMath;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.Request;
 import ru.l2.gameserver.model.Request.L2RequestType;

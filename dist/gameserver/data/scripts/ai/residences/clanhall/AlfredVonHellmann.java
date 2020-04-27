@@ -8,7 +8,7 @@ import ru.l2.gameserver.model.Zone;
 import ru.l2.gameserver.model.entity.events.impl.ClanHallSiegeEvent;
 import ru.l2.gameserver.model.entity.events.objects.SpawnExObject;
 import ru.l2.gameserver.model.instances.NpcInstance;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.tables.SkillTable;
 import ru.l2.gameserver.utils.PositionUtils;
 import ru.l2.gameserver.utils.ReflectionUtils;

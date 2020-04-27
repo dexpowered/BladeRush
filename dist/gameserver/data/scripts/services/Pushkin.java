@@ -12,7 +12,7 @@ import ru.l2.gameserver.model.entity.residence.Castle;
 import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.model.items.Inventory;
 import ru.l2.gameserver.model.items.ItemInstance;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.templates.item.ItemTemplate;
 
 import java.util.Arrays;

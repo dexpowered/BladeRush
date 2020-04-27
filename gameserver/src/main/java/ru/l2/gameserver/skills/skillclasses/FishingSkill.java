@@ -1,8 +1,8 @@
 package ru.l2.gameserver.skills.skillclasses;
 
 import ru.l2.commons.util.Rnd;
-import ru.l2.gameserver.cache.Msg;
-import ru.l2.gameserver.geodata.GeoEngine;
+import ru.l2.gameserver.data.cache.Msg;
+import ru.custom.geoengine.GeoEngine;
 import ru.l2.gameserver.model.*;
 import ru.l2.gameserver.model.Zone.ZoneType;
 import ru.l2.gameserver.model.items.ItemInstance;

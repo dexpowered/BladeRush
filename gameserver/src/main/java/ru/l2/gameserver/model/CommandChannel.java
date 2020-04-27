@@ -2,7 +2,7 @@ package ru.l2.gameserver.model;
 
 import com.google.common.collect.Iterators;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.model.entity.Reflection;
 import ru.l2.gameserver.model.instances.NpcFriendInstance;
 import ru.l2.gameserver.model.matching.MatchingRoom;

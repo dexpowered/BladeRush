@@ -1,5 +1,5 @@
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.data.xml.holder.ResidenceHolder;
 import ru.l2.gameserver.model.GameObjectsStorage;
 import ru.l2.gameserver.model.Player;
@@ -12,8 +12,8 @@ import ru.l2.gameserver.network.lineage2.components.SystemMsg;
 import ru.l2.gameserver.network.lineage2.serverpackets.ExPledgeCrestLarge;
 import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
 import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage2;
-import ru.l2.gameserver.scripts.Functions;
-import ru.l2.gameserver.scripts.Scripts;
+import ru.l2.gameserver.data.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Scripts;
 import ru.l2.gameserver.utils.CapchaUtil;
 import ru.l2.gameserver.utils.Location;
 

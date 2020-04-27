@@ -10,7 +10,7 @@ import ru.l2.gameserver.data.xml.holder.NpcTemplateHolder;
 import ru.l2.gameserver.model.*;
 import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.utils.Location;
 
 import java.util.ArrayList;

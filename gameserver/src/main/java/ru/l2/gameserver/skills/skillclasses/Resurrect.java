@@ -1,7 +1,7 @@
 package ru.l2.gameserver.skills.skillclasses;
 
 import org.apache.commons.lang3.tuple.Pair;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.listener.actor.player.OnAnswerListener;
 import ru.l2.gameserver.listener.actor.player.impl.ReviveAnswerListener;
 import ru.l2.gameserver.model.Creature;

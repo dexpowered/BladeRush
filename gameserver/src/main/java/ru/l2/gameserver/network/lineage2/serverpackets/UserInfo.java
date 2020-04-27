@@ -238,7 +238,6 @@ public class UserInfo extends L2GameServerPacket {
         pledge_type = player.getPledgeType();
         title_color = player.getTitleColor();
         transformation = player.getTransformation();
-        agathion = player.getAgathionId();
         partyRoom = (player.getMatchingRoom() != null && player.getMatchingRoom().getType() == MatchingRoom.PARTY_MATCHING && player.getMatchingRoom().getLeader() == player);
         isFlying = player.isInFlyingTransform();
         can_writeImpl = true;

@@ -1,7 +1,7 @@
 package ru.l2.gameserver.model.instances;
 
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.manager.games.LotteryManager;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.items.ItemInstance;

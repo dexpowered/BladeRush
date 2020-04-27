@@ -1,8 +1,8 @@
 package ru.l2.gameserver.model.entity.events.impl;
 
 import ru.l2.commons.collections.MultiValueSet;
-import ru.l2.gameserver.dao.SiegeClanDAO;
-import ru.l2.gameserver.dao.SiegePlayerDAO;
+import ru.l2.gameserver.data.dao.SiegeClanDAO;
+import ru.l2.gameserver.data.dao.SiegePlayerDAO;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.base.RestartType;
 import ru.l2.gameserver.model.entity.events.objects.CTBSiegeClanObject;

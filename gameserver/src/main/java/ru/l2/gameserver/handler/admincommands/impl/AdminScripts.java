@@ -6,7 +6,7 @@ import ru.l2.gameserver.handler.admincommands.IAdminCommandHandler;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.quest.Quest;
 import ru.l2.gameserver.model.quest.QuestState;
-import ru.l2.gameserver.scripts.Scripts;
+import ru.l2.gameserver.data.scripts.Scripts;
 
 import java.io.File;
 import java.util.List;

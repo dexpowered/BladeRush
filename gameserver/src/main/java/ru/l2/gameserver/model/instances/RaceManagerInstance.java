@@ -2,7 +2,7 @@ package ru.l2.gameserver.model.instances;
 
 import ru.l2.commons.threading.RunnableImpl;
 import ru.l2.gameserver.ThreadPoolManager;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.manager.ServerVariables;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.entity.MonsterRace;

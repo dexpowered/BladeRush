@@ -5,7 +5,7 @@ import ru.l2.gameserver.manager.ReflectionManager;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.entity.Reflection;
 import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 public class AdminInstance implements IAdminCommandHandler {
     @Override

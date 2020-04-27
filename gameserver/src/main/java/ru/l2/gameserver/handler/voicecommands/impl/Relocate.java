@@ -1,13 +1,13 @@
 package ru.l2.gameserver.handler.voicecommands.impl;
 
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.pledge.Clan;
 import ru.l2.gameserver.network.lineage2.components.SystemMsg;
 import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.skills.skillclasses.Call;
 import ru.l2.gameserver.utils.Location;
 

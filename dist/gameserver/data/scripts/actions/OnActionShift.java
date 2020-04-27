@@ -2,7 +2,7 @@ package actions;
 
 import org.apache.commons.lang3.StringUtils;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.HtmCache;
+import ru.l2.gameserver.data.cache.HtmCache;
 import ru.l2.gameserver.handler.admincommands.impl.AdminEditChar;
 import ru.l2.gameserver.model.AggroList.HateComparator;
 import ru.l2.gameserver.model.AggroList.HateInfo;
@@ -15,7 +15,7 @@ import ru.l2.gameserver.model.instances.PetInstance;
 import ru.l2.gameserver.model.items.ItemInstance;
 import ru.l2.gameserver.model.quest.Quest;
 import ru.l2.gameserver.model.quest.QuestEventType;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.stats.Stats;
 import ru.l2.gameserver.templates.spawn.SpawnTemplate;
 import ru.l2.gameserver.utils.HtmlUtils;

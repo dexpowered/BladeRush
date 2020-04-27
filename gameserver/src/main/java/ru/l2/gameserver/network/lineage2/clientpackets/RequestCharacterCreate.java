@@ -1,7 +1,7 @@
 package ru.l2.gameserver.network.lineage2.clientpackets;
 
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.dao.CharacterDAO;
+import ru.l2.gameserver.data.dao.CharacterDAO;
 import ru.l2.gameserver.data.xml.holder.SkillAcquireHolder;
 import ru.l2.gameserver.manager.QuestManager;
 import ru.l2.gameserver.model.Player;
@@ -160,7 +160,7 @@ public class RequestCharacterCreate extends L2GameClientPacket {
             }
         }
 
-
+/*
         ItemInstance item = newChar.getInventory().addItem(1467, 1);
         ShortCut newItem = new ShortCut(11, 0, 1, item.getObjectId(), -1, 1);
         newChar.registerShortCut(newItem);
@@ -170,7 +170,7 @@ public class RequestCharacterCreate extends L2GameClientPacket {
         ItemInstance item2 = newChar.getInventory().addItem(728, 1000);
         ShortCut newItem2 = new ShortCut(3, 0, 1, item2.getObjectId(), -1, 1);
         newChar.registerShortCut(newItem2);
-
+*/
 
         startInitialQuests(newChar);
         newChar.setCurrentHpMp(newChar.getMaxHp(), newChar.getMaxMp());

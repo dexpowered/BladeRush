@@ -1,7 +1,7 @@
 package ru.l2.gameserver.network.lineage2.clientpackets;
 
 import org.apache.commons.lang3.ArrayUtils;
-import ru.l2.gameserver.dao.MailDAO;
+import ru.l2.gameserver.data.dao.MailDAO;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.mail.Mail;
 import ru.l2.gameserver.network.lineage2.serverpackets.ExShowReceivedPostList;

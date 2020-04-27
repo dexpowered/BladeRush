@@ -3,7 +3,7 @@ package ru.l2.gameserver.handler.voicecommands.impl;
 import ru.l2.gameserver.Config;
 import ru.l2.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import ru.l2.gameserver.model.Player;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 public class Services extends Functions implements IVoicedCommandHandler {
     private static final String[] _voicedCommands = {"autoloot", "xpfreez", "ru", "en"};

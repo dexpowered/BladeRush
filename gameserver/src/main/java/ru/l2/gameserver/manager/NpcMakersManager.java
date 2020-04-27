@@ -14,7 +14,7 @@ import ru.l2.gameserver.model.Territory;
 import ru.l2.gameserver.model.npcmaker.DefaultMaker;
 import ru.l2.gameserver.model.npcmaker.RespawnData;
 import ru.l2.gameserver.model.npcmaker.SpawnDefine;
-import ru.l2.gameserver.scripts.Scripts;
+import ru.l2.gameserver.data.scripts.Scripts;
 import ru.l2.gameserver.templates.npc.NpcTemplate;
 import ru.l2.gameserver.templates.npc.superPoint.SuperPoint;
 import ru.l2.gameserver.utils.Location;

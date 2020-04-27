@@ -2,7 +2,7 @@ package ru.l2.gameserver.model.instances;
 
 import ru.l2.gameserver.Announcements;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.manager.CoupleManager;
 import ru.l2.gameserver.model.GameObjectsStorage;
 import ru.l2.gameserver.model.Player;

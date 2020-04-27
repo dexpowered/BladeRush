@@ -1,8 +1,8 @@
 package npc.model.residences.clanhall;
 
 import quests._504_CompetitionForTheBanditStronghold;
-import ru.l2.gameserver.dao.SiegeClanDAO;
-import ru.l2.gameserver.dao.SiegePlayerDAO;
+import ru.l2.gameserver.data.dao.SiegeClanDAO;
+import ru.l2.gameserver.data.dao.SiegePlayerDAO;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.entity.events.impl.ClanHallTeamBattleEvent;
 import ru.l2.gameserver.model.entity.events.objects.CTBSiegeClanObject;

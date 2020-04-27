@@ -10,7 +10,7 @@ import ru.l2.gameserver.model.Zone.ZoneType;
 import ru.l2.gameserver.model.base.PlayerAccess;
 import ru.l2.gameserver.model.entity.olympiad.OlympiadPlayersManager;
 import ru.l2.gameserver.network.lineage2.components.CustomMessage;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 @HideAccess
 @StringEncryption

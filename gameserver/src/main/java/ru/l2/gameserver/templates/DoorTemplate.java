@@ -6,7 +6,7 @@ import ru.l2.commons.geometry.Polygon;
 import ru.l2.gameserver.ai.CharacterAI;
 import ru.l2.gameserver.ai.DoorAI;
 import ru.l2.gameserver.model.instances.DoorInstance;
-import ru.l2.gameserver.scripts.Scripts;
+import ru.l2.gameserver.data.scripts.Scripts;
 import ru.l2.gameserver.utils.Location;
 
 import java.lang.reflect.Constructor;

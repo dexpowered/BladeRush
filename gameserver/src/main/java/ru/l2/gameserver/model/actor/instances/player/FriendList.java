@@ -1,7 +1,7 @@
 package ru.l2.gameserver.model.actor.instances.player;
 
 import org.apache.commons.lang3.StringUtils;
-import ru.l2.gameserver.dao.CharacterFriendDAO;
+import ru.l2.gameserver.data.dao.CharacterFriendDAO;
 import ru.l2.gameserver.model.GameObjectsStorage;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.World;

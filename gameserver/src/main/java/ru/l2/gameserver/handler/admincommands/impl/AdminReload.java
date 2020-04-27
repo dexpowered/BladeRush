@@ -3,7 +3,7 @@ package ru.l2.gameserver.handler.admincommands.impl;
 import ru.l2.commons.threading.RunnableImpl;
 import ru.l2.gameserver.Config;
 import ru.l2.gameserver.ThreadPoolManager;
-import ru.l2.gameserver.cache.HtmCache;
+import ru.l2.gameserver.data.cache.HtmCache;
 import ru.l2.gameserver.data.xml.holder.BuyListHolder;
 import ru.l2.gameserver.data.xml.holder.MultiSellHolder;
 import ru.l2.gameserver.data.xml.holder.SpawnHolder;

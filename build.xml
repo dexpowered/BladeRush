@@ -305,6 +305,29 @@
 				<attribute name="Data-Dev" value="${build.datadev}" />
 			</manifest>
 		</jar>
+		<!-- Protect by Stringer -->
+		<stringer srcFile="${build}/gameserver.jar"
+				  destFile="${build}/gameserver.jar"
+		>
+			<verbose>false</verbose>
+			<optimize>false</optimize>
+			<protectionElements>
+				<protectionElement>
+					<stringEncryption>
+						<mode>annotations</mode>
+					</stringEncryption>
+					<resourceEncryption>
+						<mode>off</mode>
+					</resourceEncryption>
+					<hideAccess>
+						<mode>annotations</mode>
+					</hideAccess>
+					<integrityControl>
+						<mode>off</mode>
+					</integrityControl>
+				</protectionElement>
+			</protectionElements>
+		</stringer>
 
 	</target>
 

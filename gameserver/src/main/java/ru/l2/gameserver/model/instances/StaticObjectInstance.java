@@ -8,7 +8,7 @@ import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.World;
 import ru.l2.gameserver.model.reference.L2Reference;
 import ru.l2.gameserver.network.lineage2.serverpackets.*;
-import ru.l2.gameserver.scripts.Events;
+import ru.l2.gameserver.data.scripts.Events;
 import ru.l2.gameserver.templates.StaticObjectTemplate;
 import ru.l2.gameserver.utils.Location;
 

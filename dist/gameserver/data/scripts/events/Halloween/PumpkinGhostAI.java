@@ -8,7 +8,7 @@ import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.model.items.ItemInstance;
 import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillLaunched;
 import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.tables.SkillTable;
 import ru.l2.gameserver.utils.Location;
 

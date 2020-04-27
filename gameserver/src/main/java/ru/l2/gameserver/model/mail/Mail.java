@@ -2,7 +2,7 @@ package ru.l2.gameserver.model.mail;
 
 import ru.l2.commons.dao.JdbcEntity;
 import ru.l2.commons.dao.JdbcEntityState;
-import ru.l2.gameserver.dao.MailDAO;
+import ru.l2.gameserver.data.dao.MailDAO;
 import ru.l2.gameserver.model.items.ItemInstance;
 
 import java.util.HashSet;

@@ -1,8 +1,8 @@
 package ru.l2.gameserver.taskmanager.actionrunner.tasks;
 
 import ru.l2.commons.dao.JdbcEntityState;
-import ru.l2.gameserver.cache.Msg;
-import ru.l2.gameserver.dao.MailDAO;
+import ru.l2.gameserver.data.cache.Msg;
+import ru.l2.gameserver.data.dao.MailDAO;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.World;
 import ru.l2.gameserver.model.mail.Mail;

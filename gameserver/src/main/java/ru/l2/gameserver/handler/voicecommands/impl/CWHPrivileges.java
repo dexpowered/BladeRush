@@ -1,12 +1,12 @@
 package ru.l2.gameserver.handler.voicecommands.impl;
 
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.HtmCache;
+import ru.l2.gameserver.data.cache.HtmCache;
 import ru.l2.gameserver.database.mysql;
 import ru.l2.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.pledge.UnitMember;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 import java.util.List;
 

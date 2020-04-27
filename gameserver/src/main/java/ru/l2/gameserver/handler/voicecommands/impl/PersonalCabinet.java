@@ -8,7 +8,7 @@ import ru.l2.gameserver.model.World;
 import ru.l2.gameserver.network.authcomm.AuthServerCommunication;
 import ru.l2.gameserver.network.authcomm.gs2as.IGPwdCng;
 import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

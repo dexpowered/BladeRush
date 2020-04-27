@@ -5,7 +5,7 @@ import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.items.ItemInstance;
 import ru.l2.gameserver.model.pledge.Clan;
 import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 public class ClanReputation extends SimpleItemHandler {
     private static final int[] ITEM_IDS = {Config.ITEM_CLAN_REPUTATION_ID};

@@ -2,7 +2,7 @@ package ru.l2.gameserver.utils;
 
 import ru.l2.gameserver.Announcements;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.dao.CharacterDAO;
+import ru.l2.gameserver.data.dao.CharacterDAO;
 import ru.l2.gameserver.manager.CursedWeaponsManager;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.World;

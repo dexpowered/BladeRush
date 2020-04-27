@@ -12,7 +12,7 @@ import ru.l2.gameserver.model.items.ItemInstance;
 import ru.l2.gameserver.network.lineage2.components.ChatType;
 import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
 import ru.l2.gameserver.network.lineage2.serverpackets.Say2;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.templates.npc.NpcTemplate;
 import ru.l2.gameserver.utils.ItemFunctions;
 import ru.l2.gameserver.utils.PositionUtils;

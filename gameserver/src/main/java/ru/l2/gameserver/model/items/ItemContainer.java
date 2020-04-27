@@ -3,7 +3,7 @@ package ru.l2.gameserver.model.items;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.l2.commons.math.SafeMath;
-import ru.l2.gameserver.dao.ItemsDAO;
+import ru.l2.gameserver.data.dao.ItemsDAO;
 import ru.l2.gameserver.idfactory.IdFactory;
 import ru.l2.gameserver.utils.ItemFunctions;
 

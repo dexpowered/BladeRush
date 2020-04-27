@@ -6,7 +6,7 @@ import ru.l2.gameserver.ai.DefaultAI;
 import ru.l2.gameserver.model.Creature;
 import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.model.items.ItemInstance;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.utils.ItemFunctions;
 import ru.l2.gameserver.utils.Location;
 

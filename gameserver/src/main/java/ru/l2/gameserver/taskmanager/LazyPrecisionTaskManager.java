@@ -6,7 +6,7 @@ import ru.l2.commons.threading.SteppingRunnableQueueManager;
 import ru.l2.commons.util.Rnd;
 import ru.l2.gameserver.Config;
 import ru.l2.gameserver.ThreadPoolManager;
-import ru.l2.gameserver.dao.AccountBonusDAO;
+import ru.l2.gameserver.data.dao.AccountBonusDAO;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.network.lineage2.components.CustomMessage;

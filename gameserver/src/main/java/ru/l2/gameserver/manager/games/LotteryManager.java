@@ -8,7 +8,7 @@ import ru.l2.commons.util.Rnd;
 import ru.l2.gameserver.Announcements;
 import ru.l2.gameserver.Config;
 import ru.l2.gameserver.ThreadPoolManager;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.database.DatabaseFactory;
 import ru.l2.gameserver.model.items.ItemInstance;
 import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage;

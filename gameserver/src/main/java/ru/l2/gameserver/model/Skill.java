@@ -10,8 +10,8 @@ import ru.l2.commons.threading.RunnableImpl;
 import ru.l2.commons.util.Rnd;
 import ru.l2.gameserver.Config;
 import ru.l2.gameserver.ThreadPoolManager;
-import ru.l2.gameserver.cache.Msg;
-import ru.l2.gameserver.geodata.GeoEngine;
+import ru.l2.gameserver.data.cache.Msg;
+import ru.custom.geoengine.GeoEngine;
 import ru.l2.gameserver.model.Zone.ZoneType;
 import ru.l2.gameserver.model.base.*;
 import ru.l2.gameserver.model.entity.events.GlobalEvent;
@@ -1988,6 +1988,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
     }
 
     public enum SkillType {
+        AGATHION(AgathionSummon.class),
         AGGRESSION(Aggression.class),
         AIEFFECTS(AIeffects.class),
         BALANCE(Balance.class),

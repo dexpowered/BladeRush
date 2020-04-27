@@ -8,7 +8,7 @@ import ru.l2.gameserver.ai.Fighter;
 import ru.l2.gameserver.model.Creature;
 import ru.l2.gameserver.model.World;
 import ru.l2.gameserver.model.instances.NpcInstance;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 import java.util.concurrent.ScheduledFuture;
 

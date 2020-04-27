@@ -2,7 +2,7 @@ package ru.l2.gameserver.handler.voicecommands.impl;
 
 import org.apache.commons.lang3.text.StrBuilder;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.HtmCache;
+import ru.l2.gameserver.data.cache.HtmCache;
 import ru.l2.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import ru.l2.gameserver.model.Creature;
 import ru.l2.gameserver.model.Player;

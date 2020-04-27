@@ -7,7 +7,7 @@ import ru.l2.commons.net.nio.impl.SelectorThread;
 import ru.l2.commons.threading.RunnableStatsManager;
 import ru.l2.gameserver.Config;
 import ru.l2.gameserver.ThreadPoolManager;
-import ru.l2.gameserver.geodata.pathfind.PathFindBuffers;
+import ru.custom.geoengine.pathfind.PathFindBuffers;
 import ru.l2.gameserver.network.telnet.TelnetCommand;
 import ru.l2.gameserver.network.telnet.TelnetCommandHolder;
 import ru.l2.gameserver.taskmanager.AiTaskManager;

@@ -23,8 +23,8 @@ import ru.l2.gameserver.ai.CtrlEvent;
 import ru.l2.gameserver.ai.CtrlIntention;
 import ru.l2.gameserver.ai.NextAction;
 import ru.l2.gameserver.ai.PlayerAI;
-import ru.l2.gameserver.cache.Msg;
-import ru.l2.gameserver.dao.*;
+import ru.l2.gameserver.data.cache.Msg;
+import ru.l2.gameserver.data.dao.*;
 import ru.l2.gameserver.data.xml.holder.*;
 import ru.l2.gameserver.data.xml.holder.MultiSellHolder.MultiSellListContainer;
 import ru.l2.gameserver.database.DatabaseFactory;
@@ -73,7 +73,7 @@ import ru.l2.gameserver.model.quest.QuestState;
 import ru.l2.gameserver.network.lineage2.GameClient;
 import ru.l2.gameserver.network.lineage2.components.*;
 import ru.l2.gameserver.network.lineage2.serverpackets.*;
-import ru.l2.gameserver.scripts.Events;
+import ru.l2.gameserver.data.scripts.Events;
 import ru.l2.gameserver.skills.AbnormalEffect;
 import ru.l2.gameserver.skills.EffectType;
 import ru.l2.gameserver.skills.TimeStamp;
@@ -2975,7 +2975,6 @@ public class Player extends Playable implements PlayerGroup {
             }
             request.cancel();
         }
-        setAgathion(0);
         boolean checkPvp = true;
         if (Config.ALLOW_CURSED_WEAPONS) {
             if (isCursedWeaponEquipped()) {
@@ -3208,7 +3207,6 @@ public class Player extends Playable implements PlayerGroup {
     }
 
     public void stopAllTimers() {
-        setAgathion(0);
         stopWaterTask();
         stopBonusTask();
         stopHourlyTask();
@@ -5773,7 +5771,6 @@ public class Player extends Playable implements PlayerGroup {
         if (getPet() != null && (getPet().isSummon() || (Config.ALT_IMPROVED_PETS_LIMITED_USE && ((getPet().getNpcId() == 16035 && !isMageClass()) || (getPet().getNpcId() == 16034 && isMageClass()))))) {
             getPet().unSummon();
         }
-        setAgathion(0);
         restoreSkills();
         if (Config.ALT_SUBLASS_SKILL_TRANSFER && getBaseClassId() == subId) {
             for (final SubClass ssc : getSubClasses().values()) {
@@ -6547,6 +6544,16 @@ public class Player extends Playable implements PlayerGroup {
         return getEvent(DuelEvent.class) != null;
     }
 
+
+    private AgathionInstance _agathion;
+    public void setAgathion(final AgathionInstance agathion) {
+        _agathion = agathion;
+    }
+
+    public AgathionInstance getAgathion() {
+        return _agathion;
+    }
+
     public TamedBeastInstance getTrainedBeast() {
         return _tamedBeast;
     }
@@ -6700,18 +6707,6 @@ public class Player extends Playable implements PlayerGroup {
         final Map<Integer, Skill> tempSkills = super.getAllSkills().stream().filter(s -> s != null && !s.isActive() && !s.isToggle()).collect(Collectors.toMap(Skill::getId, s -> s, (a, b) -> b));
         tempSkills.putAll(_transformationSkills);
         return tempSkills.values();
-    }
-
-    public void setAgathion(final int id) {
-        if (_agathionId == id) {
-            return;
-        }
-        _agathionId = id;
-        broadcastCharInfo();
-    }
-
-    public int getAgathionId() {
-        return _agathionId;
     }
 
     public int getPcBangPoints() {

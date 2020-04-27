@@ -10,7 +10,7 @@ import ru.l2.commons.util.Rnd;
 import ru.l2.gameserver.ThreadPoolManager;
 import ru.l2.gameserver.data.xml.holder.NpcTemplateHolder;
 import ru.l2.gameserver.database.mysql;
-import ru.l2.gameserver.geodata.GeoEngine;
+import ru.custom.geoengine.GeoEngine;
 import ru.l2.gameserver.idfactory.IdFactory;
 import ru.l2.gameserver.listener.actor.door.impl.MasterOnOpenCloseListenerImpl;
 import ru.l2.gameserver.listener.reflection.OnReflectionCollapseListener;

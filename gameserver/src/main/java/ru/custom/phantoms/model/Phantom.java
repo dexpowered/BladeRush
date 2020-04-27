@@ -3,7 +3,7 @@ package ru.custom.phantoms.model;
 import ru.l2.commons.threading.RunnableImpl;
 import ru.l2.commons.util.Rnd;
 import ru.l2.gameserver.ThreadPoolManager;
-import ru.l2.gameserver.dao.CharacterDAO;
+import ru.l2.gameserver.data.dao.CharacterDAO;
 import ru.l2.gameserver.model.AggroList;
 import ru.l2.gameserver.model.Player;
 import ru.custom.phantoms.PhantomConfig;

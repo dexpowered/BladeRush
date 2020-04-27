@@ -2,7 +2,7 @@ package ru.l2.gameserver.handler.admincommands.impl;
 
 import ru.l2.commons.util.Rnd;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.handler.admincommands.IAdminCommandHandler;
 import ru.l2.gameserver.model.*;
 import ru.l2.gameserver.model.base.InvisibleType;

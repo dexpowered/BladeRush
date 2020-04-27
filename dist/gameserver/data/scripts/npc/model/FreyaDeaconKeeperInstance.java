@@ -11,7 +11,7 @@ import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.network.lineage2.components.CustomMessage;
 import ru.l2.gameserver.network.lineage2.serverpackets.ExShowScreenMessage;
 import ru.l2.gameserver.network.lineage2.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.tables.SkillTable;
 import ru.l2.gameserver.templates.npc.NpcTemplate;
 import ru.l2.gameserver.utils.Location;

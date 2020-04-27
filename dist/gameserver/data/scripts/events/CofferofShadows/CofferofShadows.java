@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.l2.gameserver.Announcements;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.handler.npcdialog.INpcDialogAppender;
 import ru.l2.gameserver.listener.actor.player.OnPlayerEnterListener;
 import ru.l2.gameserver.listener.script.OnInitScriptListener;
@@ -14,7 +14,7 @@ import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.actor.listener.CharListenerList;
 import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.network.lineage2.components.CustomMessage;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.utils.Util;
 
 import java.util.Collections;

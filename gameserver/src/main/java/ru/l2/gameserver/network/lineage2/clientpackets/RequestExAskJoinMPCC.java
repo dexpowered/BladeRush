@@ -1,6 +1,6 @@
 package ru.l2.gameserver.network.lineage2.clientpackets;
 
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.model.*;
 import ru.l2.gameserver.model.Request.L2RequestType;
 import ru.l2.gameserver.network.lineage2.serverpackets.ExAskJoinMPCC;

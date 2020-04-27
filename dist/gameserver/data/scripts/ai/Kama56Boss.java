@@ -9,7 +9,7 @@ import ru.l2.gameserver.model.MinionList;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.World;
 import ru.l2.gameserver.model.instances.NpcInstance;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 import java.util.List;
 import java.util.stream.Collectors;

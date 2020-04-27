@@ -2,7 +2,7 @@ package ru.l2.gameserver.model.entity.events.objects;
 
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
-import ru.l2.gameserver.dao.SiegePlayerDAO;
+import ru.l2.gameserver.data.dao.SiegePlayerDAO;
 import ru.l2.gameserver.model.GameObjectsStorage;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.entity.events.impl.SiegeEvent;

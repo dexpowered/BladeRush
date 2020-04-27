@@ -23,7 +23,7 @@ import ru.l2.gameserver.network.lineage2.serverpackets.ExShowScreenMessage;
 import ru.l2.gameserver.network.lineage2.serverpackets.ExShowScreenMessage.ScreenMessageAlign;
 import ru.l2.gameserver.network.lineage2.serverpackets.L2GameServerPacket;
 import ru.l2.gameserver.network.lineage2.serverpackets.Revive;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.utils.Location;
 
 import java.util.List;

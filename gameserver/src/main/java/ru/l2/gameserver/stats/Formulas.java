@@ -3,7 +3,7 @@ package ru.l2.gameserver.stats;
 import ru.l2.commons.util.Rnd;
 import ru.l2.gameserver.Config;
 import ru.l2.gameserver.GameTimeController;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.data.xml.holder.HitCondBonusHolder;
 import ru.l2.gameserver.model.Creature;
 import ru.l2.gameserver.model.Player;

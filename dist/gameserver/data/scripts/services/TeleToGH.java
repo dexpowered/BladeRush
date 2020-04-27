@@ -1,7 +1,7 @@
 package services;
 
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.handler.npcdialog.INpcDialogAppender;
 import ru.l2.gameserver.listener.script.OnInitScriptListener;
 import ru.l2.gameserver.listener.zone.OnZoneEnterLeaveListener;
@@ -10,7 +10,7 @@ import ru.l2.gameserver.model.Creature;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.Zone;
 import ru.l2.gameserver.model.instances.NpcInstance;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.utils.Location;
 import ru.l2.gameserver.utils.PositionUtils;
 import ru.l2.gameserver.utils.ReflectionUtils;

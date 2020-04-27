@@ -14,7 +14,7 @@ import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.network.lineage2.components.ChatType;
 import ru.l2.gameserver.network.lineage2.components.SystemMsg;
 import ru.l2.gameserver.network.lineage2.serverpackets.Revive;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.tables.SkillTable;
 import ru.l2.gameserver.utils.Location;
 import ru.l2.gameserver.utils.PositionUtils;
@@ -436,9 +436,6 @@ public abstract class TvTTemplate extends Functions {
                             if (summon.isPet()) {
                                 summon.unSummon();
                             }
-                        }
-                        if (player.getAgathionId() > 0) {
-                            player.setAgathion(0);
                         }
                     }
                     player.sendSkillList();

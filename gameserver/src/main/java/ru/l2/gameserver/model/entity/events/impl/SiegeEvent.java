@@ -4,7 +4,7 @@ import ru.l2.commons.collections.MultiValueSet;
 import ru.l2.commons.dao.JdbcEntityState;
 import ru.l2.commons.lang.reference.HardReference;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.dao.SiegeClanDAO;
+import ru.l2.gameserver.data.dao.SiegeClanDAO;
 import ru.l2.gameserver.data.xml.holder.ResidenceHolder;
 import ru.l2.gameserver.listener.actor.OnDeathListener;
 import ru.l2.gameserver.manager.ReflectionManager;

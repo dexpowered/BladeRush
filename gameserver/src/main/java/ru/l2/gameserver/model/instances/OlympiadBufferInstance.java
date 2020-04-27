@@ -8,7 +8,7 @@ import ru.l2.gameserver.model.Skill;
 import ru.l2.gameserver.network.lineage2.serverpackets.MagicSkillUse;
 import ru.l2.gameserver.network.lineage2.serverpackets.MyTargetSelected;
 import ru.l2.gameserver.network.lineage2.serverpackets.ValidateLocation;
-import ru.l2.gameserver.scripts.Events;
+import ru.l2.gameserver.data.scripts.Events;
 import ru.l2.gameserver.tables.SkillTable;
 import ru.l2.gameserver.templates.npc.NpcTemplate;
 

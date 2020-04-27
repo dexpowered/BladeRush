@@ -1,7 +1,7 @@
 package ru.l2.gameserver.network.lineage2.clientpackets;
 
 import ru.l2.gameserver.data.xml.holder.BoatHolder;
-import ru.l2.gameserver.geodata.GeoEngine;
+import ru.custom.geoengine.GeoEngine;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.entity.boat.Boat;
 import ru.l2.gameserver.network.lineage2.serverpackets.ExServerPrimitive;

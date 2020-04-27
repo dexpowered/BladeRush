@@ -3,7 +3,7 @@ package npc.model;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.instances.WarehouseInstance;
 import ru.l2.gameserver.network.lineage2.components.SystemMsg;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.tables.SkillTable;
 import ru.l2.gameserver.templates.npc.NpcTemplate;
 

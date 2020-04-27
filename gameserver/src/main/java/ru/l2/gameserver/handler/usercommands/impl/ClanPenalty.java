@@ -1,6 +1,6 @@
 package ru.l2.gameserver.handler.usercommands.impl;
 
-import ru.l2.gameserver.cache.HtmCache;
+import ru.l2.gameserver.data.cache.HtmCache;
 import ru.l2.gameserver.handler.usercommands.IUserCommandHandler;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;

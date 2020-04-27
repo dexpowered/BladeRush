@@ -1,7 +1,7 @@
 package services.petevolve;
 
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.data.xml.holder.ItemTemplateHolder;
 import ru.l2.gameserver.handler.npcdialog.INpcDialogAppender;
 import ru.l2.gameserver.model.Player;
@@ -11,7 +11,7 @@ import ru.l2.gameserver.model.instances.PetInstance;
 import ru.l2.gameserver.model.items.ItemInstance;
 import ru.l2.gameserver.network.lineage2.components.SystemMsg;
 import ru.l2.gameserver.network.lineage2.serverpackets.InventoryUpdate;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.templates.item.ItemTemplate;
 import ru.l2.gameserver.utils.Util;
 

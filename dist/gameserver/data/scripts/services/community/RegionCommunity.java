@@ -3,7 +3,7 @@ package services.community;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.HtmCache;
+import ru.l2.gameserver.data.cache.HtmCache;
 import ru.l2.gameserver.data.xml.holder.ItemTemplateHolder;
 import ru.l2.gameserver.data.xml.holder.RecipeHolder;
 import ru.l2.gameserver.data.xml.holder.StringHolder;

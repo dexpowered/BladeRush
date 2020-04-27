@@ -3,7 +3,7 @@ package ru.l2.gameserver.model.entity.events.impl;
 import ru.l2.commons.collections.MultiValueSet;
 import ru.l2.commons.dao.JdbcEntityState;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.dao.SiegeClanDAO;
+import ru.l2.gameserver.data.dao.SiegeClanDAO;
 import ru.l2.gameserver.manager.PlayerMessageStack;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.entity.events.actions.StartStopAction;

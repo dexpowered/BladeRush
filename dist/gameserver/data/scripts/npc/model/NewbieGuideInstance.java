@@ -10,7 +10,7 @@ import ru.l2.gameserver.model.quest.QuestState;
 import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
 import ru.l2.gameserver.network.lineage2.serverpackets.PlaySound;
 import ru.l2.gameserver.network.lineage2.serverpackets.RadarControl;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 import java.util.Arrays;

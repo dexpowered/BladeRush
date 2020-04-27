@@ -2,7 +2,7 @@ package npc.model.residences.clanhall;
 
 import ru.l2.commons.dao.JdbcEntityState;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.dao.SiegeClanDAO;
+import ru.l2.gameserver.data.dao.SiegeClanDAO;
 import ru.l2.gameserver.data.xml.holder.ResidenceHolder;
 import ru.l2.gameserver.data.xml.holder.StringHolder;
 import ru.l2.gameserver.model.Player;

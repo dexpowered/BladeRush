@@ -9,7 +9,7 @@ import ru.l2.gameserver.model.Creature;
 import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.network.lineage2.serverpackets.PlaySound;
 import ru.l2.gameserver.network.lineage2.serverpackets.PlaySound.Type;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.utils.Location;
 
 public class Core extends Fighter {

@@ -2,7 +2,7 @@ package ru.l2.gameserver.skills.effects;
 
 import ru.l2.commons.util.Rnd;
 import ru.l2.gameserver.ai.CtrlEvent;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.model.Effect;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.network.lineage2.serverpackets.ChangeWaitType;

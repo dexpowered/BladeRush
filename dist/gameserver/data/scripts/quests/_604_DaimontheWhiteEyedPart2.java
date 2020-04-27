@@ -4,7 +4,7 @@ import ru.l2.commons.util.Rnd;
 import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.model.quest.Quest;
 import ru.l2.gameserver.model.quest.QuestState;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 public class _604_DaimontheWhiteEyedPart2 extends Quest {
     private static final int eye_of_argos = 31683;

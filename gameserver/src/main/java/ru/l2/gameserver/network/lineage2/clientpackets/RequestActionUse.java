@@ -4,7 +4,7 @@ import ru.l2.commons.threading.RunnableImpl;
 import ru.l2.gameserver.Config;
 import ru.l2.gameserver.ThreadPoolManager;
 import ru.l2.gameserver.ai.CtrlIntention;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.model.*;
 import ru.l2.gameserver.model.instances.DoorInstance;
 import ru.l2.gameserver.model.instances.StaticObjectInstance;

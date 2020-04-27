@@ -5,7 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.l2.commons.dbutils.DbUtils;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.cache.HtmCache;
+import ru.l2.gameserver.data.cache.HtmCache;
 import ru.l2.gameserver.data.xml.holder.MultiSellHolder;
 import ru.l2.gameserver.database.DatabaseFactory;
 import ru.l2.gameserver.handler.bbs.CommunityBoardManager;
@@ -14,7 +14,7 @@ import ru.l2.gameserver.handler.bypass.BypassHolder;
 import ru.l2.gameserver.listener.script.OnInitScriptListener;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.network.lineage2.serverpackets.ShowBoard;
-import ru.l2.gameserver.scripts.Scripts;
+import ru.l2.gameserver.data.scripts.Scripts;
 import ru.l2.gameserver.tables.ClanTable;
 
 import java.lang.reflect.Method;

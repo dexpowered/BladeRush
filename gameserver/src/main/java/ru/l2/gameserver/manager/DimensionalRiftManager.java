@@ -79,7 +79,7 @@ public class DimensionalRiftManager {
             final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             factory.setValidating(false);
             factory.setIgnoringComments(true);
-            final File file = new File(Config.DATAPACK_ROOT, "data/dimensional_rift.xml");
+            final File file = new File(Config.DATAPACK_ROOT, "data/xml/instances/dimensional_rift.xml");
             if (!file.exists()) {
                 throw new IOException();
             }

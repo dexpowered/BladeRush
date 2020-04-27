@@ -4,7 +4,7 @@ import quests._111_ElrokianHuntersProof;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.instances.NpcInstance;
 import ru.l2.gameserver.model.quest.QuestState;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.templates.npc.NpcTemplate;
 
 public class AsamahInstance extends NpcInstance {

@@ -6,7 +6,7 @@ import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.network.lineage2.serverpackets.MyTargetSelected;
 import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
 import ru.l2.gameserver.network.lineage2.serverpackets.ValidateLocation;
-import ru.l2.gameserver.scripts.Events;
+import ru.l2.gameserver.data.scripts.Events;
 import ru.l2.gameserver.tables.SkillTable;
 import ru.l2.gameserver.templates.npc.NpcTemplate;
 import ru.l2.gameserver.utils.WarehouseFunctions;

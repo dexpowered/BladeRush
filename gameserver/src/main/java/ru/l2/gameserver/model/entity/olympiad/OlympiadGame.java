@@ -5,7 +5,7 @@ import com.stringer.annotations.StringEncryption;
 import gnu.trove.map.hash.TIntIntHashMap;
 import ru.l2.gameserver.Config;
 import ru.l2.gameserver.ThreadPoolManager;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.model.*;
 import ru.l2.gameserver.model.Skill.SkillTargetType;
 import ru.l2.gameserver.model.base.TeamType;
@@ -187,9 +187,6 @@ public class OlympiadGame {
                         } else {
                             summon.getEffectList().stopAllEffects();
                         }
-                    }
-                    if (player.getAgathionId() > 0) {
-                        player.setAgathion(0);
                     }
                     player.sendSkillList();
                     final ItemInstance wpn = player.getInventory().getPaperdollItem(7);

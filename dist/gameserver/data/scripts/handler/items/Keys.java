@@ -1,7 +1,7 @@
 package handler.items;
 
 import gnu.trove.set.hash.TIntHashSet;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.data.xml.holder.DoorHolder;
 import ru.l2.gameserver.model.GameObject;
 import ru.l2.gameserver.model.Playable;

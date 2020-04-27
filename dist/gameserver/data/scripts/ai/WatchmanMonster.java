@@ -7,7 +7,7 @@ import ru.l2.gameserver.ai.CtrlEvent;
 import ru.l2.gameserver.ai.Fighter;
 import ru.l2.gameserver.model.Creature;
 import ru.l2.gameserver.model.instances.NpcInstance;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 public class WatchmanMonster extends Fighter {
     static final String[] flood = {"I'll be back", "You are stronger than expected"};

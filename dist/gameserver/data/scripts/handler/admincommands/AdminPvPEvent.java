@@ -5,7 +5,7 @@ import events.TvT2.PvPEvent.PvPEventRule;
 import ru.l2.gameserver.manager.ServerVariables;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
-import ru.l2.gameserver.scripts.Scripts;
+import ru.l2.gameserver.data.scripts.Scripts;
 
 public class AdminPvPEvent extends ScriptAdminCommand {
     @Override

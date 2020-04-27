@@ -3,7 +3,7 @@ package ru.l2.gameserver.handler.voicecommands.impl;
 import ru.l2.commons.threading.RunnableImpl;
 import ru.l2.gameserver.Config;
 import ru.l2.gameserver.ThreadPoolManager;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.handler.voicecommands.IVoicedCommandHandler;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.entity.SevenSignsFestival.SevenSignsFestival;
@@ -14,7 +14,7 @@ import ru.l2.gameserver.network.lineage2.serverpackets.ActionFail;
 import ru.l2.gameserver.network.lineage2.serverpackets.CharSelected;
 import ru.l2.gameserver.network.lineage2.serverpackets.CharacterSelectionInfo;
 import ru.l2.gameserver.network.lineage2.serverpackets.RestartResponse;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 
 public class Relog extends Functions implements IVoicedCommandHandler {
     private final String[] _commandList;

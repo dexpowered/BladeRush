@@ -2,10 +2,10 @@ package services;
 
 import ru.l2.gameserver.Config;
 import ru.l2.gameserver.Config.RateBonusInfo;
-import ru.l2.gameserver.dao.AccountBonusDAO;
+import ru.l2.gameserver.data.dao.AccountBonusDAO;
 import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.network.lineage2.serverpackets.SocialAction;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.utils.ItemFunctions;
 
 public class GlobalServices extends Functions {

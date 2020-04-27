@@ -7,7 +7,7 @@ import ru.l2.gameserver.model.World;
 import ru.l2.gameserver.model.entity.events.impl.SiegeEvent;
 import ru.l2.gameserver.model.entity.events.objects.SiegeToggleNpcObject;
 import ru.l2.gameserver.model.instances.NpcInstance;
-import ru.l2.gameserver.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.templates.npc.NpcTemplate;
 import ru.l2.gameserver.utils.Location;
 

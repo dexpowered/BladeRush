@@ -1,7 +1,7 @@
 package npc.model;
 
 import ru.l2.commons.util.Rnd;
-import ru.l2.gameserver.cache.Msg;
+import ru.l2.gameserver.data.cache.Msg;
 import ru.l2.gameserver.manager.DimensionalRiftManager;
 import ru.l2.gameserver.manager.DimensionalRiftManager.DimensionalRiftRoom;
 import ru.l2.gameserver.model.Party;

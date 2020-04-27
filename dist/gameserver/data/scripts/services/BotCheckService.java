@@ -17,8 +17,8 @@ import ru.l2.gameserver.model.Player;
 import ru.l2.gameserver.model.Skill;
 import ru.l2.gameserver.model.Zone.ZoneType;
 import ru.l2.gameserver.model.actor.listener.PlayerListenerList;
-import ru.l2.gameserver.scripts.Functions;
-import ru.l2.gameserver.scripts.Scripts;
+import ru.l2.gameserver.data.scripts.Functions;
+import ru.l2.gameserver.data.scripts.Scripts;
 import ru.l2.gameserver.tables.SkillTable;
 
 public class BotCheckService extends Functions implements OnInitScriptListener {

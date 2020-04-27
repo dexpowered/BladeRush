@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import ru.l2.commons.dbutils.DbUtils;
 import ru.l2.gameserver.Config;
-import ru.l2.gameserver.dao.CharacterDAO;
+import ru.l2.gameserver.data.dao.CharacterDAO;
 import ru.l2.gameserver.database.DatabaseFactory;
 import ru.l2.gameserver.model.CharSelectInfoPackage;
 import ru.l2.gameserver.model.items.Inventory;
