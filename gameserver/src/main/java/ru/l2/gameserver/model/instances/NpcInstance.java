@@ -1240,6 +1240,7 @@ public class NpcInstance extends Creature {
         if (classId == null) {
             return;
         }
+        /*
         final int npcId = getTemplate().npcId;
         if (getTemplate().getTeachInfo().isEmpty()) {
             final NpcHtmlMessage html = new NpcHtmlMessage(player, this);
@@ -1270,6 +1271,8 @@ public class NpcInstance extends Creature {
             }
             return;
         }
+
+         */
         final Collection<SkillLearn> skills = SkillAcquireHolder.getInstance().getAvailableSkills(player, classId, AcquireType.NORMAL, null);
         final AcquireSkillList asl = new AcquireSkillList(AcquireType.NORMAL, skills.size());
         int counts = 0;
@@ -1281,6 +1284,7 @@ public class NpcInstance extends Creature {
             if (sk == null) {
                 continue;
             }
+            /*
             if (!Config.ALT_WEAK_SKILL_LEARN) {
                 if (!sk.getCanLearn(player.getClassId())) {
                     continue;
@@ -1289,6 +1293,7 @@ public class NpcInstance extends Creature {
                     continue;
                 }
             }
+            */
             counts++;
             asl.addSkill(s.getId(), s.getLevel(), s.getLevel(), s.getCost(), 0);
         }

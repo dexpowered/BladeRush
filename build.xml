@@ -121,29 +121,7 @@
 				<attribute name="Data-Dev" value="${build.datadev}" />
 			</manifest>
 		</jar>
-		<!-- Protect by Stringer -->
-		<stringer srcFile="${build}/commons.jar"
-                  destFile="${build}/commons.jar"
-        >
-			<verbose>false</verbose>
-			<optimize>false</optimize>
-			<protectionElements>
-				<protectionElement>
-					<stringEncryption>
-						<mode>off</mode>
-					</stringEncryption>
-					<resourceEncryption>
-						<mode>off</mode>
-					</resourceEncryption>
-					<hideAccess>
-						<mode>off</mode>
-					</hideAccess>
-					<integrityControl>
-						<mode>off</mode>
-					</integrityControl>
-				</protectionElement>
-			</protectionElements>
-		</stringer>
+
 
 	</target>
 
@@ -197,29 +175,6 @@
 				<attribute name="Data-Dev" value="${build.datadev}" />
 			</manifest>
 		</jar>
-		<!-- Protect by Stringer -->
-		<stringer srcFile="${build}/scripts.jar"
-                  destFile="${build}/scripts.jar"
-        >
-			<verbose>false</verbose>
-			<optimize>false</optimize>
-			<protectionElements>
-				<protectionElement>
-					<stringEncryption>
-						<mode>off</mode>
-					</stringEncryption>
-					<resourceEncryption>
-						<mode>off</mode>
-					</resourceEncryption>
-					<hideAccess>
-						<mode>off</mode>
-					</hideAccess>
-					<integrityControl>
-						<mode>off</mode>
-					</integrityControl>
-				</protectionElement>
-			</protectionElements>
-		</stringer>
 
 	</target>
 
@@ -305,29 +260,6 @@
 				<attribute name="Data-Dev" value="${build.datadev}" />
 			</manifest>
 		</jar>
-		<!-- Protect by Stringer -->
-		<stringer srcFile="${build}/gameserver.jar"
-				  destFile="${build}/gameserver.jar"
-		>
-			<verbose>false</verbose>
-			<optimize>false</optimize>
-			<protectionElements>
-				<protectionElement>
-					<stringEncryption>
-						<mode>annotations</mode>
-					</stringEncryption>
-					<resourceEncryption>
-						<mode>off</mode>
-					</resourceEncryption>
-					<hideAccess>
-						<mode>annotations</mode>
-					</hideAccess>
-					<integrityControl>
-						<mode>off</mode>
-					</integrityControl>
-				</protectionElement>
-			</protectionElements>
-		</stringer>
 
 	</target>
 
@@ -428,29 +360,6 @@
 			</manifest>
 		</jar>
 		<!-- Protect by Stringer -->
-		<stringer srcFile="${build}/authserver.jar"
-                  destFile="${build}/authserver.jar"
-        >
-			<verbose>false</verbose>
-			<optimize>false</optimize>
-			<protectionElements>
-				<protectionElement>
-					<stringEncryption>
-						<mode>off</mode>
-					</stringEncryption>
-					<resourceEncryption>
-						<mode>off</mode>
-					</resourceEncryption>
-					<hideAccess>
-						<mode>off</mode>
-					</hideAccess>
-					<integrityControl>
-						<mode>off</mode>
-					</integrityControl>
-				</protectionElement>
-			</protectionElements>
-		</stringer>
-
 	</target>
 
 	<target name="authserver" depends="authserver-jar">
@@ -530,29 +439,6 @@
 			</manifest>
 		</jar>
 		<!-- Protect by Stringer -->
-		<stringer srcFile="${build}/cgm.jar"
-                  destFile="${build}/cgm.jar"
-        >
-			<verbose>false</verbose>
-			<optimize>false</optimize>
-			<protectionElements>
-				<protectionElement>
-					<stringEncryption>
-						<mode>off</mode>
-					</stringEncryption>
-					<resourceEncryption>
-						<mode>off</mode>
-					</resourceEncryption>
-					<hideAccess>
-						<mode>off</mode>
-					</hideAccess>
-					<integrityControl>
-						<mode>off</mode>
-					</integrityControl>
-				</protectionElement>
-			</protectionElements>
-		</stringer>
-
 	</target>
 
 	<target name="cgm" depends="cgm-jar">
@@ -610,29 +496,6 @@
 			</manifest>
 		</jar>
 		<!-- Protect by Stringer -->
-		<stringer srcFile="${build}/dataparser.jar"
-                  destFile="${build}/dataparser.jar"
-        >
-			<verbose>false</verbose>
-			<optimize>false</optimize>
-			<protectionElements>
-				<protectionElement>
-					<stringEncryption>
-						<mode>off</mode>
-					</stringEncryption>
-					<resourceEncryption>
-						<mode>off</mode>
-					</resourceEncryption>
-					<hideAccess>
-						<mode>off</mode>
-					</hideAccess>
-					<integrityControl>
-						<mode>off</mode>
-					</integrityControl>
-				</protectionElement>
-			</protectionElements>
-		</stringer>
-
 	</target>
 
 	<target name="dataparser" depends="dataparser-jar">
@@ -658,17 +521,8 @@
 	</target>
 
 	<!--<target name="dist" depends="gameserver"> cleanup -->
-	<target name="dist" depends="authserver, gameserver, dataparser, cgm, scripts">
+	<target name="dist" depends="gameserver">
 		<!-- cleanup -->
-		<delete file="${build}/authserver.jar" />
-		<delete file="${build}/cgm.jar" />
-		<delete file="${build}/commons.jar" />
-		<delete file="${build}/dataparser.jar" />
-		<delete file="${build}/gameserver.jar" />
-		<delete file="${build}/scripts.jar" />
 		<delete dir="${build.classes}" />
-		<echo message="Creating Zip archive"/>
-		<zip destfile="${build_archive}/${build.team}_${build.version}_Rev.${build.revision}.zip" basedir="${build.dist}" update="true" level="9" />
-		<echo message="Creating Zip archive done"/>
 	</target>
 </project>

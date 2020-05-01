@@ -3,21 +3,24 @@ package ru.l2.gameserver;
 import com.stringer.annotations.HideAccess;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ru.custom.geoengine.GeoEngine;
+import ru.custom.phantoms.PhantomLoader;
 import ru.l2.commons.dbutils.SqlTableOptimizer;
 import ru.l2.commons.lang.StatsUtils;
 import ru.l2.commons.listener.ListenerList;
 import ru.l2.commons.net.nio.impl.SelectorThread;
+import ru.l2.commons.threading.RunnableImpl;
 import ru.l2.commons.versioning.Version;
 import ru.l2.gameserver.data.cache.CrestCache;
 import ru.l2.gameserver.data.dao.CharacterDAO;
 import ru.l2.gameserver.data.dao.ItemsDAO;
-import ru.l2.gameserver.data.xml.holder.BoatHolder;
+import ru.l2.gameserver.data.scripts.Scripts;
 import ru.l2.gameserver.data.xml.Parsers;
+import ru.l2.gameserver.data.xml.holder.BoatHolder;
 import ru.l2.gameserver.data.xml.holder.EventHolder;
 import ru.l2.gameserver.data.xml.holder.ResidenceHolder;
 import ru.l2.gameserver.data.xml.holder.StaticObjectHolder;
 import ru.l2.gameserver.database.DatabaseFactory;
-import ru.custom.geoengine.GeoEngine;
 import ru.l2.gameserver.handler.admincommands.AdminCommandHandler;
 import ru.l2.gameserver.handler.bypass.BypassHolder;
 import ru.l2.gameserver.handler.items.ItemHandler;
@@ -45,8 +48,6 @@ import ru.l2.gameserver.network.lineage2.CGMHelper;
 import ru.l2.gameserver.network.lineage2.GameClient;
 import ru.l2.gameserver.network.lineage2.GamePacketHandler;
 import ru.l2.gameserver.network.telnet.TelnetServer;
-import ru.custom.phantoms.PhantomLoader;
-import ru.l2.gameserver.data.scripts.Scripts;
 import ru.l2.gameserver.tables.*;
 import ru.l2.gameserver.taskmanager.ItemsAutoDestroy;
 import ru.l2.gameserver.taskmanager.L2TopRuManager;
@@ -132,6 +133,10 @@ public class GameServer {
         CharTemplateTable.getInstance();
         LevelUpTable.getInstance();
         PetSkillsTable.getInstance();
+        if(Config.NPC_SERVER_DELAY > 0)
+        {
+            ThreadPoolManager.getInstance().schedule(new NpcTaskSpawn(), Config.NPC_SERVER_DELAY * 1000);
+        }
         SpawnManager.getInstance().spawnAll();
         BoatHolder.getInstance().spawnAll();
         StaticObjectHolder.getInstance().spawnAll();
@@ -309,6 +314,13 @@ public class GameServer {
 
         public void onShutdown() {
             getListeners().stream().filter(OnShutdownListener.class::isInstance).forEach(listener -> ((OnShutdownListener) listener).onShutdown());
+        }
+    }
+
+    public class NpcTaskSpawn extends RunnableImpl {
+        @Override
+        public void runImpl() {
+            SpawnManager.getInstance().spawnAll();
         }
     }
 }

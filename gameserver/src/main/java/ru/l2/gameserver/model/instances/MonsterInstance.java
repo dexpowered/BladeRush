@@ -66,6 +66,9 @@ public class MonsterInstance extends NpcInstance {
         minionList = new MinionList(this);
     }
 
+
+
+
     @Override
     public boolean isMovementDisabled() {
         return getNpcId() == 18344 || getNpcId() == 18345 || super.isMovementDisabled();
@@ -746,33 +749,30 @@ public class MonsterInstance extends NpcInstance {
     }
 
     private void checkUD(final Creature attacker, final double damage) {
-        if (getTemplate().getBaseAtkRange() > 200.0 || getLevel() < 20 || getLevel() > 78 || attacker.getLevel() - getLevel() > 9 || getLevel() - attacker.getLevel() > 9) {
+        if (getTemplate().getBaseAtkRange() > MIN_DISTANCE_FOR_USE_UD || getLevel() < 20 || getLevel() > 78 || attacker.getLevel() - getLevel() > 9 || getLevel() - attacker.getLevel() > 9)
             return;
-        }
-        if (isMinion() || getMinionList() != null || isRaid() || this instanceof ReflectionBossInstance || this instanceof ChestInstance || getChampion() > 0) {
+
+        if (isMinion() || getMinionList() != null || isRaid() || this instanceof ReflectionBossInstance || this instanceof ChestInstance || getChampion() > 0)
             return;
-        }
-        final int skillId = 5044;
+
+        int skillId = 5044;
         int skillLvl = 1;
-        if (getLevel() >= 41 || getLevel() <= 60) {
+        if (getLevel() >= 41 || getLevel() <= 60)
             skillLvl = 2;
-        } else if (getLevel() > 60) {
+        else if (getLevel() > 60)
             skillLvl = 3;
-        }
-        final double distance = getDistance(attacker);
-        if (distance <= 50.0) {
-            if (getEffectList() != null && getEffectList().getEffectsBySkillId(skillId) != null) {
-                for (final Effect e : getEffectList().getEffectsBySkillId(skillId)) {
+
+        double distance = getDistance(attacker);
+        if (distance <= MIN_DISTANCE_FOR_CANCEL_UD) {
+            if (getEffectList() != null && getEffectList().getEffectsBySkillId(skillId) != null)
+                for (Effect e : getEffectList().getEffectsBySkillId(skillId))
                     e.exit();
-                }
-            }
-        } else if (distance >= 200.0) {
-            final double chance = 30.0 / (getMaxHp() / damage);
+        } else if (distance >= MIN_DISTANCE_FOR_USE_UD) {
+            double chance = UD_USE_CHANCE / (getMaxHp() / damage);
             if (Rnd.chance(chance)) {
-                final Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
-                if (skill != null) {
+                Skill skill = SkillTable.getInstance().getInfo(skillId, skillLvl);
+                if (skill != null)
                     skill.getEffects(this, this, false, false);
-                }
             }
         }
     }

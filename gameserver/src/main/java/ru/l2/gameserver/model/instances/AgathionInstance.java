@@ -28,12 +28,9 @@ public class AgathionInstance extends NpcInstance {
         _buffTask = null;
         _hasRandomWalk = false;
         _hasChatWindow = false;
-        _hasRandomAnimation = false;
-        setShowName(false);
-        setTargetable(false);
+        _hasRandomAnimation = true;
         setRunning();
     }
-
 
     public void buffOwner() {
         if (!isInRange(getPlayer(), MAX_DISTANCE_FOR_BUFF)) {
@@ -52,10 +49,6 @@ public class AgathionInstance extends NpcInstance {
     @Override
     protected void onDeath(final Creature killer) {
         super.onDeath(killer);
-        if (_durationCheckTask != null) {
-            _durationCheckTask.cancel(false);
-            _durationCheckTask = null;
-        }
         if (_buffTask != null) {
             _buffTask.cancel(false);
             _buffTask = null;
@@ -82,6 +75,7 @@ public class AgathionInstance extends NpcInstance {
             for (final Player player : World.getAroundPlayers(this)) {
                 player.sendPacket(new NpcInfo(this, player));
             }
+
             getAI().setIntention(CtrlIntention.AI_INTENTION_FOLLOW, owner);
             _buffTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new RunnableImpl() {
                 @Override
@@ -93,12 +87,9 @@ public class AgathionInstance extends NpcInstance {
             doDespawn();
         }
     }
+
     public void doDespawn() {
         stopMove();
-        if (_durationCheckTask != null) {
-            _durationCheckTask.cancel(false);
-            _durationCheckTask = null;
-        }
         if (_buffTask != null) {
             _buffTask.cancel(false);
             _buffTask = null;

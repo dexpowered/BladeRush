@@ -72,6 +72,14 @@ public class Config {
     private static final String J2DEV_CONFIG = "config/debug.ini";
     private static final Logger LOGGER = LoggerFactory.getLogger(Config.class);
     public static int HTM_CACHE_MODE;
+    public static int NPC_SERVER_DELAY;
+    //RushAddonts
+    public static boolean ALT_ITEM_LEARN_MODE;
+    public static boolean ALT_ITEM_LEARN_SP;
+    public static int ALT_ITEM_LEARN_COUNT;
+    public static int ALT_ITEM_LEARN_ID;
+    public static List<AltSkillPrice> ALT_PRICE_SKILL;
+
     public static boolean HTM_CACHE_COMPRESS;
     public static int[] PORTS_GAME;
     public static String GAMESERVER_HOSTNAME;
@@ -2578,11 +2586,30 @@ public class Config {
 
     private static void loadJ2devConfig() {
         PropertiesParser j2devSettings = load(J2DEV_CONFIG);
+        ALT_ITEM_LEARN_MODE = j2devSettings.getProperty("AltLearnMode", false);
+        ALT_ITEM_LEARN_SP = j2devSettings.getProperty("AltLearnSp", false);
+        ALT_ITEM_LEARN_ID = j2devSettings.getProperty("AltLearnItem", 4037);
+        ALT_ITEM_LEARN_COUNT = j2devSettings.getProperty("AltLearnCount", 4037);
+
+
+        ALT_PRICE_SKILL = new ArrayList<>();
+        final StringTokenizer st = new StringTokenizer(j2devSettings.getProperty("AltSkillPrice", ""), "[]");
+        while (st.hasMoreTokens()) {
+            final String interval = st.nextToken();
+            final String[] t = interval.split(":");
+            final String[] t2 = t[0].split(",");
+            final int count = Integer.parseInt(t[1]);
+            final int skill = Integer.parseInt(t2[0]);
+            final int id = Integer.parseInt(t2[1]);
+            ALT_PRICE_SKILL.add(new AltSkillPrice(skill, id, count));
+        }
+
         LOG_CLIENT_PACKETS = j2devSettings.getProperty("ClientToServerPacketLogging", false);
         LOG_SERVER_PACKETS = j2devSettings.getProperty("ServerToClentPacketLogging", false);
         LOG_REQUEST_BUYPASS = j2devSettings.getProperty("LoggingRequestBuypass", false);
         CUSTOM_SHOP_TRADER_MANAGER = j2devSettings.getProperty("CustomShopTraderManager", true);
         MAKERS_DEBUG = j2devSettings.getProperty("NpcMakersDebug", false);
+        NPC_SERVER_DELAY = j2devSettings.getProperty("NpcTaskSpawn", 60);
 
     }
 
@@ -2786,6 +2813,19 @@ public class Config {
             hour = h;
             minute = m;
             this.category = category;
+        }
+    }
+
+    public static class AltSkillPrice {
+        public final int skillId;
+        public final int priceId;
+        public final int priceCount;
+
+        AltSkillPrice(final int skill, final int price, final int count)
+        {
+            skillId = skill;
+            priceId = price;
+            priceCount = count;
         }
     }
 
