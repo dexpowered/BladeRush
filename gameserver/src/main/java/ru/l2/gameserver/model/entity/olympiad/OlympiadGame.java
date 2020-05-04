@@ -10,6 +10,7 @@ import ru.l2.gameserver.model.*;
 import ru.l2.gameserver.model.Skill.SkillTargetType;
 import ru.l2.gameserver.model.base.TeamType;
 import ru.l2.gameserver.model.entity.olympiad.NoblessManager.NobleRecord;
+import ru.l2.gameserver.model.instances.AgathionInstance;
 import ru.l2.gameserver.model.items.ItemInstance;
 import ru.l2.gameserver.model.quest.QuestState;
 import ru.l2.gameserver.network.lineage2.components.ChatType;
@@ -179,6 +180,11 @@ public class OlympiadGame {
                     }
                     if (player.isMounted()) {
                         player.setMount(0, 0, 0);
+                    }
+                    // agathion
+                    if(player.getAgathion() != null)
+                    {
+                        player.getAgathion().doDespawn();
                     }
                     if (player.getPet() != null) {
                         final Summon summon = player.getPet();

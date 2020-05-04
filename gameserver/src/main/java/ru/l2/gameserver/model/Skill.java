@@ -189,6 +189,9 @@ public abstract class Skill extends StatTemplate implements Cloneable {
     protected String _baseValues;
     protected String _icon;
     protected int _baseBlowRate;
+    //agathion
+    protected int agathion_skill_add;
+    protected int agathion_skill_rem;
 
     protected Skill(final StatsSet set) {
         _effectTemplates = EffectTemplate.EMPTY_ARRAY;
@@ -307,6 +310,8 @@ public abstract class Skill extends StatTemplate implements Cloneable {
         _isBehind = set.getBool("behind", false);
         _symbolId = set.getInteger("symbolId", 0);
         _npcId = set.getInteger("npcId", 0);
+        agathion_skill_add = set.getInteger("npcId", 0);
+        agathion_skill_rem = set.getInteger("npcId", 0);
         _flyType = FlyType.valueOf(set.getString("flyType", "NONE").toUpperCase());
         _flyToBack = set.getBool("flyToBack", false);
         _flyRadius = set.getInteger("flyRadius", 200);
@@ -1440,6 +1445,12 @@ public abstract class Skill extends StatTemplate implements Cloneable {
     public int getNpcId() {
         return _npcId;
     }
+    public int getAgathionSkillAdd() {
+        return agathion_skill_add;
+    }
+    public int getAgathionSkillRem() {
+        return agathion_skill_rem;
+    }
 
     public int getNumCharges() {
         return _numCharges;
@@ -1989,6 +2000,7 @@ public abstract class Skill extends StatTemplate implements Cloneable {
 
     public enum SkillType {
         AGATHION(AgathionSummon.class),
+        AGATHION_REM(AgathionUnsummon.class),
         AGGRESSION(Aggression.class),
         AIEFFECTS(AIeffects.class),
         BALANCE(Balance.class),

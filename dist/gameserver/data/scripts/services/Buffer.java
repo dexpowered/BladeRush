@@ -11,6 +11,7 @@ import ru.l2.gameserver.Config;
 import ru.l2.gameserver.ThreadPoolManager;
 import ru.l2.gameserver.data.cache.HtmCache;
 import ru.l2.gameserver.data.cache.Msg;
+import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.data.xml.holder.ItemTemplateHolder;
 import ru.l2.gameserver.handler.items.IItemHandler;
 import ru.l2.gameserver.handler.items.ItemHandler;
@@ -25,7 +26,6 @@ import ru.l2.gameserver.network.lineage2.serverpackets.NpcHtmlMessage;
 import ru.l2.gameserver.network.lineage2.serverpackets.ShowBoard;
 import ru.l2.gameserver.network.lineage2.serverpackets.SkillCoolTime;
 import ru.l2.gameserver.network.lineage2.serverpackets.SystemMessage;
-import ru.l2.gameserver.data.scripts.Functions;
 import ru.l2.gameserver.skills.TimeStamp;
 import ru.l2.gameserver.tables.SkillTable;
 import ru.l2.gameserver.templates.item.ItemTemplate;
@@ -109,7 +109,7 @@ public class Buffer extends Functions implements OnInitScriptListener {
                 player.sendStatusUpdate(true, false, 9, 11, 33, 10, 12, 34);
                 if (player.getPet() != null) {
                     final Summon summon = player.getPet();
-                    summon.setCurrentHpMp((double) summon.getMaxHp(), (double) summon.getMaxMp(), false);
+                    summon.setCurrentHpMp(summon.getMaxHp(), summon.getMaxMp(), false);
                     break;
                 }
                 break;

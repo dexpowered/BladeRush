@@ -1,4 +1,4 @@
-package ru.l2.gameserver.model;
+package ru.j2dev.gameserver.model;
 
 import gnu.trove.set.TIntSet;
 import gnu.trove.set.hash.TIntHashSet;
@@ -8,95 +8,95 @@ import org.apache.commons.lang3.tuple.ImmutablePair;
 import org.apache.commons.lang3.tuple.Pair;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ru.l2.commons.collections.MultiValueSet;
-import ru.l2.commons.dbutils.DbUtils;
-import ru.l2.commons.dbutils.SqlBatch;
-import ru.l2.commons.lang.reference.HardReference;
-import ru.l2.commons.lang.reference.HardReferences;
-import ru.l2.commons.threading.RunnableImpl;
-import ru.l2.commons.util.Rnd;
-import ru.l2.gameserver.Announcements;
-import ru.l2.gameserver.Config;
-import ru.l2.gameserver.GameTimeController;
-import ru.l2.gameserver.ThreadPoolManager;
-import ru.l2.gameserver.ai.CtrlEvent;
-import ru.l2.gameserver.ai.CtrlIntention;
-import ru.l2.gameserver.ai.NextAction;
-import ru.l2.gameserver.ai.PlayerAI;
-import ru.l2.gameserver.data.cache.Msg;
-import ru.l2.gameserver.data.dao.*;
-import ru.l2.gameserver.data.xml.holder.*;
-import ru.l2.gameserver.data.xml.holder.MultiSellHolder.MultiSellListContainer;
-import ru.l2.gameserver.database.DatabaseFactory;
-import ru.l2.gameserver.database.mysql;
-import ru.l2.gameserver.handler.items.IItemHandler;
-import ru.l2.gameserver.handler.items.IRefineryHandler;
-import ru.l2.gameserver.idfactory.IdFactory;
-import ru.l2.gameserver.listener.actor.player.OnAnswerListener;
-import ru.l2.gameserver.listener.actor.player.impl.ReviveAnswerListener;
-import ru.l2.gameserver.listener.actor.player.impl.ScriptAnswerListener;
-import ru.l2.gameserver.listener.actor.player.impl.SummonAnswerListener;
-import ru.l2.gameserver.listener.hooks.ListenerHook;
-import ru.l2.gameserver.listener.hooks.ListenerHookType;
-import ru.l2.gameserver.manager.*;
-import ru.l2.gameserver.model.Effect.EEffectSlot;
-import ru.l2.gameserver.model.Request.L2RequestType;
-import ru.l2.gameserver.model.Skill.AddedSkill;
-import ru.l2.gameserver.model.Zone.ZoneType;
-import ru.l2.gameserver.model.actor.instances.player.*;
-import ru.l2.gameserver.model.actor.instances.player.FriendList;
-import ru.l2.gameserver.model.actor.listener.PlayerListenerList;
-import ru.l2.gameserver.model.actor.recorder.PlayerStatsChangeRecorder;
-import ru.l2.gameserver.model.base.*;
-import ru.l2.gameserver.model.chat.chatfilter.ChatMsg;
-import ru.l2.gameserver.model.entity.DimensionalRift;
-import ru.l2.gameserver.model.entity.Reflection;
-import ru.l2.gameserver.model.entity.SevenSignsFestival.DarknessFestival;
-import ru.l2.gameserver.model.entity.boat.Boat;
-import ru.l2.gameserver.model.entity.events.GlobalEvent;
-import ru.l2.gameserver.model.entity.events.impl.DuelEvent;
-import ru.l2.gameserver.model.entity.events.impl.SiegeEvent;
-import ru.l2.gameserver.model.entity.olympiad.*;
-import ru.l2.gameserver.model.entity.residence.Castle;
-import ru.l2.gameserver.model.entity.residence.ClanHall;
-import ru.l2.gameserver.model.entity.residence.Residence;
-import ru.l2.gameserver.model.instances.*;
-import ru.l2.gameserver.model.items.*;
-import ru.l2.gameserver.model.items.Warehouse.WarehouseType;
-import ru.l2.gameserver.model.items.attachment.FlagItemAttachment;
-import ru.l2.gameserver.model.items.attachment.PickableAttachment;
-import ru.l2.gameserver.model.matching.MatchingRoom;
-import ru.l2.gameserver.model.pledge.*;
-import ru.l2.gameserver.model.quest.Quest;
-import ru.l2.gameserver.model.quest.QuestEventType;
-import ru.l2.gameserver.model.quest.QuestState;
-import ru.l2.gameserver.network.lineage2.GameClient;
-import ru.l2.gameserver.network.lineage2.components.*;
-import ru.l2.gameserver.network.lineage2.serverpackets.*;
-import ru.l2.gameserver.data.scripts.Events;
-import ru.l2.gameserver.skills.AbnormalEffect;
-import ru.l2.gameserver.skills.EffectType;
-import ru.l2.gameserver.skills.TimeStamp;
-import ru.l2.gameserver.skills.effects.EffectCubic;
-import ru.l2.gameserver.skills.skillclasses.Transformation;
-import ru.l2.gameserver.stats.Formulas;
-import ru.l2.gameserver.stats.Stats;
-import ru.l2.gameserver.tables.*;
-import ru.l2.gameserver.taskmanager.AutoSaveManager;
-import ru.l2.gameserver.taskmanager.LazyPrecisionTaskManager;
-import ru.l2.gameserver.taskmanager.tasks.objecttasks.*;
-import ru.l2.gameserver.templates.FishTemplate;
-import ru.l2.gameserver.templates.Henna;
-import ru.l2.gameserver.templates.InstantZone;
-import ru.l2.gameserver.templates.PlayerTemplate;
-import ru.l2.gameserver.templates.item.ArmorTemplate;
-import ru.l2.gameserver.templates.item.ArmorTemplate.ArmorType;
-import ru.l2.gameserver.templates.item.ItemTemplate;
-import ru.l2.gameserver.templates.item.WeaponTemplate;
-import ru.l2.gameserver.templates.item.WeaponTemplate.WeaponType;
-import ru.l2.gameserver.templates.npc.NpcTemplate;
-import ru.l2.gameserver.utils.*;
-import ru.l2.gameserver.utils.Log.ItemLog;
+import ru.j2dev.commons.collections.MultiValueSet;
+import ru.j2dev.commons.dbutils.DbUtils;
+import ru.j2dev.commons.dbutils.SqlBatch;
+import ru.j2dev.commons.lang.reference.HardReference;
+import ru.j2dev.commons.lang.reference.HardReferences;
+import ru.j2dev.commons.threading.RunnableImpl;
+import ru.j2dev.commons.util.Rnd;
+import ru.j2dev.gameserver.Announcements;
+import ru.j2dev.gameserver.Config;
+import ru.j2dev.gameserver.GameTimeController;
+import ru.j2dev.gameserver.ThreadPoolManager;
+import ru.j2dev.gameserver.ai.CtrlEvent;
+import ru.j2dev.gameserver.ai.CtrlIntention;
+import ru.j2dev.gameserver.ai.NextAction;
+import ru.j2dev.gameserver.ai.PlayerAI;
+import ru.j2dev.gameserver.cache.Msg;
+import ru.j2dev.gameserver.dao.*;
+import ru.j2dev.gameserver.data.xml.holder.*;
+import ru.j2dev.gameserver.data.xml.holder.MultiSellHolder.MultiSellListContainer;
+import ru.j2dev.gameserver.database.DatabaseFactory;
+import ru.j2dev.gameserver.database.mysql;
+import ru.j2dev.gameserver.handler.items.IItemHandler;
+import ru.j2dev.gameserver.handler.items.IRefineryHandler;
+import ru.j2dev.gameserver.idfactory.IdFactory;
+import ru.j2dev.gameserver.listener.actor.player.OnAnswerListener;
+import ru.j2dev.gameserver.listener.actor.player.impl.ReviveAnswerListener;
+import ru.j2dev.gameserver.listener.actor.player.impl.ScriptAnswerListener;
+import ru.j2dev.gameserver.listener.actor.player.impl.SummonAnswerListener;
+import ru.j2dev.gameserver.listener.hooks.ListenerHook;
+import ru.j2dev.gameserver.listener.hooks.ListenerHookType;
+import ru.j2dev.gameserver.manager.*;
+import ru.j2dev.gameserver.model.Effect.EEffectSlot;
+import ru.j2dev.gameserver.model.Request.L2RequestType;
+import ru.j2dev.gameserver.model.Skill.AddedSkill;
+import ru.j2dev.gameserver.model.Zone.ZoneType;
+import ru.j2dev.gameserver.model.actor.instances.player.*;
+import ru.j2dev.gameserver.model.actor.instances.player.FriendList;
+import ru.j2dev.gameserver.model.actor.listener.PlayerListenerList;
+import ru.j2dev.gameserver.model.actor.recorder.PlayerStatsChangeRecorder;
+import ru.j2dev.gameserver.model.base.*;
+import ru.j2dev.gameserver.model.chat.chatfilter.ChatMsg;
+import ru.j2dev.gameserver.model.entity.DimensionalRift;
+import ru.j2dev.gameserver.model.entity.Reflection;
+import ru.j2dev.gameserver.model.entity.SevenSignsFestival.DarknessFestival;
+import ru.j2dev.gameserver.model.entity.boat.Boat;
+import ru.j2dev.gameserver.model.entity.events.GlobalEvent;
+import ru.j2dev.gameserver.model.entity.events.impl.DuelEvent;
+import ru.j2dev.gameserver.model.entity.events.impl.SiegeEvent;
+import ru.j2dev.gameserver.model.entity.olympiad.*;
+import ru.j2dev.gameserver.model.entity.residence.Castle;
+import ru.j2dev.gameserver.model.entity.residence.ClanHall;
+import ru.j2dev.gameserver.model.entity.residence.Residence;
+import ru.j2dev.gameserver.model.instances.*;
+import ru.j2dev.gameserver.model.items.*;
+import ru.j2dev.gameserver.model.items.Warehouse.WarehouseType;
+import ru.j2dev.gameserver.model.items.attachment.FlagItemAttachment;
+import ru.j2dev.gameserver.model.items.attachment.PickableAttachment;
+import ru.j2dev.gameserver.model.matching.MatchingRoom;
+import ru.j2dev.gameserver.model.pledge.*;
+import ru.j2dev.gameserver.model.quest.Quest;
+import ru.j2dev.gameserver.model.quest.QuestEventType;
+import ru.j2dev.gameserver.model.quest.QuestState;
+import ru.j2dev.gameserver.network.lineage2.GameClient;
+import ru.j2dev.gameserver.network.lineage2.components.*;
+import ru.j2dev.gameserver.network.lineage2.serverpackets.*;
+import ru.j2dev.gameserver.scripts.Events;
+import ru.j2dev.gameserver.skills.AbnormalEffect;
+import ru.j2dev.gameserver.skills.EffectType;
+import ru.j2dev.gameserver.skills.TimeStamp;
+import ru.j2dev.gameserver.skills.effects.EffectCubic;
+import ru.j2dev.gameserver.skills.skillclasses.Transformation;
+import ru.j2dev.gameserver.stats.Formulas;
+import ru.j2dev.gameserver.stats.Stats;
+import ru.j2dev.gameserver.tables.*;
+import ru.j2dev.gameserver.taskmanager.AutoSaveManager;
+import ru.j2dev.gameserver.taskmanager.LazyPrecisionTaskManager;
+import ru.j2dev.gameserver.taskmanager.tasks.objecttasks.*;
+import ru.j2dev.gameserver.templates.FishTemplate;
+import ru.j2dev.gameserver.templates.Henna;
+import ru.j2dev.gameserver.templates.InstantZone;
+import ru.j2dev.gameserver.templates.PlayerTemplate;
+import ru.j2dev.gameserver.templates.item.ArmorTemplate;
+import ru.j2dev.gameserver.templates.item.ArmorTemplate.ArmorType;
+import ru.j2dev.gameserver.templates.item.ItemTemplate;
+import ru.j2dev.gameserver.templates.item.WeaponTemplate;
+import ru.j2dev.gameserver.templates.item.WeaponTemplate.WeaponType;
+import ru.j2dev.gameserver.templates.npc.NpcTemplate;
+import ru.j2dev.gameserver.utils.*;
+import ru.j2dev.gameserver.utils.Log.ItemLog;
 
 import java.awt.*;
 import java.sql.*;
@@ -249,6 +249,7 @@ public class Player extends Playable implements PlayerGroup {
     private Summon _summon;
     private boolean _riding;
     private Map<Integer, EffectCubic> _cubics;
+    private int _agathionId;
     private Request _request;
     private ItemInstance _arrowItem;
     private WeaponTemplate _fistsWeaponItem;
@@ -832,10 +833,6 @@ public class Player extends Playable implements PlayerGroup {
         if (getPet() != null) {
             getPet().unSummon();
         }
-
-        if(getAgathion() != null) {
-            getAgathion().doDespawn();
-        }
         CursedWeaponsManager.getInstance().doLogout(this);
         if (isOlyParticipant()) {
             getOlyParticipant().onDisconnect(this);
@@ -929,9 +926,6 @@ public class Player extends Playable implements PlayerGroup {
         if (pet != null) {
             pet.saveEffects();
             pet.unSummon();
-        }
-        if(getAgathion() != null) {
-            getAgathion().doDespawn();
         }
         _friendList.notifyFriends(false);
         if (isProcessingRequest()) {
@@ -1379,9 +1373,6 @@ public class Player extends Playable implements PlayerGroup {
         sendChanges();
         if (getPet() != null) {
             getPet().broadcastCharInfo();
-        }
-        if(getAgathion() != null) {
-            getAgathion().broadcastCharInfo();
         }
     }
 
@@ -2984,6 +2975,7 @@ public class Player extends Playable implements PlayerGroup {
             }
             request.cancel();
         }
+        setAgathion(0);
         boolean checkPvp = true;
         if (Config.ALLOW_CURSED_WEAPONS) {
             if (isCursedWeaponEquipped()) {
@@ -3216,6 +3208,7 @@ public class Player extends Playable implements PlayerGroup {
     }
 
     public void stopAllTimers() {
+        setAgathion(0);
         stopWaterTask();
         stopBonusTask();
         stopHourlyTask();
@@ -4542,9 +4535,6 @@ public class Player extends Playable implements PlayerGroup {
         if (getPet() != null) {
             getPet().teleportToOwner();
         }
-        if(getAgathion() != null) {
-            getAgathion().teleportToOwner();
-        }
         if (Config.ALT_TELEPORT_PROTECTION && !isInZone(ZoneType.peace_zone) && !isInZone(ZoneType.SIEGE) && !isInZone(ZoneType.offshore) && !isOlyParticipant()) {
             setAfterTeleportPortectionTime(System.currentTimeMillis() + 1000L * Config.ALT_TELEPORT_PROTECTION_TIME);
             sendMessage(new CustomMessage("alt.teleport_protect", this, Config.ALT_TELEPORT_PROTECTION_TIME));
@@ -5783,9 +5773,7 @@ public class Player extends Playable implements PlayerGroup {
         if (getPet() != null && (getPet().isSummon() || (Config.ALT_IMPROVED_PETS_LIMITED_USE && ((getPet().getNpcId() == 16035 && !isMageClass()) || (getPet().getNpcId() == 16034 && isMageClass()))))) {
             getPet().unSummon();
         }
-        if(getAgathion() != null) {
-            getAgathion().doDespawn();
-        }
+        setAgathion(0);
         restoreSkills();
         if (Config.ALT_SUBLASS_SKILL_TRANSFER && getBaseClassId() == subId) {
             for (final SubClass ssc : getSubClasses().values()) {
@@ -6559,16 +6547,6 @@ public class Player extends Playable implements PlayerGroup {
         return getEvent(DuelEvent.class) != null;
     }
 
-
-    private AgathionInstance _agathion;
-    public void setAgathion(final AgathionInstance agathion) {
-        _agathion = agathion;
-    }
-
-    public AgathionInstance getAgathion() {
-        return _agathion;
-    }
-
     public TamedBeastInstance getTrainedBeast() {
         return _tamedBeast;
     }
@@ -6722,6 +6700,18 @@ public class Player extends Playable implements PlayerGroup {
         final Map<Integer, Skill> tempSkills = super.getAllSkills().stream().filter(s -> s != null && !s.isActive() && !s.isToggle()).collect(Collectors.toMap(Skill::getId, s -> s, (a, b) -> b));
         tempSkills.putAll(_transformationSkills);
         return tempSkills.values();
+    }
+
+    public void setAgathion(final int id) {
+        if (_agathionId == id) {
+            return;
+        }
+        _agathionId = id;
+        broadcastCharInfo();
+    }
+
+    public int getAgathionId() {
+        return _agathionId;
     }
 
     public int getPcBangPoints() {
