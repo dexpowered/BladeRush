@@ -5,6 +5,8 @@ import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import ru.j2dev.commons.geometry.Circle;
+import ru.j2dev.commons.geometry.Shape;
 import ru.j2dev.commons.lang.reference.HardReference;
 import ru.j2dev.commons.lang.reference.HardReferences;
 import ru.j2dev.commons.listener.Listener;
@@ -20,6 +22,7 @@ import ru.j2dev.gameserver.ai.NextAction;
 import ru.j2dev.gameserver.cache.Msg;
 import ru.j2dev.gameserver.geodata.GeoEngine;
 import ru.j2dev.gameserver.geodata.GeoMove;
+import ru.j2dev.gameserver.manager.CategoryDataManager;
 import ru.j2dev.gameserver.manager.DimensionalRiftManager;
 import ru.j2dev.gameserver.manager.ReflectionManager;
 import ru.j2dev.gameserver.model.Skill.SkillTargetType;
@@ -27,6 +30,7 @@ import ru.j2dev.gameserver.model.Skill.SkillType;
 import ru.j2dev.gameserver.model.Zone.ZoneType;
 import ru.j2dev.gameserver.model.actor.listener.CharListenerList;
 import ru.j2dev.gameserver.model.actor.recorder.CharStatsChangeRecorder;
+import ru.j2dev.gameserver.model.base.CategoryType;
 import ru.j2dev.gameserver.model.base.InvisibleType;
 import ru.j2dev.gameserver.model.base.TeamType;
 import ru.j2dev.gameserver.model.entity.Reflection;
@@ -159,6 +163,7 @@ public abstract class Creature extends GameObject {
     private volatile HardReference<? extends GameObject> target = HardReferences.emptyRef();
     private volatile HardReference<? extends Creature> castingTarget = HardReferences.emptyRef();
     private volatile HardReference<? extends Creature> _aggressionTarget = HardReferences.emptyRef();
+    private ForceBuffTaskContainer _forceBuff;
     private int _heading;
     private boolean _isRegenerating;
     private Future<?> _regenTask;
@@ -224,6 +229,9 @@ public abstract class Creature extends GameObject {
                 }
                 removeSkillMastery(castingSkill.getId());
             }
+            if (_forceBuff != null) {
+                _forceBuff.delete();
+            }
             broadcastPacket(new MagicSkillCanceled(this));
             getAI().setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
             if (isPlayer() && message) {
@@ -241,14 +249,16 @@ public abstract class Creature extends GameObject {
             return false;
         }
         final boolean bow = getActiveWeaponItem() != null && getActiveWeaponItem().getItemType() == WeaponType.BOW;
+        final boolean bowAtkType = getBaseTemplate().getBaseAttackType() != null && getBaseTemplate().getBaseAttackType() == WeaponType.BOW;
         double value = 0.0;
         if (skill != null && skill.isMagic()) {
             value = target.calcStat(Stats.REFLECT_AND_BLOCK_MSKILL_DAMAGE_CHANCE, 0.0, this, skill);
         } else if (skill != null && skill.getCastRange() <= 200) {
             value = target.calcStat(Stats.REFLECT_AND_BLOCK_PSKILL_DAMAGE_CHANCE, 0.0, this, skill);
-        } else if (skill == null && !bow) {
+        } else if (skill == null && !(bow || bowAtkType)) {
             value = target.calcStat(Stats.REFLECT_AND_BLOCK_DAMAGE_CHANCE, 0.0, this, null);
         }
+        // Цель отразила весь урон
         if (value > 0.0 && Rnd.chance(value)) {
             reduceCurrentHp(damage, target, null, true, true, false, false, false, false, true);
             return true;
@@ -257,9 +267,10 @@ public abstract class Creature extends GameObject {
             value = target.calcStat(Stats.REFLECT_MSKILL_DAMAGE_PERCENT, 0.0, this, skill);
         } else if (skill != null && skill.getCastRange() <= 200) {
             value = target.calcStat(Stats.REFLECT_PSKILL_DAMAGE_PERCENT, 0.0, this, skill);
-        } else if (skill == null && !bow) {
+        } else if (skill == null && !(bow || bowAtkType)) {
             value = target.calcStat(Stats.REFLECT_DAMAGE_PERCENT, 0.0, this, null);
         }
+        // Цель в состоянии отразить часть урона
         if (value > 0.0 && target.getCurrentHp() + target.getCurrentCp() > damage) {
             final double dam = value / 100.0 * damage;
             reduceCurrentHp(dam, target, null, true, true, false, false, false, false, sendMessage);
@@ -267,9 +278,10 @@ public abstract class Creature extends GameObject {
                 target.sendPacket(new SystemMessage(35).addNumber((int) dam));
             }
         }
-        if (skill != null || bow) {
+        if (skill != null || bow || bowAtkType) {
             return false;
         }
+        // вампирик
         damage = (int) (damage - target.getCurrentCp());
         if (damage <= 0.0) {
             return false;
@@ -311,7 +323,7 @@ public abstract class Creature extends GameObject {
         return damage;
     }
 
-    public double absorbToSummon(final Creature attacker, double damage) {
+    public double absorbToSummon(double damage) {
         final double transferToSummonDam = calcStat(Stats.TRANSFER_TO_SUMMON_DAMAGE_PERCENT, 0.0);
         if (transferToSummonDam > 0.0) {
             final Summon summon = getPet();
@@ -343,7 +355,7 @@ public abstract class Creature extends GameObject {
         }
         _skills.put(newSkill.getId(), newSkill);
         if (oldSkill != null) {
-            removeStatsOwner(oldSkill);
+            removeStatsByOwner(oldSkill);
             removeTriggers(oldSkill);
         }
         addTriggers(newSkill);
@@ -355,11 +367,11 @@ public abstract class Creature extends GameObject {
         return _calculators;
     }
 
-    public final void addStatFunc(final Func f) {
+    private void addStatFunc_Impl(Func f) {
         if (f == null) {
             return;
         }
-        final int stat = f.getStat().ordinal();
+        int stat = f.getStat().ordinal();
         synchronized (_calculators) {
             if (_calculators[stat] == null) {
                 _calculators[stat] = new Calculator(f.getStat(), this);
@@ -368,17 +380,29 @@ public abstract class Creature extends GameObject {
         }
     }
 
-    public final void addStatFuncs(final Func[] funcs) {
-        for (final Func f : funcs) {
-            addStatFunc(f);
-        }
-    }
-
-    public final void removeStatFunc(final Func f) {
+    public final void addStatFunc(Func f) {
         if (f == null) {
             return;
         }
-        final int stat = f.getStat().ordinal();
+
+        addStatFunc_Impl(f);
+    }
+
+    public final void addStatFuncs(Func[] funcs) {
+        if (funcs == null || funcs.length == 0) {
+            return;
+        }
+
+        for (Func f : funcs) {
+            addStatFunc_Impl(f);
+        }
+    }
+
+    private void removeStatFunc_Impl(Func f) {
+        if (f == null) {
+            return;
+        }
+        int stat = f.getStat().ordinal();
         synchronized (_calculators) {
             if (_calculators[stat] != null) {
                 _calculators[stat].removeFunc(f);
@@ -386,13 +410,31 @@ public abstract class Creature extends GameObject {
         }
     }
 
-    public final void removeStatFuncs(final Func[] funcs) {
-        Arrays.stream(funcs).forEach(this::removeStatFunc);
+    public final void removeStatFunc(Func f) {
+        if (f == null) {
+            return;
+        }
+
+        removeStatFunc_Impl(f);
     }
 
-    public final void removeStatsOwner(final Object owner) {
+    public final void removeStatFuncs(Func[] funcs) {
+        if (funcs == null || funcs.length == 0) {
+            return;
+        }
+
+        for (Func f : funcs) {
+            removeStatFunc_Impl(f);
+        }
+    }
+
+    public final void removeStatsByOwner(Object owner) {
         synchronized (_calculators) {
-            Arrays.stream(_calculators).filter(Objects::nonNull).forEach(_calculator -> _calculator.removeOwner(owner));
+            for (Calculator _calculator : _calculators) {
+                if (_calculator != null) {
+                    _calculator.removeOwner(owner);
+                }
+            }
         }
     }
 
@@ -436,6 +478,14 @@ public abstract class Creature extends GameObject {
             }
         }
         getListeners().onMagicUse(skill, target, true);
+        final double mpConsume1 = skill.getMpConsume1();
+        if (mpConsume1 > 0.0) {
+            if (_currentMp < mpConsume1) {
+                sendPacket(Msg.NOT_ENOUGH_MP);
+                return;
+            }
+            reduceCurrentMp(mpConsume1, null);
+        }
         final int[] itemConsume = skill.getItemConsume();
         if (itemConsume[0] > 0) {
             for (int i = 0; i < itemConsume.length; ++i) {
@@ -494,7 +544,7 @@ public abstract class Creature extends GameObject {
             return;
         }
         final List<Player> players = World.getAroundPlayers(this);
-        players.forEach(target -> target.sendPacket((IStaticPacket[]) packets));
+        players.forEach(target -> target.sendPacket(packets));
     }
 
     public void broadcastPacketToOthers(final List<L2GameServerPacket> packets) {
@@ -615,34 +665,28 @@ public abstract class Creature extends GameObject {
         return (int) (Math.atan2(getY() - y_dest, getX() - x_dest) * 10430.378350470453) + 32768;
     }
 
-    public final double calcStat(final Stats stat, final double init) {
+    public final double calcStat(Stats stat, double init) {
         return calcStat(stat, init, null, null);
     }
 
-    public final double calcStat(final Stats stat, final double init, final Creature target, final Skill skill) {
-        final int id = stat.ordinal();
-        final Calculator c = _calculators[id];
+    public final double calcStat(Stats stat, double init, Creature target, Skill skill) {
+        int id = stat.ordinal();
+        Calculator c = _calculators[id];
         if (c == null) {
             return init;
         }
-        final Env env = new Env();
-        env.character = this;
-        env.target = target;
-        env.skill = skill;
-        env.value = init;
-        c.calc(env);
-        return env.value;
+        return c.calc(this, target, skill, init);
     }
 
-    public final double calcStat(final Stats stat, final Creature target, final Skill skill) {
-        final Env env = new Env(this, target, skill);
-        env.value = stat.getInit();
-        final int id = stat.ordinal();
-        final Calculator c = _calculators[id];
+    public final double calcStat(Stats stat, Creature target, Skill skill) {
+        int id = stat.ordinal();
+        Calculator c = _calculators[id];
+
         if (c != null) {
-            c.calc(env);
+            return c.calc(this, target, skill, stat.getInit());
         }
-        return env.value;
+
+        return stat.getInit();
     }
 
     public int calculateAttackDelay() {
@@ -948,7 +992,7 @@ public abstract class Creature extends GameObject {
         double mult = 1.0;
         _poleAttackCount = 1;
         if (!isInZonePeace()) {
-            for (final Creature t : getAroundCharacters(range, 200)) {
+            for (final Creature t : getAroundCharacters(range)) {
                 if (_poleAttackCount > attackcountmax) {
                     break;
                 }
@@ -1058,6 +1102,14 @@ public abstract class Creature extends GameObject {
                 sendPacket(SystemMsg.CANNOT_SEE_TARGET);
                 return;
             }
+        }
+        boolean forceBuff = skill.getSkillType() == SkillType.FORCE_BUFF;
+        if (forceBuff) {
+            if (target == this) {
+                sendPacket(new SystemMessage(SystemMessage.INVALID_TARGET));
+                return;
+            }
+            startForceBuff(target, skill);
         }
         _castingSkill = skill;
         final int skillLaunchTime = (skillInterruptTime > 0) ? Math.max(0, skillTime - skillInterruptTime) : 0;
@@ -1203,7 +1255,7 @@ public abstract class Creature extends GameObject {
 
     public final Skill[] getAllSkillsArray() {
         final Collection<Skill> vals = _skills.values();
-        return vals.toArray(new Skill[0]);
+        return vals.toArray(Skill.EMPTY_ARRAY);
     }
 
     public final double getAttackSpeedMultiplier() {
@@ -1310,25 +1362,25 @@ public abstract class Creature extends GameObject {
         return (int) calcStat(Stats.STAT_INT, _template.getBaseINT(), null, null);
     }
 
-    public List<Creature> getAroundCharacters(final int radius, final int height) {
+    public List<Creature> getAroundCharacters(final int radius) {
         if (!isVisible()) {
             return Collections.emptyList();
         }
-        return World.getAroundCharacters(this, radius, height);
+        return World.getAroundCharacters(this, radius);
     }
 
-    public List<MonsterInstance> getArountMonsters(final int radius, final int height) {
+    public List<MonsterInstance> getArountMonsters(final int radius) {
         if (!isVisible()) {
             return Collections.emptyList();
         }
-        return World.getAroundMonsters(this, radius, height);
+        return World.getAroundMonsters(this, radius);
     }
 
-    public List<NpcInstance> getAroundNpc(final int range, final int height) {
+    public List<NpcInstance> getAroundNpc(final int range) {
         if (!isVisible()) {
             return Collections.emptyList();
         }
-        return World.getAroundNpc(this, range, height);
+        return World.getAroundNpc(this, range);
     }
 
     public boolean knowsObject(final GameObject obj) {
@@ -1364,7 +1416,7 @@ public abstract class Creature extends GameObject {
         return (int) calcStat(Stats.MAGIC_ATTACK_SPEED, _template.getBaseMAtkSpd(), null, null);
     }
 
-    public final int getMaxCp() {
+    public int getMaxCp() {
         return (int) calcStat(Stats.MAX_CP, _template.getBaseCpMax(), null, null);
     }
 
@@ -1542,7 +1594,7 @@ public abstract class Creature extends GameObject {
         _title = title;
     }
 
-    public final int getWalkSpeed() {
+    public int getWalkSpeed() {
         if (isInWater()) {
             return getSwimSpeed();
         }
@@ -1615,6 +1667,10 @@ public abstract class Creature extends GameObject {
         return getTemplate().getBaseMAtk() > 3;
     }
 
+    public boolean isInCategory(final CategoryType type) {
+        return CategoryDataManager.getInstance().isInCategory(this, type);
+    }
+
     public final boolean isRunning() {
         return _running;
     }
@@ -1649,7 +1705,7 @@ public abstract class Creature extends GameObject {
 
     public boolean isFollowing() {
         final MoveActionBase theMoveActionBase = moveAction;
-        return theMoveActionBase != null && theMoveActionBase instanceof MoveToRelativeAction && !theMoveActionBase.isFinished();
+        return theMoveActionBase instanceof MoveToRelativeAction && !theMoveActionBase.isFinished();
     }
 
     public int maxZDiff() {
@@ -1854,7 +1910,7 @@ public abstract class Creature extends GameObject {
     }
 
     public void updateZones() {
-        Zone[] zones = isVisible() ? getCurrentRegion().getZones() : Zone.EMPTY_L2ZONE_ARRAY;
+        Set<Zone> zones = isVisible() ? getCurrentRegion().getZones() : Collections.emptySet();
 
         List<Zone> entering = null;
         List<Zone> leaving = null;
@@ -1865,7 +1921,7 @@ public abstract class Creature extends GameObject {
                 leaving = new ArrayList<>(_zones.size());
                 for (Zone _zone : _zones) {
                     // зоны больше нет в регионе, либо вышли за территорию зоны
-                    if (!ArrayUtils.contains(zones, _zone) || !_zone.checkIfInZone(getX(), getY(), getZ(), getReflection())) {
+                    if (!zones.contains(_zone) || !_zone.checkIfInZone(getX(), getY(), getZ(), getReflection())) {
                         leaving.add(_zone);
                     }
                 }
@@ -1876,8 +1932,8 @@ public abstract class Creature extends GameObject {
                 }
             }
 
-            if (zones.length > 0) {
-                entering = new ArrayList<>(zones.length);
+            if (!zones.isEmpty()) {
+                entering = new ArrayList<>(zones.size());
                 for (Zone zone1 : zones) {
                     // в зону еще не заходили и зашли на территорию зоны
                     if (!_zones.contains(zone1) && zone1.checkIfInZone(getX(), getY(), getZ(), getReflection())) {
@@ -1997,13 +2053,13 @@ public abstract class Creature extends GameObject {
     }
 
     public String getZonesNames() {
-            String[] zone_name = new String[_zones.size()];
-            for (Zone _zone : _zones) {
-                if(_zone.getName() != null && !_zone.getName().isEmpty()) {
-                    zone_name = ArrayUtils.add(zone_name, _zone.getName());
-                }
+        String[] zone_name = new String[_zones.size()];
+        for (Zone _zone : _zones) {
+            if (_zone.getName() != null && !_zone.getName().isEmpty()) {
+                zone_name = ArrayUtils.add(zone_name, _zone.getName());
             }
-            return Arrays.toString(zone_name);
+        }
+        return Arrays.toString(zone_name);
     }
 
     public Location getRestartPoint() {
@@ -2205,8 +2261,10 @@ public abstract class Creature extends GameObject {
 
     public void onCastEndTime() {
         finishFly();
+        final Skill cs = getCastingSkill();
+        final Creature ct = getCastingTarget();
         clearCastVars();
-        getAI().notifyEvent(CtrlEvent.EVT_FINISH_CASTING, null, null);
+        getAI().notifyEvent(CtrlEvent.EVT_FINISH_CASTING, cs, ct);
     }
 
     private void finishFly() {
@@ -2236,7 +2294,7 @@ public abstract class Creature extends GameObject {
                 return;
             }
             damage = absorbToEffector(attacker, damage);
-            damage = absorbToSummon(attacker, damage);
+            damage = absorbToSummon(damage);
         }
         getListeners().onCurrentHpDamage(damage, attacker, skill);
         if (attacker != this) {
@@ -2349,7 +2407,7 @@ public abstract class Creature extends GameObject {
         final Skill oldSkill = _skills.remove(id);
         if (oldSkill != null) {
             removeTriggers(oldSkill);
-            removeStatsOwner(oldSkill);
+            removeStatsByOwner(oldSkill);
             if (Config.ALT_DELETE_SA_BUFFS && (oldSkill.isItemSkill() || oldSkill.isHandler())) {
                 List<Effect> effects = getEffectList().getEffectsBySkill(oldSkill);
                 if (effects != null) {
@@ -3094,6 +3152,9 @@ public abstract class Creature extends GameObject {
     protected void onDelete() {
         GameObjectsStorage.remove(this);
         getEffectList().stopAllEffects();
+        if (_forceBuff != null) {
+            _forceBuff.delete();
+        }
         super.onDelete();
     }
 
@@ -3392,7 +3453,7 @@ public abstract class Creature extends GameObject {
         if (skill == null || isUnActiveSkill(skill.getId())) {
             return;
         }
-        removeStatsOwner(skill);
+        removeStatsByOwner(skill);
         removeTriggers(skill);
         _unActiveSkills.add(skill.getId());
     }
@@ -3478,6 +3539,31 @@ public abstract class Creature extends GameObject {
 
     public int getInteractDistance(final GameObject target) {
         return getActingRange() + (int) getMinDistance(target);
+    }
+
+    private ForceBuffTaskContainer getForceBuff() {
+        return _forceBuff;
+    }
+
+    public void setForceBuff(final ForceBuffTaskContainer value) {
+        _forceBuff = value;
+    }
+
+    private void startForceBuff(final Creature target, final Skill skill) {
+        if (getForceBuff() == null) {
+            _forceBuff = new ForceBuffTaskContainer(this, target, skill);
+        }
+    }
+
+    @Override
+    protected Shape makeGeoShape() {
+        final int x = getX();
+        final int y = getY();
+        final int z = getZ();
+        final Circle circle = new Circle(x, y, (int) getColRadius());
+        circle.setZmin(z - Config.MAX_Z_DIFF);
+        circle.setZmax(z + (int) getColHeight());
+        return circle;
     }
 
     protected static class CreatureMoveActionTask extends RunnableImpl {
@@ -3942,9 +4028,9 @@ public abstract class Creature extends GameObject {
                     onFinish(true, false);
                     return true;
                 }
-                if (!(actor instanceof Summon)) {
-                    isRelativeMoveEnabled = true;
-                }
+
+                isRelativeMoveEnabled = true;
+
                 if (isPathRebuildRequired()) {
                     if (isArrived()) {
                         onFinish(true, false);
@@ -3960,7 +4046,9 @@ public abstract class Creature extends GameObject {
                         onFinish(false, false);
                         return true;
                     }
-                    prevTargetLoc = targetLoc.clone();
+                    if (targetLoc != null) {
+                        prevTargetLoc = targetLoc.clone();
+                    }
                 } else if (!pollPathLine()) {
                     onFinish(false, false);
                     return true;
@@ -4021,8 +4109,8 @@ public abstract class Creature extends GameObject {
                 if (isPathRebuildRequired()) {
                     final Location actorLoc = actor.getLoc();
                     final Location pawnLoc = getImpliedTargetLoc();
-                    if (actor.isPlayer() && actor.getPlayer().getNetConnection() != null) {
-                        final int pawnClippingRange = actor.getPlayer().getNetConnection().getPawnClippingRange();
+                    if (actor.isPlayer() && actor.getPlayer().getGameClient() != null) {
+                        final int pawnClippingRange = actor.getPlayer().getGameClient().getPawnClippingRange();
                         if (actorLoc.distance3D(pawnLoc) > pawnClippingRange) {
                             onFinish(false, false);
                             return false;

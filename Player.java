@@ -32,6 +32,7 @@ import ru.j2dev.gameserver.database.mysql;
 import ru.j2dev.gameserver.handler.items.IItemHandler;
 import ru.j2dev.gameserver.handler.items.IRefineryHandler;
 import ru.j2dev.gameserver.idfactory.IdFactory;
+import ru.j2dev.gameserver.listener.actor.player.EnchantLimitListener;
 import ru.j2dev.gameserver.listener.actor.player.OnAnswerListener;
 import ru.j2dev.gameserver.listener.actor.player.impl.ReviveAnswerListener;
 import ru.j2dev.gameserver.listener.actor.player.impl.ScriptAnswerListener;
@@ -43,8 +44,8 @@ import ru.j2dev.gameserver.model.Effect.EEffectSlot;
 import ru.j2dev.gameserver.model.Request.L2RequestType;
 import ru.j2dev.gameserver.model.Skill.AddedSkill;
 import ru.j2dev.gameserver.model.Zone.ZoneType;
-import ru.j2dev.gameserver.model.actor.instances.player.*;
 import ru.j2dev.gameserver.model.actor.instances.player.FriendList;
+import ru.j2dev.gameserver.model.actor.instances.player.*;
 import ru.j2dev.gameserver.model.actor.listener.PlayerListenerList;
 import ru.j2dev.gameserver.model.actor.recorder.PlayerStatsChangeRecorder;
 import ru.j2dev.gameserver.model.base.*;
@@ -57,6 +58,7 @@ import ru.j2dev.gameserver.model.entity.events.GlobalEvent;
 import ru.j2dev.gameserver.model.entity.events.impl.DuelEvent;
 import ru.j2dev.gameserver.model.entity.events.impl.SiegeEvent;
 import ru.j2dev.gameserver.model.entity.olympiad.*;
+import ru.j2dev.gameserver.model.entity.olympiad.participants.OlympiadPlayer;
 import ru.j2dev.gameserver.model.entity.residence.Castle;
 import ru.j2dev.gameserver.model.entity.residence.ClanHall;
 import ru.j2dev.gameserver.model.entity.residence.Residence;
@@ -73,6 +75,7 @@ import ru.j2dev.gameserver.model.quest.QuestState;
 import ru.j2dev.gameserver.network.lineage2.GameClient;
 import ru.j2dev.gameserver.network.lineage2.components.*;
 import ru.j2dev.gameserver.network.lineage2.serverpackets.*;
+import ru.j2dev.gameserver.network.lineage2.serverpackets.ChangeWaitType.MoveType;
 import ru.j2dev.gameserver.scripts.Events;
 import ru.j2dev.gameserver.skills.AbnormalEffect;
 import ru.j2dev.gameserver.skills.EffectType;
@@ -100,8 +103,8 @@ import ru.j2dev.gameserver.utils.Log.ItemLog;
 
 import java.awt.*;
 import java.sql.*;
-import java.util.*;
 import java.util.List;
+import java.util.*;
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -153,12 +156,11 @@ public class Player extends Playable implements PlayerGroup {
     private final AntiFlood antiFlood = new AntiFlood();
     private final PcInventory _inventory = new PcInventory(this);
     private final Warehouse _warehouse = new PcWarehouse(this);
-    private final ItemContainer _refund = new PcRefund(this);
     private final PcFreight _freight = new PcFreight(this);
     private final Deque<ChatMsg> _msgBucket = new LinkedList<>();
     private final Map<Integer, Recipe> _recipebook = new TreeMap<>();
     private final Map<Integer, Recipe> _commonrecipebook = new TreeMap<>();
-    private final Map<String, QuestState> _quests = new HashMap<>();
+    private final Map<Integer, QuestState> _quests = new HashMap<>();
     private final ShortCutList _shortCuts = new ShortCutList(this);
     private final MacroList _macroses = new MacroList(this);
     private final Henna[] _henna = new Henna[3];
@@ -178,6 +180,7 @@ public class Player extends Playable implements PlayerGroup {
     private final ConcurrentMap<Integer, TimeStamp> _sharedGroupReuses = new ConcurrentHashMap<>();
     private final TIntSet _recommendedCharIds = new TIntHashSet();
     private final AtomicBoolean isActive = new AtomicBoolean();
+    private final ConcurrentHashMap<ListenerHookType, CopyOnWriteArraySet<ListenerHook>> listenersHookTypesMap = new ConcurrentHashMap<>();
     public int expertiseIndex;
     public int _telemode;
     public boolean entering = true;
@@ -186,7 +189,8 @@ public class Player extends Playable implements PlayerGroup {
     protected int _baseClass;
     protected SubClass _activeClass;
     protected int _pvpFlag;
-    private GameClient _connection;
+    private GameClient _gameClient;
+    private volatile EnchantLimitListener _enchantLimiter;
     private String _login;
     private int _karma;
     private int _pkKills;
@@ -218,7 +222,7 @@ public class Player extends Playable implements PlayerGroup {
     private boolean AutoLootHerbs = Config.AUTO_LOOT_HERBS;
     private boolean AutoLootAdena = Config.AUTO_LOOT_ADENA;
     private long _lastNpcInteractionTime;
-    private int _privatestore;
+    private AtomicInteger _privatestore = new AtomicInteger(0);
     private String _manufactureName;
     private List<ManufactureItem> _createList = Collections.emptyList();
     private String _sellStoreName;
@@ -348,6 +352,7 @@ public class Player extends Playable implements PlayerGroup {
     private AtomicBoolean _inDuelEvent = new AtomicBoolean();
     private AtomicBoolean _inRegistredEvent = new AtomicBoolean();
     private AtomicBoolean _noClanAlyCrest = new AtomicBoolean();
+    private Location _currentSkillWorldPosition;
 
     public Player(final int objectId, final PlayerTemplate template, final String accountName) {
         super(objectId, template);
@@ -616,6 +621,7 @@ public class Player extends Playable implements PlayerGroup {
                     player.setVar("noCarrier", Config.SERVICES_NO_CARRIER_DEFAULT_TIME, -1L);
                 }
             }
+            con.commit();
         } catch (Exception e2) {
             LOGGER.error("Could not restore char data!", e2);
         } finally {
@@ -676,7 +682,7 @@ public class Player extends Playable implements PlayerGroup {
     }
 
     private static boolean hwidIpCheck(String val1, String val2) {
-        return (val1 == null && val2 != null) || (val1 != null && !val1.equals(val2));
+        return !Objects.equals(val1, val2);
     }
 
     public int buffAnimRange() {
@@ -694,17 +700,17 @@ public class Player extends Playable implements PlayerGroup {
     }
 
     public String getAccountName() {
-        if (_connection == null) {
+        if (_gameClient == null) {
             return _login;
         }
-        return _connection.getLogin();
+        return _gameClient.getLogin();
     }
 
     public String getIP() {
-        if (_connection == null) {
+        if (_gameClient == null) {
             return NOT_CONNECTED;
         }
-        return _connection.getIpAddr();
+        return _gameClient.getIpAddr();
     }
 
     public Map<Integer, String> getAccountChars() {
@@ -807,10 +813,10 @@ public class Player extends Playable implements PlayerGroup {
     }
 
     public void offline() {
-        if (_connection != null) {
-            _connection.setActiveChar(null);
-            _connection.close(ServerClose.STATIC);
-            setNetConnection(null);
+        if (_gameClient != null) {
+            _gameClient.setActiveChar(null);
+            _gameClient.close(ServerClose.STATIC);
+            setGameClient(null);
         }
         if (Config.SERVICES_OFFLINE_TRADE_NAME_COLOR_CHANGE) {
             setNameColor(Config.SERVICES_OFFLINE_TRADE_NAME_COLOR);
@@ -857,27 +863,27 @@ public class Player extends Playable implements PlayerGroup {
     }
 
     public void kick() {
-        if (_connection != null) {
-            _connection.close(LeaveWorld.STATIC);
-            setNetConnection(null);
+        if (_gameClient != null) {
+            _gameClient.close(false);
+            setGameClient(null);
         }
         prepareToLogout();
         deleteMe();
     }
 
     public void restart() {
-        if (_connection != null) {
-            _connection.setActiveChar(null);
-            setNetConnection(null);
+        if (_gameClient != null) {
+            _gameClient.setActiveChar(null);
+            setGameClient(null);
         }
         prepareToLogout();
         deleteMe();
     }
 
     public void logout() {
-        if (_connection != null) {
-            _connection.close(ServerClose.STATIC);
-            setNetConnection(null);
+        if (_gameClient != null) {
+            _gameClient.close(true);
+            setGameClient(null);
         }
         prepareToLogout();
         deleteMe();
@@ -887,7 +893,7 @@ public class Player extends Playable implements PlayerGroup {
         if (_isLogout.getAndSet(true)) {
             return;
         }
-        setNetConnection(null);
+        setGameClient(null);
         setIsOnline(false);
         getListeners().onExit();
         if (isFlying() && !checkLandingState()) {
@@ -984,7 +990,6 @@ public class Player extends Playable implements PlayerGroup {
         if (!isPhantom()) {
             try {
                 getInventory().store();
-                getRefund().clear();
             } catch (Throwable t) {
                 LOGGER.error("", t);
             }
@@ -1051,10 +1056,10 @@ public class Player extends Playable implements PlayerGroup {
     }
 
     public QuestState getQuestState(final Quest quest) {
-        return getQuestState(quest.getName());
+        return getQuestState(quest.getId());
     }
 
-    public QuestState getQuestState(final String quest) {
+    public QuestState getQuestState(final int quest) {
         questRead.lock();
         try {
             return _quests.get(quest);
@@ -1063,30 +1068,29 @@ public class Player extends Playable implements PlayerGroup {
         }
     }
 
-    public QuestState getQuestState(final Class<?> quest) {
-        return getQuestState(quest.getSimpleName());
+    public QuestState getQuestState(final String questName) {
+        return getQuestState(Integer.parseInt(questName.split("_")[1]));
     }
 
-    public boolean isQuestCompleted(final String quest) {
+    public boolean isQuestCompleted(final int quest) {
         final QuestState q = getQuestState(quest);
         return q != null && q.isCompleted();
     }
 
-    public boolean isQuestCompleted(final Class<?> quest) {
-        final QuestState q = getQuestState(quest);
-        return q != null && q.isCompleted();
+    public boolean isQuestCompleted(final String questName) {
+        return isQuestCompleted(Integer.parseInt(questName.split("_")[1]));
     }
 
     public void setQuestState(final QuestState qs) {
         questWrite.lock();
         try {
-            _quests.put(qs.getQuest().getName(), qs);
+            _quests.put(qs.getQuest().getId(), qs);
         } finally {
             questWrite.unlock();
         }
     }
 
-    public void removeQuestState(final String quest) {
+    public void removeQuestState(final int quest) {
         questWrite.lock();
         try {
             _quests.remove(quest);
@@ -1120,16 +1124,16 @@ public class Player extends Playable implements PlayerGroup {
         final Quest[] quests = npc.getTemplate().getEventQuests(event);
         if (quests != null) {
             Arrays.stream(quests).forEach(quest -> {
-                final QuestState qs = getQuestState(quest.getName());
+                final QuestState qs = getQuestState(quest.getId());
                 if (qs != null && !qs.isCompleted()) {
-                    states.add(getQuestState(quest.getName()));
+                    states.add(getQuestState(quest.getId()));
                 }
             });
         }
         return states;
     }
 
-    public void processQuestEvent(final String quest, String event, final NpcInstance npc) {
+    public void processQuestEvent(final int quest, String event, final NpcInstance npc) {
         if (event == null) {
             event = "";
         }
@@ -1150,7 +1154,7 @@ public class Player extends Playable implements PlayerGroup {
     }
 
     public boolean isQuestContinuationPossible(final boolean msg) {
-        if (getWeightPenalty() >= 3 || getInventoryLimit() * 0.9 < getInventory().getSize() || Config.QUEST_INVENTORY_MAXIMUM * 0.9 < getInventory().getQuestSize()) {
+        if (getWeightPenalty() >= 3 || getInventoryLimit() * 0.8 < getInventory().getSize()) {
             if (msg) {
                 sendPacket(Msg.PROGRESS_IN_A_QUEST_IS_POSSIBLE_ONLY_WHEN_YOUR_INVENTORYS_WEIGHT_AND_VOLUME_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
             }
@@ -1617,6 +1621,7 @@ public class Player extends Playable implements PlayerGroup {
             storeCharSubClasses();
             if (fromQuest) {
                 broadcastPacket(new SocialAction(getObjectId(), 16));
+                broadcastPacket(new SocialAction(getObjectId(), 3));
                 sendPacket(new PlaySound("ItemSound.quest_fanfare_2"));
             }
             broadcastCharInfo();
@@ -1783,23 +1788,6 @@ public class Player extends Playable implements PlayerGroup {
 
     public void rewardSkills() {
         rewardSkills(false);
-    }
-
-    public void rewardSkillsAltSrart() {
-        int unLearnable = 0;
-        for (Collection<SkillLearn> skills = SkillAcquireHolder.getInstance().getAvailableSkills(this, ClassId.VALUES[getActiveClassId()], AcquireType.NORMAL, null); skills.size() > unLearnable; skills = SkillAcquireHolder.getInstance().getAvailableSkills(this, AcquireType.NORMAL)) {
-            unLearnable = 0;
-            for (final SkillLearn s : skills) {
-                final Skill sk = SkillTable.getInstance().getInfo(s.getId(), s.getLevel());
-                if (sk == null || !sk.getCanLearn(getClassId()) || !s.canAutoLearn()) {
-                    ++unLearnable;
-                } else {
-                    addSkill(sk, true);
-                }
-            }
-        }
-        sendPacket(new SkillList(this));
-        updateStats();
     }
 
     private void rewardSkills(final boolean send) {
@@ -2025,7 +2013,7 @@ public class Player extends Playable implements PlayerGroup {
         resetWaitSitTime();
         getAI().setIntention(CtrlIntention.AI_INTENTION_REST, null, null);
         if (throne == null) {
-            broadcastPacket(new ChangeWaitType(this, 0));
+            broadcastPacket(new ChangeWaitType(this, MoveType.WT_SITTING));
         } else {
             broadcastPacket(new ChairSit(this, throne));
         }
@@ -2041,7 +2029,7 @@ public class Player extends Playable implements PlayerGroup {
             return;
         }
         getAI().clearNextAction();
-        broadcastPacket(new ChangeWaitType(this, 1));
+        broadcastPacket(new ChangeWaitType(this, MoveType.WT_STANDING));
         _sittingObject = null;
         sittingTaskLaunched = true;
         ThreadPoolManager.getInstance().schedule(new EndStandUpTask(this), 2500L);
@@ -2088,10 +2076,6 @@ public class Player extends Playable implements PlayerGroup {
         return _warehouse;
     }
 
-    public ItemContainer getRefund() {
-        return _refund;
-    }
-
     public long getAdena() {
         return getInventory().getAdena();
     }
@@ -2129,20 +2113,20 @@ public class Player extends Playable implements PlayerGroup {
         return item;
     }
 
-    public GameClient getNetConnection() {
-        return _connection;
+    public GameClient getGameClient() {
+        return _gameClient;
     }
 
-    public void setNetConnection(final GameClient connection) {
-        _connection = connection;
+    public void setGameClient(final GameClient connection) {
+        _gameClient = connection;
     }
 
     public int getRevision() {
-        return (_connection == null) ? 0 : _connection.getRevision();
+        return (_gameClient == null) ? 0 : _gameClient.getRevision();
     }
 
     public boolean isConnected() {
-        return _connection != null && _connection.isConnected();
+        return _gameClient != null && _gameClient.isConnected();
     }
 
     @Override
@@ -2393,7 +2377,7 @@ public class Player extends Playable implements PlayerGroup {
         if (isPacketIgnored(p.packet(this))) {
             return;
         }
-        _connection.sendPacket(p.packet(this));
+        _gameClient.sendPacket(p.packet(this));
     }
 
     @Override
@@ -2403,7 +2387,7 @@ public class Player extends Playable implements PlayerGroup {
         }
         for (final IStaticPacket p : packets) {
             if (!isPacketIgnored(p)) {
-                _connection.sendPacket(p.packet(this));
+                _gameClient.sendPacket(p.packet(this));
             }
         }
     }
@@ -2418,7 +2402,7 @@ public class Player extends Playable implements PlayerGroup {
             return;
         }
         for (final IStaticPacket p : packets) {
-            _connection.sendPacket(p.packet(this));
+            _gameClient.sendPacket(p.packet(this));
         }
     }
 
@@ -2547,7 +2531,7 @@ public class Player extends Playable implements PlayerGroup {
         if (item.getItemId() == 57 || item.getItemId() == 6353) {
             final Quest q = QuestManager.getQuest(255);
             if (q != null) {
-                processQuestEvent(q.getName(), "CE" + item.getItemId(), null);
+                processQuestEvent(q.getId(), "CE" + item.getItemId(), null);
             }
         }
         Log.LogItem(this, log, item);
@@ -2782,7 +2766,7 @@ public class Player extends Playable implements PlayerGroup {
         super.doPurePk(killer);
         killer.setPkKills(killer.getPkKills() + 1);
         if (Config.SERVICES_PK_ANNOUNCE) {
-            Announcements.getInstance().announceByCustomMessage("player.pkannounce", new String[]{killer.getName(), getName()});
+            Announcements.getInstance().announceByCustomMessage("player.pkannounce", killer.getName(), getName());
         }
     }
 
@@ -2801,7 +2785,7 @@ public class Player extends Playable implements PlayerGroup {
                 ipCheckSuccess = hwidIpCheck(getIP(), killer.getIP());
             }
             if (Config.SERVICES_PK_PVP_BONUS_TIE_IF_SAME_HWID) {
-                hwidCheckSuccess = hwidIpCheck(getNetConnection().getHwid(), killer.getNetConnection().getHwid());
+                hwidCheckSuccess = hwidIpCheck(getGameClient().getHwid(), killer.getGameClient().getHwid());
             }
             final long now = System.currentTimeMillis();
             final long lastKillTime = killer.getVarLong(LAST_PVP_PK_KILL_VAR_NAME, 0L);
@@ -2909,54 +2893,49 @@ public class Player extends Playable implements PlayerGroup {
         final List<ItemInstance> dropItem = new ArrayList<>();
         final List<ItemInstance> dropEquip = new ArrayList<>();
         final List<ItemInstance> dropWeapon = new ArrayList<>();
-        getInventory().writeLock();
-        try {
-            for (final ItemInstance item : getInventory().getItems()) {
-                if (item.canBeDropped(this, true)) {
-                    if (!Config.KARMA_LIST_NONDROPPABLE_ITEMS.contains(item.getItemId())) {
-                        switch (item.getTemplate().getType2()) {
-                            case 0:
-                                dropWeapon.add(item);
-                                break;
-                            case 1:
-                            case 2:
-                                dropEquip.add(item);
-                                break;
-                            case 5:
-                                dropItem.add(item);
-                                break;
-                        }
+        for (final ItemInstance item : getInventory().getItems()) {
+            if (item.canBeDropped(this, true)) {
+                if (!Config.KARMA_LIST_NONDROPPABLE_ITEMS.contains(item.getItemId())) {
+                    switch (item.getTemplate().getType2()) {
+                        case 0:
+                            dropWeapon.add(item);
+                            break;
+                        case 1:
+                        case 2:
+                            dropEquip.add(item);
+                            break;
+                        case 5:
+                            dropItem.add(item);
+                            break;
                     }
                 }
             }
-            checkAddItemToDrop(drop, dropWeapon, dropWeaponCount);
-            checkAddItemToDrop(drop, dropEquip, dropEquipCount);
-            checkAddItemToDrop(drop, dropItem, dropItemCount);
-            if (drop.isEmpty()) {
-                return;
+        }
+        checkAddItemToDrop(drop, dropWeapon, dropWeaponCount);
+        checkAddItemToDrop(drop, dropEquip, dropEquipCount);
+        checkAddItemToDrop(drop, dropItem, dropItemCount);
+        if (drop.isEmpty()) {
+            return;
+        }
+        for (ItemInstance item2 : drop) {
+            if (item2.isAugmented() && !Config.ALT_ALLOW_DROP_AUGMENTED) {
+                item2.setVariationStat1(0);
+                item2.setVariationStat2(0);
             }
-            for (ItemInstance item2 : drop) {
-                if (item2.isAugmented() && !Config.ALT_ALLOW_DROP_AUGMENTED) {
-                    item2.setVariationStat1(0);
-                    item2.setVariationStat2(0);
-                }
-                item2 = getInventory().removeItem(item2);
-                Log.LogItem(this, ItemLog.PvPDrop, item2);
-                if (item2.getEnchantLevel() > 0) {
-                    sendPacket(new SystemMessage(375).addNumber(item2.getEnchantLevel()).addItemName(item2.getItemId()));
-                } else {
-                    sendPacket(new SystemMessage(298).addItemName(item2.getItemId()));
-                }
-                if (killer.isPlayable() && ((Config.AUTO_LOOT && Config.AUTO_LOOT_PK) || isInFlyingTransform())) {
-                    killer.getPlayer().getInventory().addItem(item2);
-                    Log.LogItem(this, ItemLog.Pickup, item2);
-                    killer.getPlayer().sendPacket(SystemMessage2.obtainItems(item2));
-                } else {
-                    item2.dropToTheGround(this, Location.findAroundPosition(this, Config.KARMA_RANDOM_DROP_LOCATION_LIMIT));
-                }
+            item2 = getInventory().removeItem(item2);
+            Log.LogItem(this, ItemLog.PvPDrop, item2);
+            if (item2.getEnchantLevel() > 0) {
+                sendPacket(new SystemMessage(375).addNumber(item2.getEnchantLevel()).addItemName(item2.getItemId()));
+            } else {
+                sendPacket(new SystemMessage(298).addItemName(item2.getItemId()));
             }
-        } finally {
-            getInventory().writeUnlock();
+            if (killer.isPlayable() && ((Config.AUTO_LOOT && Config.AUTO_LOOT_PK) || isInFlyingTransform())) {
+                killer.getPlayer().getInventory().addItem(item2);
+                Log.LogItem(this, ItemLog.Pickup, item2);
+                killer.getPlayer().sendPacket(SystemMessage2.obtainItems(item2));
+            } else {
+                item2.dropToTheGround(this, Location.findAroundPosition(this, Config.KARMA_RANDOM_DROP_LOCATION_LIMIT));
+            }
         }
     }
 
@@ -3002,7 +2981,7 @@ public class Player extends Playable implements PlayerGroup {
         if (getLevel() < 6) {
             final Quest q = QuestManager.getQuest(255);
             if (q != null) {
-                processQuestEvent(q.getName(), "CE30", null);
+                processQuestEvent(q.getId(), "CE30", null);
             }
         }
         super.onDeath(killer);
@@ -3174,7 +3153,7 @@ public class Player extends Playable implements PlayerGroup {
             setCurrentCp(getMaxCp());
             final Quest q = QuestManager.getQuest(255);
             if (q != null) {
-                processQuestEvent(q.getName(), "CE40", null);
+                processQuestEvent(q.getId(), "CE40", null);
             }
         } else if (levels < 0) {
             checkSkills();
@@ -3257,13 +3236,10 @@ public class Player extends Playable implements PlayerGroup {
             return;
         }
         broadcastCharInfo();
-        ThreadPoolManager.getInstance().schedule(new RunnableImpl() {
-            @Override
-            public void runImpl() {
-                if (!isConnected()) {
-                    prepareToLogout();
-                    deleteMe();
-                }
+        ThreadPoolManager.getInstance().schedule(() -> {
+            if (!isConnected()) {
+                prepareToLogout();
+                deleteMe();
             }
         }, time);
     }
@@ -3312,7 +3288,17 @@ public class Player extends Playable implements PlayerGroup {
     }
 
     public List<TradeItem> getSellList() {
-        return getSellList(_privatestore == 8);
+        switch (getPrivateStoreType()) {
+            case 8: {
+                return getSellList(true);
+            }
+            case 1: {
+                return getSellList(false);
+            }
+            default: {
+                return Collections.emptyList();
+            }
+        }
     }
 
     public List<TradeItem> getSellList(final boolean packageSell) {
@@ -3352,19 +3338,29 @@ public class Player extends Playable implements PlayerGroup {
     }
 
     public boolean isInStoreMode() {
-        return _privatestore != 0;
+        return _privatestore.get() != 0;
     }
 
     public int getPrivateStoreType() {
-        return _privatestore;
+        return _privatestore.get();
     }
 
-    public void setPrivateStoreType(final int type) {
-        _privatestore = type;
-        if (type != 0) {
-            setVar("storemode", String.valueOf(type), -1L);
-        } else {
-            unsetVar("storemode");
+    public void setPrivateStoreType(final int newMode) {
+        final int prevMode = _privatestore.get();
+        if (prevMode != newMode && _privatestore.compareAndSet(prevMode, newMode)) {
+            if (newMode != 0) {
+                if (prevMode == 0) {
+                    sitDown(null);
+                    broadcastCharInfo();
+                }
+                setVar("storemode", String.valueOf(newMode), -1L);
+            } else if (prevMode != 0) {
+                unsetVar("storemode");
+                if (!isDead()) {
+                    standUp();
+                    broadcastCharInfo();
+                }
+            }
         }
     }
 
@@ -3507,17 +3503,13 @@ public class Player extends Playable implements PlayerGroup {
     }
 
     public void setPlayerAccess(final PlayerAccess pa) {
-        if (pa != null) {
-            _playerAccess = pa;
-        } else {
-            _playerAccess = new PlayerAccess();
-        }
+        _playerAccess = Objects.requireNonNullElseGet(pa, PlayerAccess::new);
         setAccessLevel((isGM() || _playerAccess.Menu) ? 100 : 0);
     }
 
     @Override
     public double getLevelMod() {
-        return (89.0 + getLevel()) / 100.0;
+        return LevelBonusHolder.getInstance().getLevelBonus(getLevel());
     }
 
     @Override
@@ -4178,10 +4170,18 @@ public class Player extends Playable implements PlayerGroup {
         return false;
     }
 
+    /**
+     * @return True if the Player is a Mage.<BR>
+     * <BR>
+     */
     @Override
     public boolean isMageClass() {
-        final ClassId classId = getClassId();
-        return classId.isMage();
+        return isInCategory(CategoryType.mage_group);
+    }
+
+    @Override
+    public boolean isInCategory(final CategoryType type) {
+        return CategoryDataManager.getInstance().isInCategory(this, type);
     }
 
     public boolean isMounted() {
@@ -5438,7 +5438,7 @@ public class Player extends Playable implements PlayerGroup {
             statement.setInt(2, getObjectId());
             statement.executeUpdate();
         } catch (Exception e) {
-            LOGGER.warn("Could not activate nochannel:" + e);
+            LOGGER.warn("Could not activateRegion nochannel:" + e);
         } finally {
             DbUtils.closeQuietly(con, statement);
         }
@@ -5742,12 +5742,9 @@ public class Player extends Playable implements PlayerGroup {
                 EffectsDAO.getInstance().insert(this);
                 storeDisableSkills();
                 if (QuestManager.getQuest(422) != null) {
-                    final String qn = QuestManager.getQuest(422).getName();
-                    if (qn != null) {
-                        final QuestState qs = getQuestState(qn);
-                        if (qs != null) {
-                            qs.exitCurrentQuest(true);
-                        }
+                    final QuestState qs = getQuestState(422);
+                    if (qs != null) {
+                        qs.exitCurrentQuest(true);
                     }
                 }
             }
@@ -5784,6 +5781,7 @@ public class Player extends Playable implements PlayerGroup {
         }
         rewardSkills(false);
         checkSkills();
+        sendPacket(new ExStorageMaxCount(this));
         refreshExpertisePenalty();
         sendPacket(new SkillList(this));
         getInventory().refreshEquip();
@@ -5842,10 +5840,6 @@ public class Player extends Playable implements PlayerGroup {
             _bonusExpiration.cancel(false);
             _bonusExpiration = null;
         }
-    }
-
-    public void deleteBonusPrem(){
-            AccountBonusDAO.getInstance().delete(getAccountName());
     }
 
     @Override
@@ -6089,6 +6083,14 @@ public class Player extends Playable implements PlayerGroup {
         return _bonus;
     }
 
+    public final EnchantLimitListener getEnchantLimiter() {
+        return _enchantLimiter;
+    }
+
+    public final void setEnchantLimiter(EnchantLimitListener limiter) {
+        _enchantLimiter = limiter;
+    }
+
     public boolean hasBonus() {
         return _bonus.getBonusExpire() > System.currentTimeMillis() / 1000L;
     }
@@ -6241,7 +6243,7 @@ public class Player extends Playable implements PlayerGroup {
         final double _curHpPercent = curHp / percent;
         final double _newHpPercent = newHp / percent;
         boolean needsUpdate = false;
-        for (int i = 0; i < skills.length; ++i) {
+        for (int i = 0; i < skills.length; i++) {
             final int level = getSkillLevel(skills[i]);
             if (level > 0) {
                 if (_curHpPercent > _hp[i] && _newHpPercent <= _hp[i]) {
@@ -6273,7 +6275,6 @@ public class Player extends Playable implements PlayerGroup {
     public int getZoneMask() {
         return _zoneMask;
     }
-
 
     //TODO [G1ta0] переработать в лисенер?
     @Override
@@ -6694,7 +6695,7 @@ public class Player extends Playable implements PlayerGroup {
 
     @Override
     public final Collection<Skill> getAllSkills() {
-        if (_transformationId == 0) {
+        if (_transformationId == 0 && !isCursedWeaponEquipped()) {
             return super.getAllSkills();
         }
         final Map<Integer, Skill> tempSkills = super.getAllSkills().stream().filter(s -> s != null && !s.isActive() && !s.isToggle()).collect(Collectors.toMap(Skill::getId, s -> s, (a, b) -> b));
@@ -6750,7 +6751,7 @@ public class Player extends Playable implements PlayerGroup {
     }
 
     public boolean isLogoutStarted() {
-        return _isLogout.get();
+        return this != null && _isLogout.get();
     }
 
     public void setOfflineMode(final boolean val) {
@@ -7211,12 +7212,12 @@ public class Player extends Playable implements PlayerGroup {
         return _dropDisabled > System.currentTimeMillis();
     }
 
-    public void setPetControlItem(final int itemObjId) {
-        setPetControlItem(getInventory().getItemByObjectId(itemObjId));
-    }
-
     public ItemInstance getPetControlItem() {
         return _petControlItem;
+    }
+
+    public void setPetControlItem(final int itemObjId) {
+        setPetControlItem(getInventory().getItemByObjectId(itemObjId));
     }
 
     public void setPetControlItem(final ItemInstance item) {
@@ -7441,7 +7442,7 @@ public class Player extends Playable implements PlayerGroup {
     }
 
     public void sendItemList(final boolean show) {
-        final List<ItemInstance> items = getInventory().getItems();
+        final Collection<ItemInstance> items = getInventory().getItems();
         final LockType lockType = getInventory().getLockType();
         final int[] lockItems = getInventory().getLockItems();
         sendPacket(new ItemList(items.size(), items, show, lockType, lockItems));
@@ -7740,7 +7741,7 @@ public class Player extends Playable implements PlayerGroup {
     }
 
     public boolean isInPvPEvent() {
-        return isInTvT() || isInCtF() || isInLastHero()|| isInFightClub() || isInTVTArena() || isInDuelEvent() || isInKoreanStyle();
+        return isInTvT() || isInCtF() || isInLastHero() || isInFightClub() || isInTVTArena() || isInDuelEvent() || isInKoreanStyle();
     }
 
     public boolean isInTvT() {
@@ -7826,6 +7827,39 @@ public class Player extends Playable implements PlayerGroup {
     public boolean isEventFlagEquiped() {
         final ItemInstance weapon = getActiveWeaponInstance();
         return weapon != null && weapon.getTemplate().isCtFFlag();
+    }
+
+    public void addListenerHook(ListenerHookType type, ListenerHook hook) {
+        if (!listenersHookTypesMap.containsKey(type)) {
+            CopyOnWriteArraySet<ListenerHook> hooks = new CopyOnWriteArraySet<>();
+            hooks.add(hook);
+            listenersHookTypesMap.put(type, hooks);
+        } else {
+            CopyOnWriteArraySet<ListenerHook> hooks = listenersHookTypesMap.get(type);
+            hooks.add(hook);
+        }
+    }
+
+    public void removeListenerHookType(ListenerHookType type, ListenerHook hook) {
+        if (listenersHookTypesMap.containsKey(type)) {
+            Set<ListenerHook> hooks = listenersHookTypesMap.get(type);
+            hooks.remove(hook);
+        }
+    }
+
+    public Set<ListenerHook> getListenerHooks(ListenerHookType type) {
+        Set<ListenerHook> hooks = listenersHookTypesMap.get(type);
+        if (hooks == null)
+            hooks = Collections.emptySet();
+        return hooks;
+    }
+
+    public Location getCurrentSkillWorldPosition() {
+        return _currentSkillWorldPosition;
+    }
+
+    public void setCurrentSkillWorldPosition(Location worldPosition) {
+        _currentSkillWorldPosition = worldPosition;
     }
 
     public enum EPledgeRank {
@@ -7955,39 +7989,5 @@ public class Player extends Playable implements PlayerGroup {
             sendEtcStatusUpdate();
             _increasedForceCleanupTask = null;
         }
-    }
-
-    private final ConcurrentHashMap<ListenerHookType, CopyOnWriteArraySet<ListenerHook>> listenersHookTypesMap = new ConcurrentHashMap<>();
-
-    public void addListenerHook(ListenerHookType type, ListenerHook hook)
-    {
-        if(!listenersHookTypesMap.containsKey(type))
-        {
-            CopyOnWriteArraySet<ListenerHook> hooks = new CopyOnWriteArraySet<>();
-            hooks.add(hook);
-            listenersHookTypesMap.put(type, hooks);
-        }
-        else
-        {
-            CopyOnWriteArraySet<ListenerHook> hooks = listenersHookTypesMap.get(type);
-            hooks.add(hook);
-        }
-    }
-
-    public void removeListenerHookType(ListenerHookType type, ListenerHook hook)
-    {
-        if(listenersHookTypesMap.containsKey(type))
-        {
-            Set<ListenerHook> hooks = listenersHookTypesMap.get(type);
-            hooks.remove(hook);
-        }
-    }
-
-    public Set<ListenerHook> getListenerHooks(ListenerHookType type)
-    {
-        Set<ListenerHook> hooks = listenersHookTypesMap.get(type);
-        if(hooks == null)
-            hooks = Collections.emptySet();
-        return hooks;
     }
 }
